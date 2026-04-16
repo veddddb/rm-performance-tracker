@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Piyush | RM Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white p-8">
+    <h1 class="text-3xl font-bold mb-8 border-b border-gray-700 pb-4">Team Leaderboard - FY 26-27</h1>
+    <div id="dashboard" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+
+    <script>
+        fetch('data/performance.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('dashboard');
+                data.forEach(rm => {
+                    const card = `
+                        <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 ${rm.aumVelocity > 10000000 ? 'border-red-500' : 'border-green-500'}">
+                            <h2 class="text-xl font-bold mb-2">${rm.name}</h2>
+                            <p class="text-sm text-gray-400">Monthly AUM Velocity Required:</p>
+                            <p class="text-2xl font-mono text-blue-400">₹${Number(rm.aumVelocity).toLocaleString()}</p>
+                            <div class="mt-4">
+                                <p class="text-xs uppercase text-gray-500">Leverage Penetration</p>
+                                <p class="text-lg font-bold">${(rm.leveragePct * 100).toFixed(2)}%</p>
+                            </div>
+                            <div class="mt-4 text-xs text-gray-500 italic">Last Updated: ${rm.lastUpdated}</div>
+                        </div>
+                    `;
+                    container.innerHTML += card;
+                });
+            });
+    </script>
+</body>
+</html>
