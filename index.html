@@ -140,8 +140,27 @@
             document.getElementById('ledger-total-preview').innerText = `₹${Number(rm.netMob).toFixed(2)} Cr`;
 
             // PIPELINE UNIT FIX: CR
-            document.getElementById('plan-rows').innerHTML = rm.plan.map(p => `<tr><td class="py-3 font-bold text-white">${p.client}</td><td>${p.asset}</td><td class="text-right text-blue-400 font-mono">₹${Number(p.amt).toFixed(2)}Cr</td><td class="text-right">${(p.prob * 100).toFixed(0)}%</td></tr>`).join('');
-            
+            // Replace the plan-rows mapping inside your openRM function with this:
+document.getElementById('plan-rows').innerHTML = rm.plan.map(p => {
+    // Smart Probability Logic:
+    // If RM types 0.1 (10%), multiply by 100. 
+    // If RM types 10, keep it as 10.
+    let displayProb = parseFloat(p.prob);
+    if (displayProb > 0 && displayProb <= 1) {
+        displayProb = (displayProb * 100).toFixed(0);
+    } else {
+        displayProb = displayProb ? displayProb.toFixed(0) : 0;
+    }
+
+    return `
+        <tr>
+            <td class="py-3 font-bold text-white">${p.client}</td>
+            <td>${p.asset}</td>
+            <td class="text-right text-blue-400 font-mono">₹${Number(p.amt).toFixed(2)}Cr</td>
+            <td class="text-right font-bold text-slate-400">${displayProb}%</td>
+        </tr>
+    `;
+}).join('');
             document.getElementById('activity-rows').innerHTML = rm.activity.map(a => `<tr><td class="py-3 text-slate-300 font-semibold">${a.param}</td><td class="text-slate-500">${a.target}</td><td class="text-blue-400 font-black">${a.actual}</td></tr>`).join('');
             
             document.getElementById('leverage-rows').innerHTML = rm.leverage.map(l => {
