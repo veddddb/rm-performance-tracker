@@ -12,6 +12,7 @@
         .glass-card:hover { transform: translateY(-4px); }
         .modal-container { display: none; position: fixed; inset: 0; background: rgba(2, 6, 23, 0.98); z-index: 100; overflow-y: auto; padding: 20px; }
         .stat-sidebar { background: #0f172a; border: 1px solid #1e293b; border-radius: 24px; }
+        .hidden-content { display: none; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -22,7 +23,6 @@
             <p id="month-display" class="text-6xl font-black italic uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 tracking-tighter"></p>
             <p id="fy-display" class="text-blue-500 text-xs font-black tracking-[0.5em] mt-4 uppercase">Financial Year 2026-27</p>
         </header>
-
         <div id="main-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
     </div>
 
@@ -47,23 +47,31 @@
                         </div>
                     </section>
 
-                    <section>
-                        <h3 class="text-[10px] font-black text-blue-500 uppercase mb-4 tracking-widest">Activity Tracker</h3>
-                        <table class="w-full text-xs text-left">
-                            <thead class="text-slate-500 border-b border-slate-800 text-[9px] uppercase font-bold"><tr><th class="pb-3">Parameter</th><th>Target</th><th>Actual</th></tr></thead>
-                            <tbody id="activity-rows" class="divide-y divide-slate-800/50 text-slate-300"></tbody>
-                        </table>
+                    <section class="bg-slate-800/10 p-6 rounded-3xl border border-slate-800/50">
+                        <div class="flex justify-between items-center cursor-pointer" onclick="toggleSection('activity-content', 'activity-icon')">
+                            <div>
+                                <h3 class="text-[10px] font-black text-blue-400 uppercase tracking-widest">Activity & Audit Tracker</h3>
+                                <p class="text-[11px] text-slate-500 mt-1 italic">Click to view monthly parameters</p>
+                            </div>
+                            <span id="activity-icon" class="text-xl text-slate-500">⊕</span>
+                        </div>
+                        <div id="activity-content" class="hidden-content mt-8">
+                            <table class="w-full text-xs text-left">
+                                <thead class="text-slate-500 border-b border-slate-800 text-[9px] uppercase font-bold"><tr><th class="pb-3">Parameter</th><th>Target</th><th>Actual</th></tr></thead>
+                                <tbody id="activity-rows" class="divide-y divide-slate-800/50 text-slate-300"></tbody>
+                            </table>
+                        </div>
                     </section>
 
                     <section class="bg-slate-800/20 p-6 rounded-3xl border border-slate-800">
-                        <div class="flex justify-between items-center cursor-pointer" onclick="toggleLedger()">
+                        <div class="flex justify-between items-center cursor-pointer" onclick="toggleSection('ledger-content', 'ledger-icon')">
                             <div>
                                 <h3 class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Net Mobilization Ledger</h3>
-                                <p class="text-[11px] text-slate-400 mt-1 italic">Total Net Mob till date: <span id="ledger-total-preview" class="text-white font-bold"></span></p>
+                                <p class="text-[11px] text-slate-400 mt-1 italic tracking-tight">Total Net Mob: <span id="ledger-total-preview" class="text-white font-bold"></span></p>
                             </div>
-                            <span id="ledger-toggle-icon" class="text-xl text-slate-500 transition-transform">⊕</span>
+                            <span id="ledger-icon" class="text-xl text-slate-500">⊕</span>
                         </div>
-                        <div id="ledger-content" class="hidden mt-8 overflow-x-auto">
+                        <div id="ledger-content" class="hidden-content mt-8 overflow-x-auto">
                             <table class="w-full text-[10px] text-left">
                                 <thead class="text-slate-600 border-b border-slate-800 font-bold uppercase"><tr><th class="pb-3">Client</th><th>Asset</th><th>Purchase</th><th>Redemp</th><th class="text-right">Net</th></tr></thead>
                                 <tbody id="ledger-rows" class="divide-y divide-slate-800/30 text-slate-400"></tbody>
@@ -99,7 +107,6 @@
         let data = [];
         const rmColors = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#06b6d4'];
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        
         document.getElementById('month-display').innerText = months[new Date().getMonth()];
 
         async function load() {
@@ -109,30 +116,24 @@
                 const grid = document.getElementById('main-grid');
                 grid.innerHTML = data.map((rm, i) => `
                     <div class="glass-card p-8 rounded-[2rem]" style="border-top: 4px solid ${rmColors[i]}" onclick="openRM(${i})">
-                        <div class="flex justify-between items-start mb-8">
-                            <h2 class="text-2xl font-black text-white tracking-tighter uppercase">${rm.name}</h2>
-                            <div class="h-3 w-3 rounded-full" style="background-color: ${rmColors[i]}; box-shadow: 0 0 15px ${rmColors[i]}99"></div>
+                        <div class="flex justify-between items-start mb-8 text-white uppercase">
+                            <h2 class="text-2xl font-black tracking-tighter">${rm.name}</h2>
+                            <div class="h-3 w-3 rounded-full" style="background-color: ${rmColors[i]}; box-shadow: 0 0 15px ${rmColors[i]}"></div>
                         </div>
                         <div class="grid grid-cols-2 gap-y-6 gap-x-4">
-                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">AUM</p><p class="text-xl font-black text-white">${Number(rm.aum || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">Cr</span></p></div>
-                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">Revenue</p><p class="text-xl font-black text-white">${Number(rm.revenue || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">L</span></p></div>
-                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">Net Mob</p><p class="text-xl font-black text-white">${Number(rm.netMob || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">Cr</span></p></div>
-                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">M50</p><p class="text-xl font-black text-white">${rm.m50 || 0}</p></div>
-                            <div class="col-span-2 border-t border-slate-800 pt-4">
-                                <p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">SIP Book</p>
-                                <p class="text-xl font-black text-white">${Number(rm.sip || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">L</span></p>
-                            </div>
+                            <div><p class="text-[9px] text-slate-500 font-bold uppercase mb-1">AUM</p><p class="text-xl font-black text-white">${Number(rm.aum || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">Cr</span></p></div>
+                            <div><p class="text-[9px] text-slate-500 font-bold uppercase mb-1">Revenue</p><p class="text-xl font-black text-white">${Number(rm.revenue || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">L</span></p></div>
+                            <div><p class="text-[9px] text-slate-500 font-bold uppercase mb-1">Net Mob</p><p class="text-xl font-black text-white">${Number(rm.netMob || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">Cr</span></p></div>
+                            <div><p class="text-[9px] text-slate-500 font-bold uppercase mb-1">M50</p><p class="text-xl font-black text-white">${rm.m50 || 0}</p></div>
                         </div>
                     </div>
                 `).join('');
-            } catch (e) { console.log("Waiting for data sync..."); }
+            } catch (e) { console.log("Syncing..."); }
         }
 
         function openRM(i) {
             const rm = data[i];
             document.getElementById('modal-name').innerText = rm.name;
-            
-            // Performance Sidebar
             document.getElementById('stat-aum').innerText = `₹${Number(rm.aum || 0).toFixed(2)} Cr`;
             document.getElementById('stat-rev').innerText = `₹${Number(rm.revenue || 0).toFixed(2)} L`;
             document.getElementById('stat-net').innerText = `₹${Number(rm.netMob || 0).toFixed(2)} Cr`;
@@ -142,60 +143,27 @@
             // Ledger Preview Fix
             document.getElementById('ledger-total-preview').innerText = `₹${Number(rm.netMob || 0).toFixed(2)} Cr`;
 
-            // Pipeline Table (Amt in Cr + Probability Fix)
-            document.getElementById('plan-rows').innerHTML = rm.plan.map(p => `
-                <tr>
-                    <td class="py-3 font-bold text-white">${p.client}</td>
-                    <td>${p.asset}</td>
-                    <td class="text-right text-blue-400 font-mono">₹${Number(p.amt || 0).toFixed(2)}Cr</td>
-                    <td class="text-right font-bold text-slate-400">${p.prob ?? 0}%</td>
-                </tr>
-            `).join('');
-            
-            // Activity Tracker
-            document.getElementById('activity-rows').innerHTML = rm.activity.map(a => `
-                <tr>
-                    <td class="py-3 text-slate-300 font-semibold">${a.param}</td>
-                    <td class="text-slate-500">${a.target || 0}</td>
-                    <td class="text-blue-400 font-black">${a.actual || 0}</td>
-                </tr>
-            `).join('');
-            
-            // Leverage % Logic
+            document.getElementById('plan-rows').innerHTML = rm.plan.map(p => `<tr><td class="py-3 font-bold text-white">${p.client}</td><td>${p.asset}</td><td class="text-right text-blue-400 font-mono">₹${Number(p.amt || 0).toFixed(2)}Cr</td><td class="text-right font-bold text-slate-400">${p.prob ?? 0}%</td></tr>`).join('');
+            document.getElementById('activity-rows').innerHTML = rm.activity.map(a => `<tr><td class="py-3 text-slate-300 font-semibold">${a.param}</td><td>${a.target || 0}</td><td class="text-blue-400 font-black">${a.actual || 0}</td></tr>`).join('');
             document.getElementById('leverage-rows').innerHTML = rm.leverage.map(l => {
-                const isPercent = l.label.includes('%') || l.label.toLowerCase().includes('penetration');
-                const val = Number(l.value || 0);
-                const displayValue = isPercent ? (val * 100).toFixed(2) + '%' : val;
-                return `<tr><td class="py-3 text-slate-500 uppercase text-[10px] font-bold">${l.label}</td><td class="text-right font-black ${isPercent ? 'text-emerald-400' : ''}">${displayValue}</td></tr>`;
+                const isP = l.label.includes('%') || l.label.toLowerCase().includes('penetration');
+                return `<tr><td class="py-3 text-slate-500 uppercase text-[10px] font-bold">${l.label}</td><td class="text-right font-black ${isP ? 'text-emerald-400' : ''}">${isP ? (Number(l.value)*100).toFixed(2)+'%' : l.value}</td></tr>`;
             }).join('');
-
-            // Detailed Ledger
-            document.getElementById('ledger-rows').innerHTML = rm.ledger.map(l => `
-                <tr>
-                    <td class="py-3 font-bold text-white">${l.client}</td>
-                    <td>${l.asset}</td>
-                    <td>${l.purchase || 0}</td>
-                    <td>${l.redemption || 0}</td>
-                    <td class="text-right text-emerald-400 font-bold">${l.net || 0}</td>
-                </tr>
-            `).join('');
+            document.getElementById('ledger-rows').innerHTML = rm.ledger.map(l => `<tr><td class="py-3 font-bold text-white">${l.client}</td><td>${l.asset}</td><td>${l.purchase || 0}</td><td>${l.redemption || 0}</td><td class="text-right text-emerald-400 font-bold">${l.net || 0}</td></tr>`).join('');
 
             document.getElementById('modal').style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
 
-        function toggleLedger() {
-            const content = document.getElementById('ledger-content');
-            const icon = document.getElementById('ledger-toggle-icon');
-            const isHidden = content.classList.toggle('hidden');
-            icon.innerText = isHidden ? '⊕' : '⊖';
+        function toggleSection(id, iconId) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(iconId);
+            const isHidden = content.style.display === 'none' || content.style.display === '';
+            content.style.display = isHidden ? 'block' : 'none';
+            icon.innerText = isHidden ? '⊖' : '⊕';
         }
 
-        function closeModal() { 
-            document.getElementById('modal').style.display = 'none'; 
-            document.body.style.overflow = 'auto'; 
-        }
-        
+        function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
         load();
     </script>
 </body>
