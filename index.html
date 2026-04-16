@@ -20,7 +20,7 @@
         <header class="flex flex-col items-center mb-16 border-b border-slate-800 pb-10 text-center">
             <h1 class="text-xl font-bold tracking-[0.4em] text-slate-500 uppercase mb-4">Team Piyush</h1>
             <p id="month-display" class="text-6xl font-black italic uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 tracking-tighter"></p>
-            <p id="fy-display" class="text-blue-500 text-xs font-black tracking-[0.5em] mt-4 uppercase"></p>
+            <p id="fy-display" class="text-blue-500 text-xs font-black tracking-[0.5em] mt-4 uppercase">Financial Year 2026-27</p>
         </header>
 
         <div id="main-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -35,7 +35,6 @@
             
             <div class="flex flex-col lg:flex-row gap-8 p-8 md:p-12">
                 <div class="flex-1 space-y-12">
-                    
                     <section>
                         <h3 class="text-[10px] font-black text-blue-500 uppercase mb-4 tracking-widest">Monthly Plan Pipeline</h3>
                         <div class="overflow-x-auto">
@@ -98,12 +97,10 @@
 
     <script>
         let data = [];
-        // Unique Color ID for each RM
         const rmColors = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#06b6d4'];
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         
         document.getElementById('month-display').innerText = months[new Date().getMonth()];
-        document.getElementById('fy-display').innerText = `Financial Year 2026-27`;
 
         async function load() {
             try {
@@ -117,62 +114,69 @@
                             <div class="h-3 w-3 rounded-full" style="background-color: ${rmColors[i]}; box-shadow: 0 0 15px ${rmColors[i]}99"></div>
                         </div>
                         <div class="grid grid-cols-2 gap-y-6 gap-x-4">
-                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">AUM</p><p class="text-xl font-black text-white">${Number(rm.aum).toFixed(2)}<span class="text-xs text-slate-500 ml-1">Cr</span></p></div>
-                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">Revenue</p><p class="text-xl font-black text-white">${Number(rm.revenue).toFixed(2)}<span class="text-xs text-slate-500 ml-1">L</span></p></div>
-                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">Net Mob</p><p class="text-xl font-black text-white">${Number(rm.netMob).toFixed(2)}<span class="text-xs text-slate-500 ml-1">Cr</span></p></div>
-                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">M50</p><p class="text-xl font-black text-white">${rm.m50}</p></div>
+                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">AUM</p><p class="text-xl font-black text-white">${Number(rm.aum || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">Cr</span></p></div>
+                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">Revenue</p><p class="text-xl font-black text-white">${Number(rm.revenue || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">L</span></p></div>
+                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">Net Mob</p><p class="text-xl font-black text-white">${Number(rm.netMob || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">Cr</span></p></div>
+                            <div><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">M50</p><p class="text-xl font-black text-white">${rm.m50 || 0}</p></div>
                             <div class="col-span-2 border-t border-slate-800 pt-4">
                                 <p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">SIP Book</p>
-                                <p class="text-xl font-black text-white">${Number(rm.sip).toFixed(2)}<span class="text-xs text-slate-500 ml-1">L</span></p>
+                                <p class="text-xl font-black text-white">${Number(rm.sip || 0).toFixed(2)}<span class="text-xs text-slate-500 ml-1">L</span></p>
                             </div>
                         </div>
                     </div>
                 `).join('');
-            } catch (e) { console.log("Data sync in progress..."); }
+            } catch (e) { console.log("Waiting for data sync..."); }
         }
 
         function openRM(i) {
             const rm = data[i];
             document.getElementById('modal-name').innerText = rm.name;
-            document.getElementById('stat-aum').innerText = `₹${Number(rm.aum).toFixed(2)} Cr`;
-            document.getElementById('stat-rev').innerText = `₹${Number(rm.revenue).toFixed(2)} L`;
-            document.getElementById('stat-net').innerText = `₹${Number(rm.netMob).toFixed(2)} Cr`;
-            document.getElementById('stat-m50').innerText = rm.m50;
-            document.getElementById('stat-sip').innerText = `₹${Number(rm.sip).toFixed(2)} L`;
-            document.getElementById('ledger-total-preview').innerText = `₹${Number(rm.netMob).toFixed(2)} Cr`;
+            
+            // Performance Sidebar
+            document.getElementById('stat-aum').innerText = `₹${Number(rm.aum || 0).toFixed(2)} Cr`;
+            document.getElementById('stat-rev').innerText = `₹${Number(rm.revenue || 0).toFixed(2)} L`;
+            document.getElementById('stat-net').innerText = `₹${Number(rm.netMob || 0).toFixed(2)} Cr`;
+            document.getElementById('stat-m50').innerText = rm.m50 || 0;
+            document.getElementById('stat-sip').innerText = `₹${Number(rm.sip || 0).toFixed(2)} L`;
+            
+            // Ledger Preview Fix
+            document.getElementById('ledger-total-preview').innerText = `₹${Number(rm.netMob || 0).toFixed(2)} Cr`;
 
-            // Plan Table: Probability display fix + Cr Unit
+            // Pipeline Table (Amt in Cr + Probability Fix)
             document.getElementById('plan-rows').innerHTML = rm.plan.map(p => `
                 <tr>
                     <td class="py-3 font-bold text-white">${p.client}</td>
                     <td>${p.asset}</td>
-                    <td class="text-right text-blue-400 font-mono">₹${Number(p.amt).toFixed(2)}Cr</td>
-                    <td class="text-right font-bold text-slate-400">${p.prob}%</td>
+                    <td class="text-right text-blue-400 font-mono">₹${Number(p.amt || 0).toFixed(2)}Cr</td>
+                    <td class="text-right font-bold text-slate-400">${p.prob ?? 0}%</td>
                 </tr>
             `).join('');
             
+            // Activity Tracker
             document.getElementById('activity-rows').innerHTML = rm.activity.map(a => `
                 <tr>
                     <td class="py-3 text-slate-300 font-semibold">${a.param}</td>
-                    <td class="text-slate-500">${a.target}</td>
-                    <td class="text-blue-400 font-black">${a.actual}</td>
+                    <td class="text-slate-500">${a.target || 0}</td>
+                    <td class="text-blue-400 font-black">${a.actual || 0}</td>
                 </tr>
             `).join('');
             
-            // Leverage: % Formatting Fix
+            // Leverage % Logic
             document.getElementById('leverage-rows').innerHTML = rm.leverage.map(l => {
                 const isPercent = l.label.includes('%') || l.label.toLowerCase().includes('penetration');
-                const displayValue = isPercent ? (Number(l.value) * 100).toFixed(2) + '%' : l.value;
+                const val = Number(l.value || 0);
+                const displayValue = isPercent ? (val * 100).toFixed(2) + '%' : val;
                 return `<tr><td class="py-3 text-slate-500 uppercase text-[10px] font-bold">${l.label}</td><td class="text-right font-black ${isPercent ? 'text-emerald-400' : ''}">${displayValue}</td></tr>`;
             }).join('');
 
+            // Detailed Ledger
             document.getElementById('ledger-rows').innerHTML = rm.ledger.map(l => `
                 <tr>
                     <td class="py-3 font-bold text-white">${l.client}</td>
                     <td>${l.asset}</td>
-                    <td>${l.purchase}</td>
-                    <td>${l.redemption}</td>
-                    <td class="text-right text-emerald-400 font-bold">${l.net}</td>
+                    <td>${l.purchase || 0}</td>
+                    <td>${l.redemption || 0}</td>
+                    <td class="text-right text-emerald-400 font-bold">${l.net || 0}</td>
                 </tr>
             `).join('');
 
