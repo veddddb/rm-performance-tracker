@@ -1,35 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Team Piyush | RM Performance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Piyush Command Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .modal { display: none; position: fixed; z-index: 50; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); overflow-y: auto; }
+    </style>
 </head>
-<body class="bg-gray-900 text-white p-8">
-    <h1 class="text-3xl font-bold mb-8 border-b border-gray-700 pb-4">Team Leaderboard - FY 26-27</h1>
-    <div id="dashboard" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<body class="bg-slate-950 text-slate-100 font-sans p-6">
+    <header class="mb-10 text-center">
+        <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">TEAM PIYUSH PERFORMANCE</h1>
+        <p class="text-slate-400 mt-2">Private Banking RM Dashboard | FY 26-27</p>
+    </header>
+
+    <div id="rm-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         </div>
 
+    <div id="modal" class="modal flex items-start justify-center pt-10 px-4">
+        <div class="bg-slate-900 w-full max-w-5xl rounded-2xl border border-slate-700 p-8 shadow-2xl mb-10">
+            <div class="flex justify-between items-center mb-6 border-b border-slate-700 pb-4">
+                <h2 id="modal-title" class="text-3xl font-bold">RM Details</h2>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white text-2xl">&times; Close</button>
+            </div>
+            <div id="modal-content" class="space-y-10">
+                </div>
+        </div>
+    </div>
+
     <script>
-        fetch('data/performance.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('dashboard');
-                data.forEach(rm => {
-                    const card = `
-                        <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 ${rm.aumVelocity > 10000000 ? 'border-red-500' : 'border-green-500'}">
-                            <h2 class="text-xl font-bold mb-2">${rm.name}</h2>
-                            <p class="text-sm text-gray-400">Monthly AUM Velocity Required:</p>
-                            <p class="text-2xl font-mono text-blue-400">₹${Number(rm.aumVelocity).toLocaleString()}</p>
-                            <div class="mt-4">
-                                <p class="text-xs uppercase text-gray-500">Leverage Penetration</p>
-                                <p class="text-lg font-bold">${(rm.leveragePct * 100).toFixed(2)}%</p>
-                            </div>
-                            <div class="mt-4 text-xs text-gray-500 italic">Last Updated: ${rm.lastUpdated}</div>
+        let globalData = [];
+
+        async function loadDashboard() {
+            const res = await fetch('data/performance.json');
+            globalData = await res.json();
+            const grid = document.getElementById('rm-grid');
+            grid.innerHTML = '';
+
+            globalData.forEach((rm, index) => {
+                grid.innerHTML += `
+                    <div onclick="openRM(${index})" class="group bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-blue-500 transition-all cursor-pointer shadow-lg">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold group-hover:text-blue-400">${rm.name}</h3>
+                            <span class="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-500 uppercase font-bold tracking-widest">Click to Expand</span>
                         </div>
-                    `;
-                    container.innerHTML += card;
-                });
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase">AUM Velocity Required</p>
+                                <p class="text-xl font-mono text-emerald-400">₹${Number(rm.performance.aumVelocity).toLocaleString()}</p>
+                            </div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded-full mt-1">
+                                <div class="bg-blue-500 h-1.5 rounded-full" style="width: ${Math.min(rm.leveragePct * 100, 100)}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
             });
+        }
+
+        function openRM(index) {
+            const rm = globalData[index];
+            document.getElementById('modal-title').innerText = rm.name;
+            const content = document.getElementById('modal-content');
+            
+            content.innerHTML = `
+                <section>
+                    <h4 class="text-blue-400 font-bold uppercase text-sm mb-3 tracking-widest">Table 1: Performance Dashboard</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-slate-800 p-4 rounded-xl">
+                            <p class="text-xs text-slate-500">AUM Velocity</p>
+                            <p class="text-lg font-bold">₹${Number(rm.performance.aumVelocity).toLocaleString()}</p>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-xl">
+                            <p class="text-xs text-slate-500">Rev Velocity</p>
+                            <p class="text-lg font-bold">₹${Number(rm.performance.revVelocity).toLocaleString()}</p>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-xl">
+                            <p class="text-xs text-slate-500">Net Mob Actual</p>
+                            <p class="text-lg font-bold">₹${Number(rm.performance.netMobActual).toLocaleString()}</p>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-xl">
+                            <p class="text-xs text-slate-500">Mission 50</p>
+                            <p class="text-lg font-bold">₹${Number(rm.performance.mission50Actual).toLocaleString()}</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 class="text-blue-400 font-bold uppercase text-sm mb-3 tracking-widest">Table 2: Activity Tracker</h4>
+                    <table class="w-full text-left text-sm border-collapse">
+                        <thead><tr class="text-slate-500 border-b border-slate-800"><th class="pb-2">Parameter</th><th class="pb-2">Target</th><th class="pb-2">Actual</th><th class="pb-2">Gap</th></tr></thead>
+                        <tbody>
+                            ${rm.activity.map(a => `<tr class="border-b border-slate-800/50"><td class="py-2">${a.param}</td><td>${a.target}</td><td>${a.actual}</td><td class="${a.gap > 0 ? 'text-red-400':'text-green-400'}">${a.gap}</td></tr>`).join('')}
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <h4 class="text-blue-400 font-bold uppercase text-sm mb-3 tracking-widest text-right">Table 3: Leverage Tracker</h4>
+                    <div class="flex justify-end gap-6">
+                        <div class="text-right">
+                            <p class="text-xs text-slate-500">Total Leverage</p>
+                            <p class="text-2xl font-bold">₹${Number(rm.leverage.total).toLocaleString()}</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-slate-500">Penetration %</p>
+                            <p class="text-2xl font-bold text-blue-400">${(rm.leverage.pct * 100).toFixed(2)}%</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 class="text-blue-400 font-bold uppercase text-sm mb-3 tracking-widest">Table 4: Monthly Plan (Active Pipeline)</h4>
+                    <div class="space-y-2">
+                        ${rm.plan.length ? rm.plan.map(p => `
+                            <div class="flex justify-between bg-slate-800/50 p-3 rounded-lg">
+                                <div><p class="font-bold">${p.client}</p><p class="text-xs text-slate-500">${p.asset}</p></div>
+                                <div class="text-right"><p class="text-emerald-400 font-mono">₹${Number(p.amt).toLocaleString()}</p><p class="text-xs text-slate-500">Prob: ${p.prob*100}%</p></div>
+                            </div>
+                        `).join('') : '<p class="text-slate-600 italic">No active pipeline items.</p>'}
+                    </div>
+                </section>
+            `;
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() { document.getElementById('modal').style.display = 'none'; }
+        loadDashboard();
     </script>
 </body>
 </html>
