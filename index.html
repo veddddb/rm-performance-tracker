@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Piyush | Portfolio Command</title>
+    <title>Team Piyush | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
     <style>
@@ -16,11 +16,13 @@
 </head>
 <body class="p-6 md:p-12">
 
-    <div class="max-w-6xl mx-auto">
-        <header class="flex flex-col items-center mb-16 text-center">
-            <h1 class="text-[10px] font-bold tracking-[0.5em] text-blue-500 uppercase mb-2">Team Piyush | Private Banking</h1>
-            <p id="month-display" class="text-3xl font-extrabold text-white tracking-tight capitalize"></p>
-            <p id="fy-display" class="text-slate-500 text-[10px] font-medium tracking-[0.2em] mt-1 uppercase">Financial Year 2026-27</p>
+    <div class="max-w-5xl mx-auto">
+        <header class="flex justify-between items-end mb-12 border-b border-slate-800/50 pb-6">
+            <div>
+                <p id="month-display" class="text-2xl font-extrabold text-white tracking-tight capitalize"></p>
+                <p class="text-[9px] font-bold tracking-[0.3em] text-slate-500 uppercase">Team Piyush | Private Banking</p>
+            </div>
+            <p class="text-[9px] font-medium text-blue-500 tracking-widest uppercase mb-1">FY 2026-27</p>
         </header>
 
         <div id="main-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
@@ -30,7 +32,7 @@
         <div class="max-w-6xl mx-auto bg-slate-900 border border-slate-800 rounded-[2rem] shadow-2xl overflow-hidden mt-6 mb-10">
             <div class="p-6 border-b border-slate-800 flex justify-between items-center bg-slate-900/50">
                 <h2 id="modal-name" class="text-xl font-bold text-white tracking-tight uppercase"></h2>
-                <button onclick="closeModal()" class="text-slate-500 hover:text-white font-bold text-[10px] uppercase border border-slate-800 px-4 py-2 rounded-full">Close</button>
+                <button onclick="closeModal()" class="text-slate-500 hover:text-white font-bold text-[9px] uppercase border border-slate-800 px-4 py-2 rounded-full">Close</button>
             </div>
             
             <div class="flex flex-col lg:flex-row gap-8 p-8">
@@ -79,14 +81,13 @@
                     <div class="stat-sidebar p-6">
                         <h3 class="text-[9px] font-black text-blue-400 uppercase mb-6 tracking-widest text-center">Snapshot</h3>
                         <div class="space-y-4">
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">AUM Actual</p><p id="stat-aum" class="text-xl font-bold text-white"></p></div>
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Revenue YTD</p><p id="stat-rev" class="text-xl font-bold text-white"></p></div>
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Net Mobilization</p><p id="stat-net" class="text-xl font-bold text-white"></p></div>
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Mission 50</p><p id="stat-m50" class="text-xl font-bold text-white"></p></div>
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">SIP Book</p><p id="stat-sip" class="text-xl font-bold text-white"></p></div>
+                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">AUM Actual</p><p id="stat-aum" class="text-lg font-bold text-white"></p></div>
+                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Revenue YTD</p><p id="stat-rev" class="text-lg font-bold text-white"></p></div>
+                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Net Mobilization</p><p id="stat-net" class="text-lg font-bold text-white"></p></div>
+                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Mission 50</p><p id="stat-m50" class="text-lg font-bold text-white"></p></div>
+                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">SIP Book</p><p id="stat-sip" class="text-lg font-bold text-white"></p></div>
                         </div>
                     </div>
-
                     <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
                         <h3 class="text-[9px] font-black text-blue-500 uppercase mb-4 tracking-widest text-center">Leverage</h3>
                         <table class="w-full text-xs text-left">
@@ -112,18 +113,18 @@
                 grid.innerHTML = data.map((rm, i) => `
                     <div class="glass-card p-6 rounded-3xl" style="border-top: 3px solid ${rmColors[i]}" onclick="openRM(${i})">
                         <div class="flex justify-between items-start mb-6">
-                            <h2 class="text-lg font-bold text-white tracking-tight uppercase">${rm.name}</h2>
-                            <div class="h-2 w-2 rounded-full" style="background-color: ${rmColors[i]}"></div>
+                            <h2 class="text-sm font-bold text-white tracking-tight uppercase">${rm.name}</h2>
+                            <div class="h-1.5 w-1.5 rounded-full" style="background-color: ${rmColors[i]}"></div>
                         </div>
                         <div class="grid grid-cols-2 gap-4">
-                            <div><p class="text-[8px] text-slate-500 font-bold uppercase mb-0.5">AUM</p><p class="text-sm font-bold text-white">${Number(rm.aum || 0).toFixed(2)}<span class="text-[10px] text-slate-500 ml-0.5 font-normal">Cr</span></p></div>
-                            <div><p class="text-[8px] text-slate-500 font-bold uppercase mb-0.5">Revenue</p><p class="text-sm font-bold text-white">${Number(rm.revenue || 0).toFixed(2)}<span class="text-[10px] text-slate-500 ml-0.5 font-normal">L</span></p></div>
-                            <div><p class="text-[8px] text-slate-500 font-bold uppercase mb-0.5">Net Mob</p><p class="text-sm font-bold text-white">${Number(rm.netMob || 0).toFixed(2)}<span class="text-[10px] text-slate-500 ml-0.5 font-normal">Cr</span></p></div>
-                            <div><p class="text-[8px] text-slate-500 font-bold uppercase mb-0.5">M50</p><p class="text-sm font-bold text-white">${rm.m50 || 0}</p></div>
+                            <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">AUM</p><p class="text-xs font-bold text-white">${Number(rm.aum || 0).toFixed(2)}<span class="text-[8px] text-slate-500 ml-0.5 font-normal">Cr</span></p></div>
+                            <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">Revenue</p><p class="text-xs font-bold text-white">${Number(rm.revenue || 0).toFixed(2)}<span class="text-[8px] text-slate-500 ml-0.5 font-normal">L</span></p></div>
+                            <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">Net Mob</p><p class="text-xs font-bold text-white">${Number(rm.netMob || 0).toFixed(2)}<span class="text-[8px] text-slate-500 ml-0.5 font-normal">Cr</span></p></div>
+                            <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">M50</p><p class="text-xs font-bold text-white">${rm.m50 || 0}</p></div>
                         </div>
                     </div>
                 `).join('');
-            } catch (e) { console.log("Updating..."); }
+            } catch (e) { console.log("Syncing..."); }
         }
 
         function openRM(i) {
@@ -134,29 +135,22 @@
             document.getElementById('stat-net').innerText = `${Number(rm.netMob || 0).toFixed(2)} Cr`;
             document.getElementById('stat-m50').innerText = rm.m50 || 0;
             document.getElementById('stat-sip').innerText = `${Number(rm.sip || 0).toFixed(2)} L`;
-            document.getElementById('ledger-total-preview').innerText = `₹${Number(rm.netMob || 0).toFixed(2)} Cr`;
+            
+            // LEDGER TOTAL FIX: Use the new ledgerTotal pulled from F101
+            document.getElementById('ledger-total-preview').innerText = `₹${Number(rm.ledgerTotal || 0).toFixed(2)} Cr`;
 
             document.getElementById('plan-rows').innerHTML = rm.plan.map(p => `
-                <tr>
-                    <td class="py-2 font-semibold text-white">${p.client}</td>
-                    <td>${p.asset}</td>
-                    <td class="text-right text-blue-400 font-mono">₹${Number(p.amt || 0).toFixed(2)}Cr</td>
-                    <td class="text-right font-bold text-slate-500">${p.prob}%</td>
-                </tr>
+                <tr><td class="py-2 font-semibold text-white">${p.client}</td><td>${p.asset}</td><td class="text-right text-blue-400 font-mono">₹${Number(p.amt || 0).toFixed(2)}Cr</td><td class="text-right font-bold text-slate-500">${p.prob}%</td></tr>
             `).join('');
-            
             document.getElementById('activity-rows').innerHTML = rm.activity.map(a => `
                 <tr><td class="py-2 text-slate-300 font-medium">${a.param}</td><td>${a.target || 0}</td><td class="text-blue-400 font-bold">${a.actual || 0}</td></tr>
             `).join('');
-            
             document.getElementById('leverage-rows').innerHTML = rm.leverage.map(l => {
                 const isP = l.label.includes('%') || l.label.toLowerCase().includes('penetration');
-                const val = Number(l.value || 0);
-                return `<tr><td class="py-2 text-slate-500 uppercase text-[9px] font-bold">${l.label}</td><td class="text-right font-bold ${isP ? 'text-emerald-500' : ''}">${isP ? (val * 100).toFixed(2) + '%' : val}</td></tr>`;
+                return `<tr><td class="py-2 text-slate-500 uppercase text-[9px] font-bold">${l.label}</td><td class="text-right font-bold ${isP ? 'text-emerald-500' : ''}">${isP ? (Number(l.value)*100).toFixed(2)+'%' : l.value}</td></tr>`;
             }).join('');
-
             document.getElementById('ledger-rows').innerHTML = rm.ledger.map(l => `
-                <tr><td class="py-2 font-medium text-white">${l.client}</td><td>${l.asset}</td><td>${l.purchase || 0}</td><td>${l.redemption || 0}</td><td class="text-right text-emerald-500 font-bold">${l.net || 0}</td></tr>
+                <tr><td class="py-2 font-medium text-white">${l.client}</td><td>${l.asset}</td><td>${l.purchase || 0}</td><td>${l.redemption || 0}</td><td class="text-right text-emerald-400 font-bold">${l.net || 0}</td></tr>
             `).join('');
 
             document.getElementById('modal').style.display = 'block';
@@ -166,8 +160,9 @@
         function toggleSec(id, iconId) {
             const el = document.getElementById(id);
             const icon = document.getElementById(iconId);
-            const isHidden = el.classList.toggle('hidden');
-            icon.innerText = isHidden ? '⊕' : '⊖';
+            const isHidden = el.style.display === 'none' || el.style.display === '';
+            el.style.display = isHidden ? 'block' : 'none';
+            icon.innerText = isHidden ? '⊖' : '⊕';
         }
 
         function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
