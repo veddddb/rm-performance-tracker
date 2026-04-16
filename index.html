@@ -8,165 +8,453 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
-        .glass-card { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.2s; cursor: pointer; }
+
+        /* ── Glass cards ── */
+        .glass-card { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s; cursor: pointer; }
         .glass-card:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-2px); }
-        .modal-container { display: none; position: fixed; inset: 0; background: rgba(2, 6, 23, 0.98); z-index: 100; overflow-y: auto; padding: 20px; }
+
+        /* ── Modal ── */
+        .modal-container { display: none; position: fixed; inset: 0; background: rgba(2,6,23,0.98); z-index: 100; overflow-y: auto; padding: 20px; }
         .stat-sidebar { background: #0f172a; border: 1px solid #1e293b; border-radius: 20px; }
+
+        /* ── Hero summary card ── */
+        .hero-card { background: rgba(15,23,42,0.7); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; backdrop-filter: blur(12px); }
+        .hero-stat-val { font-size: 1.35rem; font-weight: 800; color: #f8fafc; letter-spacing: -0.02em; }
+        .hero-stat-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #475569; }
+
+        /* ── Skeleton loader ── */
+        @keyframes shimmer { 0%{background-position:-400px 0} 100%{background-position:400px 0} }
+        .skeleton { border-radius: 24px; height: 180px; background: linear-gradient(90deg, #0f172a 25%, #1e293b 50%, #0f172a 75%); background-size: 800px 100%; animation: shimmer 1.4s infinite; border: 1px solid #1e293b; }
+
+        /* ── Progress bar ── */
+        .progress-track { background: #1e293b; border-radius: 99px; height: 3px; overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 99px; transition: width 0.8s cubic-bezier(.4,0,.2,1); }
+
+        /* ── Prob badge ── */
+        .prob-high  { color: #34d399; font-weight: 700; }
+        .prob-mid   { color: #fbbf24; font-weight: 700; }
+        .prob-low   { color: #f87171; font-weight: 700; }
+
+        /* ── Error state ── */
+        .error-card { background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.2); border-radius: 20px; }
+
+        /* ── Last updated pill ── */
+        .updated-pill { background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.07); border-radius: 99px; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #475569; padding: 4px 12px; display: inline-flex; align-items: center; gap: 5px; }
+        .updated-dot { width: 5px; height: 5px; border-radius: 50%; background: #22c55e; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+        /* ── Refresh spinner ── */
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .spin { animation: spin 0.8s linear infinite; }
     </style>
 </head>
 <body class="p-6 md:p-12">
 
-    <div class="max-w-5xl mx-auto">
-        <header class="flex justify-between items-end mb-12 border-b border-slate-800/50 pb-6">
+<div class="max-w-5xl mx-auto">
+
+    <!-- ── Header ── -->
+    <header class="flex justify-between items-end mb-8 border-b border-slate-800/50 pb-6">
+        <div>
+            <p id="month-display" class="text-2xl font-extrabold text-white tracking-tight capitalize"></p>
+            <p class="text-[9px] font-bold tracking-[0.3em] text-slate-500 uppercase">Team Piyush | Private Banking</p>
+        </div>
+        <div class="flex flex-col items-end gap-2">
+            <p class="text-[9px] font-medium text-blue-500 tracking-widest uppercase">FY 2026-27</p>
+            <div id="last-updated" class="updated-pill" style="display:none">
+                <span class="updated-dot"></span>
+                <span id="updated-text">Live</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── HERO SUMMARY ROW ── -->
+    <div id="hero-row" class="hero-card p-6 mb-8" style="display:none">
+        <div class="flex items-center justify-between mb-5">
+            <p class="text-[9px] font-black text-blue-500 uppercase tracking-widest">Team Scorecard</p>
+            <div id="refresh-indicator" class="updated-pill" style="display:none">
+                <svg id="refresh-icon" width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="#475569" stroke-width="2.5">
+                    <path d="M4 4v5h5M16 16v-5h-5M4 9a7 7 0 0 1 12-4.9M16 11a7 7 0 0 1-12 4.9"/>
+                </svg>
+                <span id="refresh-text">Refreshing…</span>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
             <div>
-                <p id="month-display" class="text-2xl font-extrabold text-white tracking-tight capitalize"></p>
-                <p class="text-[9px] font-bold tracking-[0.3em] text-slate-500 uppercase">Team Piyush | Private Banking</p>
+                <p class="hero-stat-label mb-1">Total AUM</p>
+                <p id="h-aum" class="hero-stat-val">—</p>
+                <p class="text-[8px] text-slate-600 mt-0.5">Crores</p>
             </div>
-            <p class="text-[9px] font-medium text-blue-500 tracking-widest uppercase mb-1">FY 2026-27</p>
-        </header>
-
-        <div id="main-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    </div>
-
-    <div id="modal" class="modal-container">
-        <div class="max-w-6xl mx-auto bg-slate-900 border border-slate-800 rounded-[2rem] shadow-2xl overflow-hidden mt-6 mb-10">
-            <div class="p-6 border-b border-slate-800 flex justify-between items-center bg-slate-900/50">
-                <h2 id="modal-name" class="text-xl font-bold text-white tracking-tight uppercase"></h2>
-                <button onclick="closeModal()" class="text-slate-500 hover:text-white font-bold text-[9px] uppercase border border-slate-800 px-4 py-2 rounded-full">Close</button>
+            <div>
+                <p class="hero-stat-label mb-1">Net Mobilization</p>
+                <p id="h-netmob" class="hero-stat-val">—</p>
+                <p class="text-[8px] text-slate-600 mt-0.5">Crores</p>
             </div>
-            
-            <div class="flex flex-col lg:flex-row gap-8 p-8">
-                <div class="flex-1 space-y-10">
-                    <section>
-                        <h3 class="text-[9px] font-black text-blue-500 uppercase mb-4 tracking-widest">Monthly Plan Pipeline</h3>
-                        <table class="w-full text-xs text-left">
-                            <thead class="text-slate-600 border-b border-slate-800 uppercase font-bold text-[8px]">
-                                <tr><th class="pb-3">Client</th><th>Asset</th><th class="text-right">Amt (Cr)</th><th class="text-right">Prob %</th></tr>
-                            </thead>
-                            <tbody id="plan-rows" class="divide-y divide-slate-800/50 text-slate-300"></tbody>
-                        </table>
-                    </section>
+            <div>
+                <p class="hero-stat-label mb-1">Revenue YTD</p>
+                <p id="h-rev" class="hero-stat-val">—</p>
+                <p class="text-[8px] text-slate-600 mt-0.5">Lakhs</p>
+            </div>
+            <div>
+                <p class="hero-stat-label mb-1">Mission 50</p>
+                <p id="h-m50" class="hero-stat-val">—</p>
+                <p class="text-[8px] text-slate-600 mt-0.5">Total accounts</p>
+            </div>
+            <div>
+                <p class="hero-stat-label mb-1">SIP Book</p>
+                <p id="h-sip" class="hero-stat-val">—</p>
+                <p class="text-[8px] text-slate-600 mt-0.5">Lakhs</p>
+            </div>
+        </div>
 
-                    <section class="bg-slate-800/10 p-5 rounded-2xl border border-slate-800/50">
-                        <div class="flex justify-between items-center cursor-pointer" onclick="toggleSec('activity-content', 'activity-icon')">
-                            <h3 class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Activity & Audit Tracker</h3>
-                            <span id="activity-icon" class="text-sm text-slate-500">⊕</span>
-                        </div>
-                        <div id="activity-content" class="hidden mt-6">
-                            <table class="w-full text-xs text-left">
-                                <thead class="text-slate-500 border-b border-slate-800 text-[8px] uppercase"><tr><th class="pb-3">Parameter</th><th>Target</th><th>Actual</th></tr></thead>
-                                <tbody id="activity-rows" class="divide-y divide-slate-800/50 text-slate-300"></tbody>
-                            </table>
-                        </div>
-                    </section>
-
-                    <section class="bg-slate-800/20 p-5 rounded-2xl border border-slate-800">
-                        <div class="flex justify-between items-center cursor-pointer" onclick="toggleSec('ledger-content', 'ledger-icon')">
-                            <div>
-                                <h3 class="text-[9px] font-black text-emerald-500 uppercase tracking-widest">Net Mobilization Ledger</h3>
-                                <p class="text-[10px] text-slate-400 mt-0.5">Summary: <span id="ledger-total-preview" class="text-white font-bold"></span></p>
-                            </div>
-                            <span id="ledger-icon" class="text-sm text-slate-500">⊕</span>
-                        </div>
-                        <div id="ledger-content" class="hidden mt-6 overflow-x-auto">
-                            <table class="w-full text-[9px] text-left">
-                                <thead class="text-slate-600 border-b border-slate-800 font-bold uppercase"><tr><th class="pb-2">Client</th><th>Asset</th><th>Purchase</th><th>Redemp</th><th class="text-right">Net</th></tr></thead>
-                                <tbody id="ledger-rows" class="divide-y divide-slate-800/30 text-slate-400"></tbody>
-                            </table>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="w-full lg:w-80 space-y-6">
-                    <div class="stat-sidebar p-6">
-                        <h3 class="text-[9px] font-black text-blue-400 uppercase mb-6 tracking-widest text-center">Snapshot</h3>
-                        <div class="space-y-4">
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">AUM Actual</p><p id="stat-aum" class="text-lg font-bold text-white"></p></div>
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Revenue YTD</p><p id="stat-rev" class="text-lg font-bold text-white"></p></div>
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Net Mobilization</p><p id="stat-net" class="text-lg font-bold text-white"></p></div>
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Mission 50</p><p id="stat-m50" class="text-lg font-bold text-white"></p></div>
-                            <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">SIP Book</p><p id="stat-sip" class="text-lg font-bold text-white"></p></div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
-                        <h3 class="text-[9px] font-black text-blue-500 uppercase mb-4 tracking-widest text-center">Leverage</h3>
-                        <table class="w-full text-xs text-left">
-                            <tbody id="leverage-rows" class="divide-y divide-slate-800 text-slate-300"></tbody>
-                        </table>
-                    </div>
-                </div>
+        <!-- Team AUM progress bar -->
+        <div class="mt-6 pt-5 border-t border-slate-800/60">
+            <div class="flex justify-between items-center mb-2">
+                <p class="text-[8px] font-bold text-slate-600 uppercase tracking-widest">AUM Progress to Target</p>
+                <p id="h-aum-pct" class="text-[9px] font-bold text-blue-400">—%</p>
+            </div>
+            <div class="progress-track">
+                <div id="h-aum-bar" class="progress-fill bg-blue-500" style="width:0%"></div>
             </div>
         </div>
     </div>
 
-    <script>
-        let data = [];
-        const rmColors = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#06b6d4'];
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        document.getElementById('month-display').innerText = months[new Date().getMonth()];
+    <!-- ── SKELETON GRID ── -->
+    <div id="skeleton-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+    </div>
 
-        async function load() {
-            try {
-                const res = await fetch('data/performance.json?t=' + Date.now());
-                data = await res.json();
-                const grid = document.getElementById('main-grid');
-                grid.innerHTML = data.map((rm, i) => `
-                    <div class="glass-card p-6 rounded-3xl" style="border-top: 3px solid ${rmColors[i]}" onclick="openRM(${i})">
-                        <div class="flex justify-between items-start mb-6">
-                            <h2 class="text-sm font-bold text-white tracking-tight uppercase">${rm.name}</h2>
-                            <div class="h-1.5 w-1.5 rounded-full" style="background-color: ${rmColors[i]}"></div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">AUM</p><p class="text-xs font-bold text-white">${Number(rm.aum || 0).toFixed(2)}<span class="text-[8px] text-slate-500 ml-0.5 font-normal">Cr</span></p></div>
-                            <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">Revenue</p><p class="text-xs font-bold text-white">${Number(rm.revenue || 0).toFixed(2)}<span class="text-[8px] text-slate-500 ml-0.5 font-normal">L</span></p></div>
-                            <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">Net Mob</p><p class="text-xs font-bold text-white">${Number(rm.netMob || 0).toFixed(2)}<span class="text-[8px] text-slate-500 ml-0.5 font-normal">Cr</span></p></div>
-                            <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">M50</p><p class="text-xs font-bold text-white">${rm.m50 || 0}</p></div>
-                        </div>
+    <!-- ── ERROR STATE ── -->
+    <div id="error-state" class="error-card p-8 text-center" style="display:none">
+        <p class="text-2xl mb-2">⚠️</p>
+        <p class="text-sm font-bold text-red-400 mb-1">Couldn't load data</p>
+        <p class="text-[10px] text-slate-500 mb-4">Make sure <code class="text-slate-400 bg-slate-800 px-1 rounded">data/performance.json</code> is accessible.</p>
+        <button onclick="load()" class="text-[9px] font-bold uppercase tracking-widest border border-red-900 text-red-400 px-5 py-2 rounded-full hover:bg-red-900/20 transition">Retry</button>
+    </div>
+
+    <!-- ── MAIN GRID ── -->
+    <div id="main-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style="display:none"></div>
+</div>
+
+<!-- ── MODAL ── -->
+<div id="modal" class="modal-container">
+    <div class="max-w-6xl mx-auto bg-slate-900 border border-slate-800 rounded-[2rem] shadow-2xl overflow-hidden mt-6 mb-10">
+        <div class="p-6 border-b border-slate-800 flex justify-between items-center bg-slate-900/50">
+            <h2 id="modal-name" class="text-xl font-bold text-white tracking-tight uppercase"></h2>
+            <button onclick="closeModal()" class="text-slate-500 hover:text-white font-bold text-[9px] uppercase border border-slate-800 px-4 py-2 rounded-full transition">Close</button>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8 p-8">
+            <div class="flex-1 space-y-10">
+
+                <!-- Pipeline -->
+                <section>
+                    <h3 class="text-[9px] font-black text-blue-500 uppercase mb-4 tracking-widest">Monthly Plan Pipeline</h3>
+                    <table class="w-full text-xs text-left">
+                        <thead class="text-slate-600 border-b border-slate-800 uppercase font-bold text-[8px]">
+                            <tr><th class="pb-3">Client</th><th>Asset</th><th class="text-right">Amt (Cr)</th><th class="text-right">Prob %</th></tr>
+                        </thead>
+                        <tbody id="plan-rows" class="divide-y divide-slate-800/50 text-slate-300"></tbody>
+                    </table>
+                </section>
+
+                <!-- Activity -->
+                <section class="bg-slate-800/10 p-5 rounded-2xl border border-slate-800/50">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleSec('activity-content','activity-icon')">
+                        <h3 class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Activity & Audit Tracker</h3>
+                        <span id="activity-icon" class="text-sm text-slate-500">⊕</span>
                     </div>
-                `).join('');
-            } catch (e) { console.log("Syncing..."); }
+                    <div id="activity-content" style="display:none" class="mt-6">
+                        <table class="w-full text-xs text-left">
+                            <thead class="text-slate-500 border-b border-slate-800 text-[8px] uppercase"><tr><th class="pb-3">Parameter</th><th>Target</th><th>Actual</th></tr></thead>
+                            <tbody id="activity-rows" class="divide-y divide-slate-800/50 text-slate-300"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Ledger -->
+                <section class="bg-slate-800/20 p-5 rounded-2xl border border-slate-800">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleSec('ledger-content','ledger-icon')">
+                        <div>
+                            <h3 class="text-[9px] font-black text-emerald-500 uppercase tracking-widest">Net Mobilization Ledger</h3>
+                            <p class="text-[10px] text-slate-400 mt-0.5">Summary: <span id="ledger-total-preview" class="text-white font-bold"></span></p>
+                        </div>
+                        <span id="ledger-icon" class="text-sm text-slate-500">⊕</span>
+                    </div>
+                    <div id="ledger-content" style="display:none" class="mt-6 overflow-x-auto">
+                        <table class="w-full text-[9px] text-left">
+                            <thead class="text-slate-600 border-b border-slate-800 font-bold uppercase"><tr><th class="pb-2">Client</th><th>Asset</th><th>Purchase</th><th>Redemp</th><th class="text-right">Net</th></tr></thead>
+                            <tbody id="ledger-rows" class="divide-y divide-slate-800/30 text-slate-400"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="w-full lg:w-80 space-y-6">
+                <div class="stat-sidebar p-6">
+                    <h3 class="text-[9px] font-black text-blue-400 uppercase mb-6 tracking-widest text-center">Snapshot</h3>
+                    <div class="space-y-5">
+                        <div>
+                            <p class="text-[8px] font-bold text-slate-600 uppercase mb-1">AUM Actual</p>
+                            <p id="stat-aum" class="text-lg font-bold text-white"></p>
+                            <div class="progress-track mt-2"><div id="bar-aum" class="progress-fill bg-blue-500" style="width:0%"></div></div>
+                        </div>
+                        <div>
+                            <p class="text-[8px] font-bold text-slate-600 uppercase mb-1">Revenue YTD</p>
+                            <p id="stat-rev" class="text-lg font-bold text-white"></p>
+                            <div class="progress-track mt-2"><div id="bar-rev" class="progress-fill bg-purple-500" style="width:0%"></div></div>
+                        </div>
+                        <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Net Mobilization</p><p id="stat-net" class="text-lg font-bold text-white"></p></div>
+                        <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">Mission 50</p><p id="stat-m50" class="text-lg font-bold text-white"></p></div>
+                        <div><p class="text-[8px] font-bold text-slate-600 uppercase mb-0.5">SIP Book</p><p id="stat-sip" class="text-lg font-bold text-white"></p></div>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                    <h3 class="text-[9px] font-black text-blue-500 uppercase mb-4 tracking-widest text-center">Leverage</h3>
+                    <table class="w-full text-xs text-left">
+                        <tbody id="leverage-rows" class="divide-y divide-slate-800 text-slate-300"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let data = [];
+    let teamTargetAUM = 0; // set in JSON or default
+
+    const rmColors = ['#3b82f6','#8b5cf6','#10b981','#f59e0b','#ef4444','#06b6d4'];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    document.getElementById('month-display').innerText = months[new Date().getMonth()];
+
+    // ── Keyboard close ──
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // ── Probability color helper ──
+    function probClass(p) {
+        const n = Number(p);
+        if (n >= 70) return 'prob-high';
+        if (n >= 40) return 'prob-mid';
+        return 'prob-low';
+    }
+
+    // ── Progress bar helper (capped at 100%) ──
+    function pct(val, target) {
+        if (!target || target === 0) return 0;
+        return Math.min(100, Math.round((val / target) * 100));
+    }
+
+    // ── Hero row population ──
+    function populateHero() {
+        const totAUM    = data.reduce((s, r) => s + Number(r.aum    || 0), 0);
+        const totNetMob = data.reduce((s, r) => s + Number(r.netMob || 0), 0);
+        const totRev    = data.reduce((s, r) => s + Number(r.revenue|| 0), 0);
+        const totM50    = data.reduce((s, r) => s + Number(r.m50    || 0), 0);
+        const totSip    = data.reduce((s, r) => s + Number(r.sip    || 0), 0);
+
+        document.getElementById('h-aum').innerText    = totAUM.toFixed(2);
+        document.getElementById('h-netmob').innerText = totNetMob.toFixed(2);
+        document.getElementById('h-rev').innerText    = totRev.toFixed(2);
+        document.getElementById('h-m50').innerText    = totM50;
+        document.getElementById('h-sip').innerText    = totSip.toFixed(2);
+
+        // AUM progress — use teamTargetAUM from JSON or fall back to 2× current
+        const target = teamTargetAUM || totAUM * 2;
+        const p = pct(totAUM, target);
+        document.getElementById('h-aum-pct').innerText = p + '%';
+        document.getElementById('h-aum-bar').style.width = p + '%';
+
+        document.getElementById('hero-row').style.display = 'block';
+    }
+
+    // ── Main grid ──
+    function buildGrid() {
+        const grid = document.getElementById('main-grid');
+        // targets per RM — use rm.targets if present, else rough defaults
+        grid.innerHTML = data.map((rm, i) => {
+            const aumT = rm.targets?.aum || 0;
+            const revT = rm.targets?.revenue || 0;
+            const aumP = aumT ? pct(rm.aum, aumT) : null;
+            const revP = revT ? pct(rm.revenue, revT) : null;
+
+            const aumBar = aumP !== null ? `
+                <div class="col-span-2 mt-1">
+                    <div class="flex justify-between mb-1">
+                        <p class="text-[7px] text-slate-600 uppercase font-bold">AUM vs Target</p>
+                        <p class="text-[7px] font-bold" style="color:${rmColors[i]}">${aumP}%</p>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width:${aumP}%;background:${rmColors[i]}"></div></div>
+                </div>` : '';
+
+            const revBar = revP !== null ? `
+                <div class="col-span-2 mt-1">
+                    <div class="flex justify-between mb-1">
+                        <p class="text-[7px] text-slate-600 uppercase font-bold">Revenue vs Target</p>
+                        <p class="text-[7px] font-bold text-purple-400">${revP}%</p>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill bg-purple-500" style="width:${revP}%"></div></div>
+                </div>` : '';
+
+            return `
+            <div class="glass-card p-6 rounded-3xl" style="border-top: 3px solid ${rmColors[i]}" onclick="openRM(${i})">
+                <div class="flex justify-between items-start mb-6">
+                    <h2 class="text-sm font-bold text-white tracking-tight uppercase">${rm.name}</h2>
+                    <div class="h-1.5 w-1.5 rounded-full" style="background-color:${rmColors[i]}"></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">AUM</p><p class="text-xs font-bold text-white">${Number(rm.aum||0).toFixed(2)}<span class="text-[8px] text-slate-500 ml-0.5 font-normal">Cr</span></p></div>
+                    <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">Revenue</p><p class="text-xs font-bold text-white">${Number(rm.revenue||0).toFixed(2)}<span class="text-[8px] text-slate-500 ml-0.5 font-normal">L</span></p></div>
+                    <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">Net Mob</p><p class="text-xs font-bold text-white">${Number(rm.netMob||0).toFixed(2)}<span class="text-[8px] text-slate-500 ml-0.5 font-normal">Cr</span></p></div>
+                    <div><p class="text-[7px] text-slate-500 font-bold uppercase mb-0.5">M50</p><p class="text-xs font-bold text-white">${rm.m50||0}</p></div>
+                    ${aumBar}${revBar}
+                </div>
+            </div>`;
+        }).join('');
+
+        document.getElementById('skeleton-grid').style.display = 'none';
+        document.getElementById('main-grid').style.display = 'grid';
+    }
+
+    // ── Last updated stamp ──
+    function showUpdated(ts) {
+        const el = document.getElementById('last-updated');
+        const txt = document.getElementById('updated-text');
+        const d = ts ? new Date(ts) : new Date();
+        txt.innerText = 'Updated ' + d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+        el.style.display = 'inline-flex';
+    }
+
+    // ── Auto-refresh every 5 min ──
+    function startAutoRefresh() {
+        setInterval(() => {
+            const ind = document.getElementById('refresh-indicator');
+            const icon = document.getElementById('refresh-icon');
+            ind.style.display = 'inline-flex';
+            icon.classList.add('spin');
+            load(true);
+        }, 300000);
+    }
+
+    // ── LOAD ──
+    async function load(silent = false) {
+        if (!silent) {
+            document.getElementById('skeleton-grid').style.display = 'grid';
+            document.getElementById('main-grid').style.display = 'none';
+            document.getElementById('error-state').style.display = 'none';
+            document.getElementById('hero-row').style.display = 'none';
         }
+        try {
+            const res = await fetch('data/performance.json?t=' + Date.now());
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const json = await res.json();
 
-        function openRM(i) {
-            const rm = data[i];
-            document.getElementById('modal-name').innerText = rm.name;
-            document.getElementById('stat-aum').innerText = `${Number(rm.aum || 0).toFixed(2)} Cr`;
-            document.getElementById('stat-rev').innerText = `${Number(rm.revenue || 0).toFixed(2)} L`;
-            document.getElementById('stat-net').innerText = `${Number(rm.netMob || 0).toFixed(2)} Cr`;
-            document.getElementById('stat-m50').innerText = rm.m50 || 0;
-            document.getElementById('stat-sip').innerText = `${Number(rm.sip || 0).toFixed(2)} L`;
-            
-            // LEDGER TOTAL FIX: Use the new ledgerTotal pulled from F101
-            document.getElementById('ledger-total-preview').innerText = `₹${Number(rm.ledgerTotal || 0).toFixed(2)} Cr`;
+            // Support both array format and {teamTarget, rms:[]} format
+            if (Array.isArray(json)) {
+                data = json;
+            } else {
+                data = json.rms || json;
+                teamTargetAUM = json.teamTargetAUM || 0;
+            }
 
-            document.getElementById('plan-rows').innerHTML = rm.plan.map(p => `
-                <tr><td class="py-2 font-semibold text-white">${p.client}</td><td>${p.asset}</td><td class="text-right text-blue-400 font-mono">₹${Number(p.amt || 0).toFixed(2)}Cr</td><td class="text-right font-bold text-slate-500">${p.prob}%</td></tr>
-            `).join('');
-            document.getElementById('activity-rows').innerHTML = rm.activity.map(a => `
-                <tr><td class="py-2 text-slate-300 font-medium">${a.param}</td><td>${a.target || 0}</td><td class="text-blue-400 font-bold">${a.actual || 0}</td></tr>
-            `).join('');
-            document.getElementById('leverage-rows').innerHTML = rm.leverage.map(l => {
-                const isP = l.label.includes('%') || l.label.toLowerCase().includes('penetration');
-                return `<tr><td class="py-2 text-slate-500 uppercase text-[9px] font-bold">${l.label}</td><td class="text-right font-bold ${isP ? 'text-emerald-500' : ''}">${isP ? (Number(l.value)*100).toFixed(2)+'%' : l.value}</td></tr>`;
-            }).join('');
-            document.getElementById('ledger-rows').innerHTML = rm.ledger.map(l => `
-                <tr><td class="py-2 font-medium text-white">${l.client}</td><td>${l.asset}</td><td>${l.purchase || 0}</td><td>${l.redemption || 0}</td><td class="text-right text-emerald-400 font-bold">${l.net || 0}</td></tr>
-            `).join('');
+            populateHero();
+            buildGrid();
+            showUpdated(json.lastUpdated || null);
 
-            document.getElementById('modal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
+            // Hide refresh spinner
+            const ind = document.getElementById('refresh-indicator');
+            const icon = document.getElementById('refresh-icon');
+            setTimeout(() => { ind.style.display = 'none'; icon.classList.remove('spin'); }, 600);
+
+        } catch (e) {
+            document.getElementById('skeleton-grid').style.display = 'none';
+            document.getElementById('error-state').style.display = 'block';
+            console.error('Load failed:', e);
         }
+    }
 
-        function toggleSec(id, iconId) {
-            const el = document.getElementById(id);
-            const icon = document.getElementById(iconId);
-            const isHidden = el.style.display === 'none' || el.style.display === '';
-            el.style.display = isHidden ? 'block' : 'none';
-            icon.innerText = isHidden ? '⊖' : '⊕';
-        }
+    // ── Modal open ──
+    function openRM(i) {
+        const rm = data[i];
+        const color = rmColors[i];
 
-        function closeModal() { document.getElementById('modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
-        load();
-    </script>
+        document.getElementById('modal-name').innerText = rm.name;
+        document.getElementById('stat-aum').innerText = `${Number(rm.aum||0).toFixed(2)} Cr`;
+        document.getElementById('stat-rev').innerText = `${Number(rm.revenue||0).toFixed(2)} L`;
+        document.getElementById('stat-net').innerText = `${Number(rm.netMob||0).toFixed(2)} Cr`;
+        document.getElementById('stat-m50').innerText = rm.m50 || 0;
+        document.getElementById('stat-sip').innerText = `${Number(rm.sip||0).toFixed(2)} L`;
+        document.getElementById('ledger-total-preview').innerText = `₹${Number(rm.ledgerTotal||0).toFixed(2)} Cr`;
+
+        // Progress bars in sidebar
+        const aumT = rm.targets?.aum || 0;
+        const revT = rm.targets?.revenue || 0;
+        document.getElementById('bar-aum').style.width = aumT ? pct(rm.aum, aumT) + '%' : '0%';
+        document.getElementById('bar-rev').style.width = revT ? pct(rm.revenue, revT) + '%' : '0%';
+
+        // Pipeline with prob color-coding
+        document.getElementById('plan-rows').innerHTML = (rm.plan || []).map(p => `
+            <tr>
+                <td class="py-2 font-semibold text-white">${p.client}</td>
+                <td class="text-slate-400">${p.asset}</td>
+                <td class="text-right text-blue-400 font-mono">₹${Number(p.amt||0).toFixed(2)}Cr</td>
+                <td class="text-right ${probClass(p.prob)}">${p.prob}%</td>
+            </tr>`).join('');
+
+        // Activity
+        document.getElementById('activity-rows').innerHTML = (rm.activity || []).map(a => `
+            <tr>
+                <td class="py-2 text-slate-300 font-medium">${a.param}</td>
+                <td class="text-slate-400">${a.target||0}</td>
+                <td class="text-blue-400 font-bold">${a.actual||0}</td>
+            </tr>`).join('');
+
+        // Leverage
+        document.getElementById('leverage-rows').innerHTML = (rm.leverage || []).map(l => {
+            const isP = l.label.includes('%') || l.label.toLowerCase().includes('penetration');
+            return `<tr><td class="py-2 text-slate-500 uppercase text-[9px] font-bold">${l.label}</td><td class="text-right font-bold ${isP?'text-emerald-500':''}">${isP?(Number(l.value)*100).toFixed(2)+'%':l.value}</td></tr>`;
+        }).join('');
+
+        // Ledger
+        document.getElementById('ledger-rows').innerHTML = (rm.ledger || []).map(l => `
+            <tr>
+                <td class="py-2 font-medium text-white">${l.client}</td>
+                <td class="text-slate-500">${l.asset}</td>
+                <td class="text-slate-400">${l.purchase||0}</td>
+                <td class="text-slate-400">${l.redemption||0}</td>
+                <td class="text-right text-emerald-400 font-bold">${l.net||0}</td>
+            </tr>`).join('');
+
+        // Reset collapsibles
+        document.getElementById('activity-content').style.display = 'none';
+        document.getElementById('activity-icon').innerText = '⊕';
+        document.getElementById('ledger-content').style.display = 'none';
+        document.getElementById('ledger-icon').innerText = '⊕';
+
+        document.getElementById('modal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function toggleSec(id, iconId) {
+        const el = document.getElementById(id);
+        const icon = document.getElementById(iconId);
+        const open = el.style.display === 'block';
+        el.style.display = open ? 'none' : 'block';
+        icon.innerText = open ? '⊕' : '⊖';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    load();
+    startAutoRefresh();
+</script>
 </body>
 </html>
