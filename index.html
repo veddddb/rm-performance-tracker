@@ -4,702 +4,754 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Team Piyush | Private Banking</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:       #09090b;
-  --surface:  #111113;
-  --border:   #1f1f23;
-  --border2:  #2a2a30;
-  --text:     #fafafa;
-  --muted:    #71717a;
-  --muted2:   #3f3f46;
-  --blue:     #3b82f6;
-  --blue-dim: rgba(59,130,246,0.12);
-  --green:    #22c55e;
-  --green-dim:rgba(34,197,94,0.12);
-  --amber:    #f59e0b;
-  --amber-dim:rgba(245,158,11,0.12);
-  --red:      #ef4444;
-  --red-dim:  rgba(239,68,68,0.1);
-  --purple:   #a855f7;
-  --cyan:     #06b6d4;
+  --bg:       #08080d;
+  --s1:       #101018;
+  --s2:       #16161f;
+  --s3:       #1d1d28;
+  --b1:       #1f1f2e;
+  --b2:       #2a2a3c;
+  --b3:       #363650;
+  --text:     #eeeef5;
+  --sub:      #8888a8;
+  --muted:    #484868;
+  --blue:     #5b8ef0;
+  --blue-d:   rgba(91,142,240,.12);
+  --green:    #3dd68c;
+  --green-d:  rgba(61,214,140,.1);
+  --amber:    #f0a840;
+  --amber-d:  rgba(240,168,64,.1);
+  --red:      #f06060;
+  --red-d:    rgba(240,96,96,.1);
+  --purple:   #a87ef0;
+  --cyan:     #38c8f0;
+  --r:        10px;
+  --r2:       14px;
+  --sidebar-w: 230px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
-/* ── Layout ── */
-.shell{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
-.sidebar{background:var(--surface);border-right:1px solid var(--border);padding:28px 20px;display:flex;flex-direction:column;gap:32px;position:sticky;top:0;height:100vh;overflow-y:auto}
-.main{padding:32px 36px;overflow-x:hidden}
-/* ── Sidebar ── */
-.brand{display:flex;flex-direction:column;gap:4px}
-.brand-title{font-size:13px;font-weight:600;letter-spacing:0.02em;color:var(--text)}
-.brand-sub{font-size:10px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase}
-.nav-section{display:flex;flex-direction:column;gap:2px}
-.nav-label{font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted2);padding:0 8px;margin-bottom:4px}
-.nav-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;font-size:12px;color:var(--muted);cursor:pointer;transition:.15s;border:none;background:none;width:100%;text-align:left}
-.nav-item:hover{background:var(--border);color:var(--text)}
-.nav-item.active{background:var(--blue-dim);color:var(--blue)}
-.nav-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.sidebar-footer{margin-top:auto;display:flex;flex-direction:column;gap:8px}
-.live-badge{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--muted);padding:6px 10px;border-radius:8px;background:var(--border)}
-.live-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-/* ── Header ── */
-.page-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
-.page-title{font-size:22px;font-weight:600;letter-spacing:-0.02em}
-.page-month{font-size:11px;color:var(--muted);margin-top:3px}
-.header-actions{display:flex;gap:8px;align-items:center}
-.chip{font-size:10px;font-weight:500;padding:5px 12px;border-radius:99px;border:1px solid var(--border2);color:var(--muted);letter-spacing:0.05em}
-.chip.blue{border-color:rgba(59,130,246,0.3);color:var(--blue);background:var(--blue-dim)}
-/* ── Scorecard strip ── */
-.scorecard{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:28px}
-.sc-cell{background:var(--surface);padding:18px 20px;display:flex;flex-direction:column;gap:4px}
-.sc-label{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
-.sc-val{font-size:20px;font-weight:600;letter-spacing:-0.02em;font-family:'DM Mono',monospace}
-.sc-sub{font-size:10px;color:var(--muted)}
-.sc-bar-track{height:2px;background:var(--border2);border-radius:2px;margin-top:8px;overflow:hidden}
-.sc-bar-fill{height:100%;border-radius:2px;transition:width 1s cubic-bezier(.4,0,.2,1)}
-/* ── RM Grid ── */
-.section-title{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-.rm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px}
-.rm-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
-.rm-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
-.rm-card:hover{border-color:var(--border2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,0.4)}
-.rm-name{font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center}
-.rm-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.rm-stat-label{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:2px}
-.rm-stat-val{font-size:13px;font-weight:600;font-family:'DM Mono',monospace}
-.rm-stat-unit{font-size:9px;color:var(--muted);font-family:'DM Sans',sans-serif;margin-left:2px}
-.rm-progress{margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
-.prog-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
-.prog-label{font-size:8px;color:var(--muted);font-weight:500}
-.prog-pct{font-size:9px;font-weight:600;font-family:'DM Mono',monospace}
-.prog-track{height:2px;background:var(--border2);border-radius:2px;overflow:hidden}
-.prog-fill{height:100%;border-radius:2px;transition:width 1s cubic-bezier(.4,0,.2,1)}
-/* ── Skeleton ── */
-@keyframes shimmer{0%{opacity:.4}50%{opacity:.8}100%{opacity:.4}}
-.skel{border-radius:14px;height:200px;background:var(--surface);border:1px solid var(--border);animation:shimmer 1.6s infinite}
-/* ── Error ── */
-.error-box{background:var(--red-dim);border:1px solid rgba(239,68,68,0.2);border-radius:14px;padding:40px;text-align:center}
-/* ── Modal ── */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(9,9,11,0.96);z-index:200;overflow-y:auto;padding:24px}
-.modal-box{max-width:1100px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;margin-top:12px;margin-bottom:24px}
-.modal-header{padding:22px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.modal-title{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase}
-.modal-close{font-size:9px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border2);padding:6px 14px;border-radius:99px;cursor:pointer;background:none;transition:.15s}
-.modal-close:hover{color:var(--text);border-color:var(--border2)}
-.modal-body{display:grid;grid-template-columns:1fr 300px;gap:0}
-.modal-left{padding:28px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:28px}
-.modal-right{padding:24px;display:flex;flex-direction:column;gap:16px}
-/* ── Actual vs Target table ── */
-.avt-table{width:100%;border-collapse:collapse}
-.avt-table td,.avt-table th{padding:10px 0;font-size:11px}
-.avt-table th{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding-bottom:10px;border-bottom:1px solid var(--border)}
-.avt-metric{font-weight:500;color:var(--text)}
-.avt-target{font-family:'DM Mono',monospace;color:var(--muted);font-size:11px}
-.avt-actual{font-family:'DM Mono',monospace;font-weight:600;font-size:12px}
-.avt-pct{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px}
-.avt-bar-cell{width:80px}
-.avt-row{border-bottom:1px solid var(--border)}
-/* ── Section headers ── */
-.modal-section-title{font-size:9px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
-/* ── Pipeline table ── */
-.pipe-table{width:100%;border-collapse:collapse;font-size:11px}
-.pipe-table th{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--border);text-align:left}
-.pipe-table td{padding:9px 0;border-bottom:1px solid var(--border)}
-.pipe-table tr:last-child td{border-bottom:none}
-.prob-pill{display:inline-block;font-size:9px;font-weight:600;font-family:'DM Mono',monospace;padding:2px 8px;border-radius:4px}
-.prob-high{background:var(--green-dim);color:var(--green)}
-.prob-mid{background:var(--amber-dim);color:var(--amber)}
-.prob-low{background:var(--red-dim);color:var(--red)}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; }
+
+/* ── Top header bar ── */
+.topbar {
+  height: 52px;
+  background: var(--s1);
+  border-bottom: 1px solid var(--b1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  flex-shrink: 0;
+  z-index: 10;
+}
+.topbar-brand { display: flex; align-items: baseline; gap: 10px; }
+.topbar-brand-name { font-size: 13px; font-weight: 600; letter-spacing: .02em; color: var(--text); }
+.topbar-brand-sub  { font-size: 9px;  font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.topbar-right { display: flex; align-items: center; gap: 10px; }
+.chip { font-size: 9px; font-weight: 600; padding: 4px 11px; border-radius: 99px; letter-spacing: .08em; text-transform: uppercase; }
+.chip-blue  { background: var(--blue-d);  color: var(--blue);  border: 1px solid rgba(91,142,240,.25); }
+.chip-muted { background: var(--s2);      color: var(--sub);   border: 1px solid var(--b1); }
+.live-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; display: inline-block; margin-right: 5px; vertical-align: middle; }
+
+/* ── Main layout: sidebar + workspace ── */
+.workspace {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Left sidebar: RM list ── */
+.rm-sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--s1);
+  border-right: 1px solid var(--b1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.rm-sidebar-header {
+  padding: 16px 16px 10px;
+  border-bottom: 1px solid var(--b1);
+  flex-shrink: 0;
+}
+.rm-sidebar-label {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+/* Team scorecard mini */
+.mini-scorecard { display: flex; flex-direction: column; gap: 6px; }
+.mini-sc-row { display: flex; justify-content: space-between; align-items: center; }
+.mini-sc-label { font-size: 9px; color: var(--muted); }
+.mini-sc-val   { font-size: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--sub); }
+
+/* RM list */
+.rm-list { flex: 1; overflow-y: auto; padding: 8px; }
+.rm-list::-webkit-scrollbar { width: 3px; }
+.rm-list::-webkit-scrollbar-track { background: transparent; }
+.rm-list::-webkit-scrollbar-thumb { background: var(--b2); border-radius: 3px; }
+.rm-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: background .15s;
+  border: 1px solid transparent;
+  margin-bottom: 2px;
+}
+.rm-item:hover  { background: var(--s2); }
+.rm-item.active { background: var(--s3); border-color: var(--b2); }
+.rm-color-dot   { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.rm-item-info   { flex: 1; min-width: 0; }
+.rm-item-name   { font-size: 11px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rm-item-aum    { font-size: 9px; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-top: 1px; }
+.rm-item-pct    { font-size: 9px; font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+
+/* ── Detail panel ── */
+.detail-panel {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--bg);
+}
+.detail-panel::-webkit-scrollbar { width: 4px; }
+.detail-panel::-webkit-scrollbar-track { background: transparent; }
+.detail-panel::-webkit-scrollbar-thumb { background: var(--b2); border-radius: 4px; }
+
+/* Empty / skeleton state */
+.detail-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 12px;
+  color: var(--muted);
+}
+.detail-empty-icon { font-size: 32px; opacity: .4; }
+.detail-empty-text { font-size: 12px; }
+
+/* ── Detail inner layout ── */
+.detail-inner {
+  padding: 28px 32px;
+  max-width: 1100px;
+  display: none;
+}
+.detail-inner.visible { display: block; }
+
+/* Detail header */
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--b1);
+}
+.detail-rm-name    { font-size: 18px; font-weight: 600; letter-spacing: -.02em; }
+.detail-rm-sub     { font-size: 10px; color: var(--muted); margin-top: 4px; font-family: 'JetBrains Mono', monospace; }
+.detail-header-kpis { display: flex; gap: 20px; }
+.hkpi { text-align: right; }
+.hkpi-l { font-size: 8px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.hkpi-v { font-size: 16px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+.hkpi-u { font-size: 9px; color: var(--muted); margin-left: 2px; font-family: 'Inter', sans-serif; }
+
+/* ── Two-column grid inside detail ── */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.detail-col { display: flex; flex-direction: column; gap: 20px; }
+
+/* ── Section card ── */
+.sec-card {
+  background: var(--s1);
+  border: 1px solid var(--b1);
+  border-radius: var(--r2);
+  overflow: hidden;
+}
+.sec-card-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--b1);
+  background: var(--s2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec-card-title {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--sub);
+}
+.sec-card-body { padding: 16px 18px; }
+
+/* ── Journey table ── */
+.jtable { width: 100%; border-collapse: collapse; }
+.jtable th {
+  font-size: 8px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .1em; color: var(--muted);
+  padding: 0 0 10px; border-bottom: 1px solid var(--b1); text-align: left;
+}
+.jtable th.r { text-align: right; }
+.jtable td { padding: 10px 0; border-bottom: 1px solid var(--b1); vertical-align: middle; }
+.jtable tr:last-child td { border-bottom: none; }
+.j-metric   { font-size: 12px; font-weight: 500; }
+.j-mono     { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--sub); }
+.j-rr       { font-size: 8px; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-top: 2px; }
+.j-actual   { font-size: 15px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+.j-pill     { display: inline-block; font-size: 9px; font-weight: 600; font-family: 'JetBrains Mono', monospace; padding: 3px 8px; border-radius: 5px; }
+.j-bar-wrap { min-width: 80px; }
+.j-bar-track{ height: 3px; background: var(--b2); border-radius: 2px; overflow: hidden; margin-bottom: 3px; }
+.j-bar-fill { height: 100%; border-radius: 2px; transition: width 1.2s cubic-bezier(.4,0,.2,1); }
+.j-newrr    { font-size: 8px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.r { text-align: right; }
+
+/* ── Plan table ── */
+.ptable { width: 100%; border-collapse: collapse; font-size: 11px; }
+.ptable th { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 6px 10px 0; border-bottom: 1px solid var(--b1); text-align: right; }
+.ptable th:first-child { text-align: left; }
+.ptable td { padding: 9px 6px 9px 0; border-bottom: 1px solid var(--b1); color: var(--sub); text-align: right; }
+.ptable td:first-child { text-align: left; color: var(--text); font-weight: 500; }
+.ptable tr:last-child td { border-bottom: none; }
+.ptable td.mono { font-family: 'JetBrains Mono', monospace; }
+.ptable tfoot td { font-weight: 600; color: var(--text); font-family: 'JetBrains Mono', monospace; border-top: 1px solid var(--b2); padding-top: 10px; border-bottom: none; }
+.prob-pill { display: inline-block; font-size: 9px; font-weight: 600; font-family: 'JetBrains Mono', monospace; padding: 2px 8px; border-radius: 4px; }
+.p-hi { background: var(--green-d); color: var(--green); }
+.p-md { background: var(--amber-d); color: var(--amber); }
+.p-lo { background: var(--red-d);   color: var(--red);   }
+
+/* ── Activity table ── */
+.atable { width: 100%; border-collapse: collapse; font-size: 11px; }
+.atable th { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 6px 10px 0; border-bottom: 1px solid var(--b1); text-align: right; }
+.atable th:first-child { text-align: left; }
+.atable td { padding: 8px 6px 8px 0; border-bottom: 1px solid var(--b1); color: var(--sub); text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+.atable td:first-child { text-align: left; font-family: 'Inter', sans-serif; color: var(--text); font-weight: 500; font-size: 11px; }
+.atable tr:last-child td { border-bottom: none; }
+.gap-neg { color: var(--red); }
+.gap-pos { color: var(--green); }
+.gap-zero{ color: var(--muted); }
+
 /* ── Collapsible ── */
-.collapsible-header{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:12px 0;border-bottom:1px solid var(--border)}
-.collapsible-title{font-size:9px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
-.collapsible-icon{font-size:14px;color:var(--muted2);transition:.2s}
-.collapsible-body{display:none;padding-top:14px}
-/* ── Ledger ── */
-.month-filter{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.month-pill{font-size:9px;font-weight:500;padding:3px 10px;border-radius:99px;border:1px solid var(--border2);color:var(--muted);cursor:pointer;background:none;transition:.15s;font-family:'DM Sans',sans-serif}
-.month-pill:hover{border-color:var(--border2);color:var(--text)}
-.month-pill.active{border-color:rgba(59,130,246,0.5);color:var(--blue);background:var(--blue-dim)}
-.ledger-table{width:100%;border-collapse:collapse;font-size:10px}
-.ledger-table th{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--border);text-align:left}
-.ledger-table td{padding:7px 0;border-bottom:1px solid var(--border);color:#a1a1aa}
-.ledger-table tr:last-child td{border-bottom:none}
-.ledger-subtotal{font-weight:600;color:var(--text) !important;border-top:1px solid var(--border2) !important;padding-top:10px !important}
-/* ── Sidebar stats ── */
-.snapshot-stat{display:flex;flex-direction:column;gap:3px;padding:12px;background:var(--bg);border-radius:10px;border:1px solid var(--border)}
-.snap-label{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
-.snap-val{font-size:16px;font-weight:600;font-family:'DM Mono',monospace}
-.snap-track{height:2px;background:var(--border2);border-radius:2px;margin-top:6px;overflow:hidden}
-.snap-fill{height:100%;border-radius:2px;transition:width 1s cubic-bezier(.4,0,.2,1)}
-/* ── Leverage ── */
-.lev-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:11px}
-.lev-row:last-child{border-bottom:none}
-.lev-label{color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:0.08em}
-.lev-val{font-family:'DM Mono',monospace;font-weight:600;font-size:12px}
-/* ── Analytics strip ── */
-.analytics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}
-.anal-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px}
-.anal-title{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:14px}
-.anal-rm-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.anal-rm-name{font-size:10px;color:var(--muted);width:80px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.anal-bar-wrap{flex:1;height:4px;background:var(--border2);border-radius:2px;overflow:hidden}
-.anal-bar{height:100%;border-radius:2px;transition:width 1s cubic-bezier(.4,0,.2,1)}
-.anal-val{font-size:9px;font-family:'DM Mono',monospace;color:var(--muted);width:44px;text-align:right;flex-shrink:0}
-/* ── Utils ── */
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-@keyframes spin{to{transform:rotate(360deg)}}
-.spin{animation:spin .8s linear infinite}
-@media(max-width:900px){
-  .shell{grid-template-columns:1fr}
-  .sidebar{display:none}
-  .rm-grid{grid-template-columns:1fr 1fr}
-  .scorecard{grid-template-columns:repeat(3,1fr)}
-  .modal-body{grid-template-columns:1fr}
-  .analytics-grid{grid-template-columns:1fr}
+.collap-head {
+  display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; padding: 14px 18px; background: var(--s2);
+  border-top: 1px solid var(--b1); user-select: none; transition: background .15s;
 }
-@media(max-width:600px){
-  .rm-grid{grid-template-columns:1fr}
-  .scorecard{grid-template-columns:1fr 1fr}
-  .main{padding:20px 16px}
+.collap-head:hover { background: var(--s3); }
+.collap-head-title { font-size: 9px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--sub); }
+.collap-icon { font-size: 14px; color: var(--muted); line-height: 1; }
+.collap-body { display: none; padding: 16px 18px; }
+
+/* ── Ledger ── */
+.month-filter { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+.mpill {
+  font-size: 9px; font-weight: 500; padding: 3px 10px;
+  border-radius: 99px; border: 1px solid var(--b2); color: var(--sub);
+  cursor: pointer; background: none; transition: .15s; font-family: 'Inter', sans-serif;
+}
+.mpill:hover { color: var(--text); border-color: var(--b3); }
+.mpill.on { border-color: rgba(91,142,240,.4); color: var(--blue); background: var(--blue-d); }
+.ltable { width: 100%; border-collapse: collapse; font-size: 10px; }
+.ltable th { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 0 8px; border-bottom: 1px solid var(--b1); text-align: right; }
+.ltable th:first-child,.ltable th:nth-child(2) { text-align: left; }
+.ltable td { padding: 7px 0; border-bottom: 1px solid var(--b1); color: var(--sub); text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+.ltable td:first-child { text-align: left; font-family: 'Inter', sans-serif; color: var(--text); }
+.ltable td:nth-child(2) { text-align: left; }
+.ltable tr:last-child td { border-bottom: none; }
+.ltable .tot-row td { font-weight: 600; color: var(--text); border-top: 1px solid var(--b2); padding-top: 10px; border-bottom: none; }
+
+/* ── Sidebar stats (right col) ── */
+.snap-list { display: flex; flex-direction: column; gap: 10px; }
+.snap-item { display: flex; flex-direction: column; gap: 3px; }
+.snap-l { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.snap-row { display: flex; justify-content: space-between; align-items: baseline; }
+.snap-v { font-size: 16px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+.snap-pct { font-size: 9px; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.snap-bar { height: 2px; background: var(--b2); border-radius: 2px; overflow: hidden; margin-top: 4px; }
+.snap-fill { height: 100%; border-radius: 2px; transition: width 1.2s cubic-bezier(.4,0,.2,1); }
+.lev-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--b1); font-size: 10px; }
+.lev-row:last-child { border-bottom: none; }
+.lev-l { font-size: 9px; color: var(--sub); }
+.lev-v { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 11px; }
+
+/* ── Error / skeleton ── */
+@keyframes shimmer { 0%,100%{opacity:.25} 50%{opacity:.5} }
+.skel { border-radius: var(--r); height: 48px; background: var(--s2); animation: shimmer 1.6s infinite; margin-bottom: 4px; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+@keyframes spin   { to{transform:rotate(360deg)} }
+.spin { animation: spin .8s linear infinite; }
+
+/* ── Responsive ── */
+@media(max-width:780px){
+  :root { --sidebar-w: 180px; }
+  .detail-grid { grid-template-columns: 1fr; }
+  .detail-header { flex-direction: column; gap: 14px; }
+  .detail-header-kpis { flex-wrap: wrap; }
+}
+@media(max-width:560px){
+  .workspace { flex-direction: column; }
+  .rm-sidebar { width: 100%; height: 200px; border-right: none; border-bottom: 1px solid var(--b1); }
+  .rm-list { flex-direction: row; display: flex; overflow-x: auto; padding: 8px; }
+  .rm-item { flex-direction: column; gap: 4px; min-width: 100px; }
+  html, body { overflow: auto; }
+  .detail-panel { overflow: visible; }
 }
 </style>
 </head>
 <body>
-<div class="shell">
 
-  <!-- ── Sidebar ── -->
-  <aside class="sidebar">
-    <div class="brand">
-      <div class="brand-title">Team Piyush</div>
-      <div class="brand-sub">Private Banking · FY 2026–27</div>
-    </div>
-
-    <div class="nav-section">
-      <div class="nav-label">Views</div>
-      <button class="nav-item active" onclick="setView('overview')">
-        <span style="font-size:12px">▦</span> Overview
-      </button>
-      <button class="nav-item" onclick="setView('pipeline')">
-        <span style="font-size:12px">◈</span> Pipeline
-      </button>
-      <button class="nav-item" onclick="setView('activity')">
-        <span style="font-size:12px">◎</span> Activity
-      </button>
-    </div>
-
-    <div class="nav-section">
-      <div class="nav-label">Team</div>
-      <div id="sidebar-rm-list"></div>
-    </div>
-
-    <div class="sidebar-footer">
-      <div class="live-badge">
-        <span class="live-dot"></span>
-        <span id="sidebar-updated">Loading…</span>
-      </div>
-      <button onclick="load(true)" style="font-size:9px;color:var(--muted);background:none;border:1px solid var(--border);border-radius:8px;padding:6px 10px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em">↺ Refresh</button>
-    </div>
-  </aside>
-
-  <!-- ── Main ── -->
-  <main class="main">
-
-    <!-- Header -->
-    <div class="page-header">
-      <div>
-        <div class="page-title" id="page-title-text">Dashboard</div>
-        <div class="page-month" id="month-display"></div>
-      </div>
-      <div class="header-actions">
-        <div class="chip blue" id="fy-chip">FY 2026–27</div>
-        <div class="chip" id="rm-count-chip"></div>
-      </div>
-    </div>
-
-    <!-- Team Scorecard -->
-    <div class="scorecard" id="scorecard" style="display:none">
-      <div class="sc-cell">
-        <div class="sc-label">Total AUM</div>
-        <div class="sc-val" id="sc-aum">—</div>
-        <div class="sc-sub">Crores</div>
-        <div class="sc-bar-track"><div class="sc-bar-fill" id="sc-aum-bar" style="background:var(--blue);width:0%"></div></div>
-      </div>
-      <div class="sc-cell">
-        <div class="sc-label">Net Mobilization</div>
-        <div class="sc-val" id="sc-netmob">—</div>
-        <div class="sc-sub">Crores</div>
-        <div class="sc-bar-track"><div class="sc-bar-fill" id="sc-netmob-bar" style="background:var(--green);width:0%"></div></div>
-      </div>
-      <div class="sc-cell">
-        <div class="sc-label">Revenue YTD</div>
-        <div class="sc-val" id="sc-rev">—</div>
-        <div class="sc-sub">Lakhs</div>
-        <div class="sc-bar-track"><div class="sc-bar-fill" id="sc-rev-bar" style="background:var(--purple);width:0%"></div></div>
-      </div>
-      <div class="sc-cell">
-        <div class="sc-label">Mission 50</div>
-        <div class="sc-val" id="sc-m50">—</div>
-        <div class="sc-sub">Total accounts</div>
-      </div>
-      <div class="sc-cell">
-        <div class="sc-label">SIP Book</div>
-        <div class="sc-val" id="sc-sip">—</div>
-        <div class="sc-sub">Lakhs</div>
-      </div>
-    </div>
-
-    <!-- Analytics Strip -->
-    <div class="analytics-grid" id="analytics-grid" style="display:none">
-      <!-- AUM Rank -->
-      <div class="anal-card">
-        <div class="anal-title">AUM Ranking</div>
-        <div id="anal-aum"></div>
-      </div>
-      <!-- Pipeline weighted -->
-      <div class="anal-card">
-        <div class="anal-title">Probability-Weighted Pipeline</div>
-        <div id="anal-pipeline"></div>
-      </div>
-      <!-- Activity hit rate -->
-      <div class="anal-card">
-        <div class="anal-title">Activity Completion Rate</div>
-        <div id="anal-activity"></div>
-      </div>
-    </div>
-
-    <!-- Skeleton -->
-    <div id="skeleton-grid" class="rm-grid">
-      <div class="skel"></div><div class="skel"></div><div class="skel"></div>
-      <div class="skel"></div><div class="skel"></div><div class="skel"></div>
-    </div>
-
-    <!-- Error -->
-    <div id="error-state" class="error-box" style="display:none">
-      <div style="font-size:24px;margin-bottom:8px">⚠</div>
-      <div style="font-size:13px;font-weight:600;color:var(--red);margin-bottom:4px">Couldn't load data</div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:16px">Check that <code style="background:var(--border);padding:2px 6px;border-radius:4px">data/performance.json</code> is accessible.</div>
-      <button onclick="load()" style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;border:1px solid rgba(239,68,68,0.3);color:var(--red);padding:7px 18px;border-radius:99px;cursor:pointer;background:none">Retry</button>
-    </div>
-
-    <!-- RM Grid -->
-    <div id="rm-grid" class="rm-grid" style="display:none"></div>
-  </main>
-</div>
-
-<!-- ── Modal ── -->
-<div id="modal" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div>
-        <div class="modal-title" id="modal-name"></div>
-        <div style="font-size:10px;color:var(--muted);margin-top:3px" id="modal-sub"></div>
-      </div>
-      <button class="modal-close" onclick="closeModal()">Close ✕</button>
-    </div>
-    <div class="modal-body">
-      <!-- Left -->
-      <div class="modal-left">
-
-        <!-- Actual vs Target -->
-        <div>
-          <div class="modal-section-title">FY 2026–27 · Actual vs Annual Target</div>
-          <table class="avt-table">
-            <thead>
-              <tr>
-                <th>Metric</th>
-                <th>Target</th>
-                <th>Actual</th>
-                <th>vs Target</th>
-                <th class="avt-bar-cell"></th>
-              </tr>
-            </thead>
-            <tbody id="avt-rows"></tbody>
-          </table>
-        </div>
-
-        <!-- Pipeline -->
-        <div>
-          <div class="modal-section-title">Monthly Plan Pipeline</div>
-          <table class="pipe-table">
-            <thead>
-              <tr><th>Client</th><th>Asset</th><th style="text-align:right">Amt (Cr)</th><th style="text-align:right">Probability</th><th style="text-align:right">Wtd Amt</th></tr>
-            </thead>
-            <tbody id="plan-rows"></tbody>
-          </table>
-          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:10px;color:var(--muted)">
-            <span>Weighted pipeline total</span>
-            <span id="plan-weighted-total" style="font-family:'DM Mono',monospace;font-weight:600;color:var(--text)"></span>
-          </div>
-        </div>
-
-        <!-- Activity -->
-        <div>
-          <div class="collapsible-header" onclick="toggleSec('activity-body','activity-ico')">
-            <div class="collapsible-title">Activity & Audit Tracker</div>
-            <span class="collapsible-icon" id="activity-ico">+</span>
-          </div>
-          <div class="collapsible-body" id="activity-body">
-            <table style="width:100%;border-collapse:collapse;font-size:11px">
-              <thead><tr>
-                <th style="font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--border);text-align:left">Parameter</th>
-                <th style="font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--border);text-align:right">Target</th>
-                <th style="font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--border);text-align:right">Actual</th>
-                <th style="font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--border);text-align:right">Hit%</th>
-              </tr></thead>
-              <tbody id="activity-rows"></tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Ledger -->
-        <div>
-          <div class="collapsible-header" onclick="toggleSec('ledger-body','ledger-ico')">
-            <div class="collapsible-title">Net Mobilization Ledger</div>
-            <span class="collapsible-icon" id="ledger-ico">+</span>
-          </div>
-          <div class="collapsible-body" id="ledger-body">
-            <div class="month-filter" id="ledger-month-filter"></div>
-            <div style="overflow-x:auto">
-              <table class="ledger-table">
-                <thead><tr><th>Client</th><th>Asset</th><th>Purchase</th><th>Redemp</th><th style="text-align:right">Net</th></tr></thead>
-                <tbody id="ledger-rows"></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right sidebar -->
-      <div class="modal-right">
-        <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-bottom:4px">Snapshot</div>
-        <div id="snapshot-stats"></div>
-
-        <div style="margin-top:8px">
-          <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-bottom:10px">Leverage</div>
-          <div id="leverage-rows"></div>
-        </div>
-      </div>
-    </div>
+<!-- ── Top bar ── -->
+<div class="topbar">
+  <div class="topbar-brand">
+    <span class="topbar-brand-name">Team Piyush</span>
+    <span class="topbar-brand-sub">Private Banking</span>
+  </div>
+  <div class="topbar-right">
+    <span class="chip chip-blue">FY 2026–27</span>
+    <span class="chip chip-muted" id="updated-chip">
+      <span class="live-dot"></span>Loading…
+    </span>
   </div>
 </div>
 
+<!-- ── Workspace ── -->
+<div class="workspace">
+
+  <!-- Left: RM sidebar -->
+  <div class="rm-sidebar">
+    <div class="rm-sidebar-header">
+      <div class="rm-sidebar-label">Team Overview</div>
+      <div class="mini-scorecard" id="mini-scorecard">
+        <!-- populated by JS -->
+      </div>
+    </div>
+    <div class="rm-list" id="rm-list">
+      <!-- skeleton -->
+      <div class="skel"></div>
+      <div class="skel"></div>
+      <div class="skel"></div>
+      <div class="skel"></div>
+      <div class="skel"></div>
+      <div class="skel"></div>
+    </div>
+  </div>
+
+  <!-- Right: Detail panel -->
+  <div class="detail-panel" id="detail-panel">
+
+    <!-- Empty state -->
+    <div class="detail-empty" id="detail-empty">
+      <div class="detail-empty-icon">◎</div>
+      <div class="detail-empty-text">Select an RM to view their dashboard</div>
+    </div>
+
+    <!-- Error state -->
+    <div class="detail-empty" id="err-state" style="display:none">
+      <div style="font-size:13px;color:var(--red);font-weight:600">⚠ Couldn't load data</div>
+      <div style="font-size:11px">Check that <code style="background:var(--s2);padding:2px 6px;border-radius:4px">data/performance.json</code> is accessible.</div>
+      <button onclick="load()" style="margin-top:8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;border:1px solid rgba(240,96,96,.3);color:var(--red);padding:6px 16px;border-radius:99px;cursor:pointer;background:none">Retry</button>
+    </div>
+
+    <!-- Detail content -->
+    <div class="detail-inner" id="detail-inner">
+
+      <!-- Header -->
+      <div class="detail-header">
+        <div>
+          <div class="detail-rm-name" id="d-name"></div>
+          <div class="detail-rm-sub"  id="d-sub"></div>
+        </div>
+        <div class="detail-header-kpis" id="d-hkpis"></div>
+      </div>
+
+      <!-- Two-column grid -->
+      <div class="detail-grid">
+
+        <!-- Left column: journey + plan + activity + ledger -->
+        <div class="detail-col">
+
+          <!-- Annual Journey -->
+          <div class="sec-card">
+            <div class="sec-card-header">
+              <span class="sec-card-title">FY 2026–27 · Annual Journey</span>
+            </div>
+            <div class="sec-card-body" style="padding:0 18px">
+              <table class="jtable">
+                <thead>
+                  <tr>
+                    <th style="width:90px">Metric</th>
+                    <th>Annual Target<br><span style="font-weight:400;letter-spacing:0;text-transform:none;color:var(--muted)">Monthly RR</span></th>
+                    <th class="r">YTD Actual</th>
+                    <th class="r">vs Target</th>
+                    <th style="width:110px">Progress</th>
+                    <th class="r">New RR</th>
+                  </tr>
+                </thead>
+                <tbody id="j-rows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Monthly Plan -->
+          <div class="sec-card">
+            <div class="sec-card-header">
+              <span class="sec-card-title" id="plan-title">Monthly Plan</span>
+              <span style="font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace" id="plan-weighted-badge"></span>
+            </div>
+            <div class="sec-card-body" style="padding:0 18px">
+              <table class="ptable">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Asset</th>
+                    <th>Exp Amt</th>
+                    <th>Exp Redemption</th>
+                    <th>Net Plan</th>
+                    <th>Prob</th>
+                  </tr>
+                </thead>
+                <tbody id="p-rows"></tbody>
+                <tfoot id="p-foot"></tfoot>
+              </table>
+            </div>
+          </div>
+
+          <!-- Activity (collapsible) -->
+          <div class="sec-card">
+            <div class="collap-head" onclick="toggleSec('act-body','act-ico')">
+              <span class="collap-head-title">Monthly Activity Tracker</span>
+              <span class="collap-icon" id="act-ico">+</span>
+            </div>
+            <div class="collap-body" id="act-body">
+              <table class="atable">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Monthly Target</th>
+                    <th>Actual MTD</th>
+                    <th>Gap</th>
+                  </tr>
+                </thead>
+                <tbody id="act-rows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Ledger (collapsible) -->
+          <div class="sec-card">
+            <div class="collap-head" onclick="toggleSec('led-body','led-ico')">
+              <span class="collap-head-title">Transaction Ledger</span>
+              <span class="collap-icon" id="led-ico">+</span>
+            </div>
+            <div class="collap-body" id="led-body">
+              <div class="month-filter" id="month-filter"></div>
+              <div style="overflow-x:auto">
+                <table class="ltable">
+                  <thead>
+                    <tr>
+                      <th>Client</th>
+                      <th>Asset</th>
+                      <th>Month</th>
+                      <th>Purchase</th>
+                      <th>Redemption</th>
+                      <th>Net</th>
+                    </tr>
+                  </thead>
+                  <tbody id="led-rows"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /left col -->
+
+        <!-- Right column: snapshot + leverage -->
+        <div class="detail-col">
+
+          <div class="sec-card">
+            <div class="sec-card-header"><span class="sec-card-title">Snapshot</span></div>
+            <div class="sec-card-body">
+              <div class="snap-list" id="snap-list"></div>
+            </div>
+          </div>
+
+          <div class="sec-card">
+            <div class="sec-card-header"><span class="sec-card-title">Leverage</span></div>
+            <div class="sec-card-body" style="padding:0 18px">
+              <div id="lev-list"></div>
+            </div>
+          </div>
+
+        </div><!-- /right col -->
+
+      </div><!-- /detail-grid -->
+    </div><!-- /detail-inner -->
+  </div><!-- /detail-panel -->
+</div><!-- /workspace -->
+
 <script>
-let data = [], teamTargetAUM = 0, teamTargetRev = 0, activeLedger = [];
-const RM_COLORS = ['#3b82f6','#a855f7','#22c55e','#f59e0b','#ef4444','#06b6d4'];
-const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+// ── State ──
+let data = [], teamTargetAUM = 0, teamTargetRev = 0, activeLedger = [], activeRM = -1;
+const RM_COLORS = ['#5b8ef0','#a87ef0','#3dd68c','#f0a840','#f06060','#38c8f0'];
+const MONTHS_LG = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const curMonth  = MONTHS_LG[new Date().getMonth()];
+const curYear   = new Date().getFullYear();
 
-document.getElementById('month-display').innerText = months[new Date().getMonth()] + ' ' + new Date().getFullYear();
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
-
-// ── view switcher (simple, extend as needed) ──
-function setView(v) {
-  document.querySelectorAll('.nav-item').forEach(b => b.classList.toggle('active', b.innerText.trim().toLowerCase().startsWith(v[0])));
-}
+document.addEventListener('keydown', e => { if(e.key==='Escape') { /* nothing to close */ });
 
 // ── Helpers ──
-function n(v,d=2){ return Number(v||0).toFixed(d); }
-function pct(v,t){ if(!t) return 0; return Math.min(100,Math.round(v/t*100)); }
-function probClass(p){ return p>=70?'prob-high':p>=40?'prob-mid':'prob-low'; }
-
-function pctColor(p){
-  if(p>=90) return 'var(--green)';
-  if(p>=60) return 'var(--amber)';
-  return 'var(--red)';
+const n   = (v,d=2) => Number(v||0).toFixed(d);
+const pct = (v,t)   => (!t ? 0 : Math.min(100, Math.round(v/t*100)));
+function pctCol(p)  { return p>=90?'var(--green)':p>=60?'var(--amber)':'var(--red)'; }
+function pctBg(p)   { return p>=90?'var(--green-d)':p>=60?'var(--amber-d)':'var(--red-d)'; }
+function probCls(p) { return p>=70?'p-hi':p>=40?'p-md':'p-lo'; }
+function shortName(nm){
+  const p=nm.trim().split(' ');
+  return p.length>1 ? p[0]+' '+p[p.length-1][0]+'.' : nm;
+}
+function findJourney(journey, kw){
+  return journey.find(m=>m.label.toLowerCase().includes(kw.toLowerCase()))
+      || { target:0, actual:0, monthlyRunRate:0, newRunRate:0 };
 }
 
-function shortName(name){
-  const parts = name.trim().split(' ');
-  return parts.length > 1 ? parts[0] + ' ' + parts[parts.length-1][0] + '.' : name;
+// ── Mini scorecard in sidebar ──
+function populateMini(){
+  const tot = f => data.reduce((s,r)=>s+Number(r[f]||0),0);
+  document.getElementById('mini-scorecard').innerHTML = [
+    { l:'AUM',    v:n(tot('aum'))+'Cr' },
+    { l:'Rev',    v:n(tot('revenue'))+'L' },
+    { l:'NetMob', v:n(tot('netMob'))+'Cr' },
+    { l:'M50',    v:tot('m50') },
+  ].map(s=>`<div class="mini-sc-row">
+    <span class="mini-sc-label">${s.l}</span>
+    <span class="mini-sc-val">${s.v}</span>
+  </div>`).join('');
 }
 
-// ── Scorecard ──
-function populateScorecard(){
-  const totAUM    = data.reduce((s,r)=>s+Number(r.aum||0),0);
-  const totNetMob = data.reduce((s,r)=>s+Number(r.netMob||0),0);
-  const totRev    = data.reduce((s,r)=>s+Number(r.revenue||0),0);
-  const totM50    = data.reduce((s,r)=>s+Number(r.m50||0),0);
-  const totSip    = data.reduce((s,r)=>s+Number(r.sip||0),0);
-
-  document.getElementById('sc-aum').innerText    = n(totAUM);
-  document.getElementById('sc-netmob').innerText = n(totNetMob);
-  document.getElementById('sc-rev').innerText    = n(totRev);
-  document.getElementById('sc-m50').innerText    = totM50;
-  document.getElementById('sc-sip').innerText    = n(totSip);
-
-  const aumP = pct(totAUM,    teamTargetAUM || totAUM*2);
-  const revP = pct(totRev,    teamTargetRev || totRev*2);
-  const netP = pct(totNetMob, data.reduce((s,r)=>s+Number(r.targets?.netMob||0),0) || totNetMob*2);
-
-  document.getElementById('sc-aum-bar').style.width    = aumP+'%';
-  document.getElementById('sc-netmob-bar').style.width = netP+'%';
-  document.getElementById('sc-rev-bar').style.width    = revP+'%';
-
-  document.getElementById('sc-aum-bar').style.background    = pctColor(aumP);
-  document.getElementById('sc-netmob-bar').style.background = pctColor(netP);
-  document.getElementById('sc-rev-bar').style.background    = pctColor(revP);
-
-  document.getElementById('scorecard').style.display = 'grid';
-}
-
-// ── Analytics strip ──
-function populateAnalytics(){
-  // AUM rank
-  const sorted = [...data].sort((a,b)=>Number(b.aum||0)-Number(a.aum||0));
-  const maxAUM = Number(sorted[0]?.aum||1);
-  document.getElementById('anal-aum').innerHTML = sorted.map((rm,i)=>{
-    const color = RM_COLORS[data.indexOf(rm)];
-    return `<div class="anal-rm-row">
-      <div class="anal-rm-name" style="color:${color}">${shortName(rm.name)}</div>
-      <div class="anal-bar-wrap"><div class="anal-bar" style="width:${pct(rm.aum,maxAUM)}%;background:${color}"></div></div>
-      <div class="anal-val">${n(rm.aum)}Cr</div>
-    </div>`;
-  }).join('');
-
-  // Weighted pipeline
-  const sortedPipe = [...data].sort((a,b)=>Number(b.planWeightedAmt||0)-Number(a.planWeightedAmt||0));
-  const maxPipe = Number(sortedPipe[0]?.planWeightedAmt||1);
-  document.getElementById('anal-pipeline').innerHTML = sortedPipe.map(rm=>{
-    const color = RM_COLORS[data.indexOf(rm)];
-    return `<div class="anal-rm-row">
-      <div class="anal-rm-name" style="color:${color}">${shortName(rm.name)}</div>
-      <div class="anal-bar-wrap"><div class="anal-bar" style="width:${pct(rm.planWeightedAmt,maxPipe)}%;background:${color}"></div></div>
-      <div class="anal-val">${n(rm.planWeightedAmt)}Cr</div>
-    </div>`;
-  }).join('');
-
-  // Activity completion rate
-  const rmActivity = data.map(rm => {
-    const acts = rm.activity || [];
-    const hits = acts.filter(a => Number(a.actual||0) >= Number(a.target||1)).length;
-    const rate = acts.length ? Math.round(hits/acts.length*100) : 0;
-    return { rm, rate };
-  }).sort((a,b)=>b.rate-a.rate);
-  const maxRate = Math.max(...rmActivity.map(x=>x.rate), 1);
-  document.getElementById('anal-activity').innerHTML = rmActivity.map(({rm,rate})=>{
-    const color = RM_COLORS[data.indexOf(rm)];
-    return `<div class="anal-rm-row">
-      <div class="anal-rm-name" style="color:${color}">${shortName(rm.name)}</div>
-      <div class="anal-bar-wrap"><div class="anal-bar" style="width:${pct(rate,maxRate)}%;background:${pctColor(rate)}"></div></div>
-      <div class="anal-val">${rate}%</div>
-    </div>`;
-  }).join('');
-
-  document.getElementById('analytics-grid').style.display = 'grid';
-}
-
-// ── Sidebar RM list ──
-function populateSidebarRM(){
-  document.getElementById('sidebar-rm-list').innerHTML = data.map((rm,i)=>`
-    <button class="nav-item" onclick="openRM(${i})" style="color:${RM_COLORS[i]}">
-      <span class="nav-dot" style="background:${RM_COLORS[i]}"></span>
-      ${shortName(rm.name)}
-    </button>`).join('');
-  document.getElementById('rm-count-chip').innerText = data.length + ' RMs';
-}
-
-// ── RM Grid ──
-function buildGrid(){
-  const grid = document.getElementById('rm-grid');
-  grid.innerHTML = data.map((rm,i)=>{
-    const color = RM_COLORS[i];
-    const aumT = rm.targets?.aum||0, revT = rm.targets?.revenue||0;
-    const aumP = aumT ? pct(rm.aum,aumT) : null;
-    const revP = revT ? pct(rm.revenue,revT) : null;
-
-    const bars = (aumP!==null||revP!==null) ? `<div class="rm-progress">
-      ${aumP!==null?`
-        <div class="prog-row"><span class="prog-label">AUM</span><span class="prog-pct" style="color:${pctColor(aumP)}">${aumP}%</span></div>
-        <div class="prog-track"><div class="prog-fill" style="width:${aumP}%;background:${pctColor(aumP)}"></div></div>
-      `:''}
-      ${revP!==null?`
-        <div class="prog-row" style="margin-top:8px"><span class="prog-label">Revenue</span><span class="prog-pct" style="color:${pctColor(revP)}">${revP}%</span></div>
-        <div class="prog-track"><div class="prog-fill" style="width:${revP}%;background:var(--purple)"></div></div>
-      `:''}
-    </div>`:''
-
-    return `<div class="rm-card" style="--c:${color}" onclick="openRM(${i})">
-      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:${color}"></div>
-      <div class="rm-name">
-        <span>${shortName(rm.name)}</span>
-        <span style="width:6px;height:6px;border-radius:50%;background:${color};display:inline-block"></span>
+// ── RM List ──
+function buildRMList(){
+  const list = document.getElementById('rm-list');
+  list.innerHTML = data.map((rm,i)=>{
+    const j    = rm.journey||[];
+    const aumJ = findJourney(j,'aum');
+    const p    = pct(aumJ.actual, aumJ.target);
+    return `<div class="rm-item" id="rm-item-${i}" onclick="openRM(${i})">
+      <div class="rm-color-dot" style="background:${RM_COLORS[i]}"></div>
+      <div class="rm-item-info">
+        <div class="rm-item-name">${shortName(rm.name)}</div>
+        <div class="rm-item-aum">${n(rm.aum)}Cr</div>
       </div>
-      <div class="rm-stats">
-        <div><div class="rm-stat-label">AUM</div><div class="rm-stat-val">${n(rm.aum)}<span class="rm-stat-unit">Cr</span></div></div>
-        <div><div class="rm-stat-label">Revenue</div><div class="rm-stat-val">${n(rm.revenue)}<span class="rm-stat-unit">L</span></div></div>
-        <div><div class="rm-stat-label">Net Mob</div><div class="rm-stat-val">${n(rm.netMob)}<span class="rm-stat-unit">Cr</span></div></div>
-        <div><div class="rm-stat-label">M50</div><div class="rm-stat-val">${rm.m50||0}</div></div>
-      </div>
-      ${bars}
+      ${aumJ.target?`<span class="rm-item-pct" style="color:${pctCol(p)}">${p}%</span>`:''}
     </div>`;
   }).join('');
-  document.getElementById('skeleton-grid').style.display = 'none';
-  document.getElementById('rm-grid').style.display = 'grid';
 }
 
-// ── Updated ──
-function showUpdated(ts){
-  const d = ts ? new Date(ts) : new Date();
-  const s = 'Updated ' + d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
-  document.getElementById('sidebar-updated').innerText = s;
-}
-
-// ── Load ──
-async function load(silent=false){
-  if(!silent){
-    document.getElementById('skeleton-grid').style.display='grid';
-    document.getElementById('rm-grid').style.display='none';
-    document.getElementById('error-state').style.display='none';
-    document.getElementById('scorecard').style.display='none';
-    document.getElementById('analytics-grid').style.display='none';
-  }
-  try{
-    const res = await fetch('data/performance.json?t='+Date.now());
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    const json = await res.json();
-    if(Array.isArray(json)){ data=json; }
-    else { data=json.rms||json; teamTargetAUM=json.teamTargetAUM||0; teamTargetRev=json.teamTargetRev||0; }
-
-    populateScorecard();
-    populateAnalytics();
-    populateSidebarRM();
-    buildGrid();
-    showUpdated(json.lastUpdated||null);
-  } catch(e){
-    document.getElementById('skeleton-grid').style.display='none';
-    document.getElementById('error-state').style.display='block';
-    document.getElementById('sidebar-updated').innerText='Error loading';
-    console.error(e);
-  }
-}
-
-// ── Ledger ──
-function renderLedger(filterMonth){
-  document.querySelectorAll('.month-pill').forEach(b=>b.classList.toggle('active',b.dataset.month===filterMonth));
-  const rows = filterMonth==='ALL' ? activeLedger : activeLedger.filter(l=>l.month===filterMonth);
+// ── Ledger render ──
+function renderLedger(filter){
+  document.querySelectorAll('.mpill').forEach(b=>b.classList.toggle('on', b.dataset.m===filter));
+  const rows = filter==='ALL' ? activeLedger : activeLedger.filter(l=>l.month===filter);
   const totP = rows.reduce((s,l)=>s+Number(l.purchase||0),0);
   const totR = rows.reduce((s,l)=>s+Number(l.redemption||0),0);
   const totN = rows.reduce((s,l)=>s+Number(l.net||0),0);
-  document.getElementById('ledger-rows').innerHTML =
+  document.getElementById('led-rows').innerHTML =
     rows.map(l=>`<tr>
-      <td style="color:var(--text);padding:7px 0">${l.client}</td>
-      <td style="color:var(--muted)">${l.asset}</td>
+      <td>${l.client}</td>
+      <td>${l.asset}</td>
+      <td>${l.month}</td>
       <td>${n(l.purchase)}</td>
       <td>${n(l.redemption)}</td>
-      <td style="text-align:right;color:var(--green);font-family:'DM Mono',monospace;font-weight:600">${n(l.net)}</td>
+      <td style="color:var(--green)">${n(l.net)}</td>
     </tr>`).join('') +
-    `<tr>
-      <td class="ledger-subtotal" colspan="2" style="color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.08em">${filterMonth==='ALL'?'Grand total':filterMonth}</td>
-      <td class="ledger-subtotal">${n(totP)}</td>
-      <td class="ledger-subtotal">${n(totR)}</td>
-      <td class="ledger-subtotal" style="text-align:right;color:var(--green)">${n(totN)}</td>
+    `<tr class="tot-row">
+      <td colspan="3" style="color:var(--muted);font-size:8px;text-transform:uppercase;letter-spacing:.08em">${filter==='ALL'?'Grand Total':filter+' Total'}</td>
+      <td>${n(totP)}</td>
+      <td>${n(totR)}</td>
+      <td style="color:var(--green)">${n(totN)}</td>
     </tr>`;
 }
 
-// ── Modal open ──
+// ── Open RM detail ──
 function openRM(i){
-  const rm = data[i];
-  const color = RM_COLORS[i];
+  if(activeRM===i) return;
+  activeRM = i;
 
-  document.getElementById('modal-name').innerText = rm.name;
-  document.getElementById('modal-sub').innerText  = `Ledger net: ₹${n(rm.ledgerTotal)} Cr  ·  Pipeline: ₹${n(rm.planTotal)} Cr  ·  Wtd: ₹${n(rm.planWeightedAmt)} Cr`;
+  // Update active state in list
+  document.querySelectorAll('.rm-item').forEach((el,idx)=>el.classList.toggle('active', idx===i));
 
-  // ── Actual vs Target table ──
-  const metrics = rm.metrics || [];
-  document.getElementById('avt-rows').innerHTML = metrics.map(m=>{
-    const p = pct(m.actual, m.target);
-    const col = pctColor(p);
-    return `<tr class="avt-row">
-      <td class="avt-metric">${m.label}</td>
-      <td class="avt-target">${n(m.target)}</td>
-      <td class="avt-actual" style="color:${col}">${n(m.actual)}</td>
-      <td><span class="avt-pct" style="background:${col}22;color:${col}">${p}%</span></td>
-      <td class="avt-bar-cell">
-        <div style="height:3px;background:var(--border2);border-radius:2px;overflow:hidden">
-          <div style="height:100%;width:${p}%;background:${col};border-radius:2px;transition:width 1s"></div>
+  const rm  = data[i];
+  const col = RM_COLORS[i];
+  const j   = rm.journey||[];
+
+  // Header
+  document.getElementById('d-name').innerText = rm.name;
+  document.getElementById('d-name').style.color = col;
+  document.getElementById('d-sub').innerText  =
+    `Ledger Net ₹${n(rm.ledgerTotal)}Cr  ·  Plan ₹${n(rm.planTotalAmt)}Cr  ·  Wtd Pipeline ₹${n(rm.planWeighted)}Cr`;
+
+  // Quick KPIs in header
+  document.getElementById('d-hkpis').innerHTML = [
+    { l:'SIP Book', v:n(rm.sip),     u:'L',  c:'var(--cyan)' },
+    { l:'M50',      v:rm.m50||0,     u:'',   c:'var(--amber)' },
+    { l:'Net Mob',  v:n(rm.netMob),  u:'Cr', c:'var(--green)' },
+  ].map(k=>`<div class="hkpi">
+    <div class="hkpi-l">${k.l}</div>
+    <div class="hkpi-v" style="color:${k.c}">${k.v}<span class="hkpi-u">${k.u}</span></div>
+  </div>`).join('');
+
+  // ── Annual Journey table ──
+  document.getElementById('j-rows').innerHTML = j.map(m=>{
+    const p   = pct(m.actual, m.target);
+    const c   = pctCol(p), bg = pctBg(p);
+    return `<tr>
+      <td><span class="j-metric">${m.label}</span></td>
+      <td>
+        <span class="j-mono">${n(m.target)}</span>
+        <div class="j-rr">${n(m.monthlyRunRate)}/mo</div>
+      </td>
+      <td class="r"><span class="j-actual" style="color:${c}">${n(m.actual)}</span></td>
+      <td class="r"><span class="j-pill" style="background:${bg};color:${c}">${p}%</span></td>
+      <td>
+        <div class="j-bar-wrap">
+          <div class="j-bar-track"><div class="j-bar-fill" style="width:${p}%;background:${c}"></div></div>
+          <div class="j-newrr">New RR: ${n(m.newRunRate)}/mo</div>
         </div>
       </td>
+      <td class="r"><span class="j-mono">${n(m.newRunRate)}</span></td>
     </tr>`;
   }).join('');
 
-  // ── Pipeline ──
-  // Probability: already normalized to 0–100 by the scraper (raw decimal × 100)
-  document.getElementById('plan-rows').innerHTML = (rm.plan||[]).map(p=>`
+  // ── Monthly Plan ──
+  document.getElementById('plan-title').innerText = curMonth + ' ' + curYear + ' — Monthly Plan';
+  document.getElementById('plan-weighted-badge').innerText = 'Wtd: ₹'+n(rm.planWeighted)+'Cr';
+  const plan = rm.plan||[];
+  document.getElementById('p-rows').innerHTML = plan.map(p=>`
     <tr>
-      <td style="padding:9px 0;color:var(--text);font-weight:500">${p.client}</td>
-      <td style="color:var(--muted)">${p.asset}</td>
-      <td style="text-align:right;font-family:'DM Mono',monospace">₹${n(p.amt)}</td>
-      <td style="text-align:right"><span class="prob-pill ${probClass(p.prob)}">${p.prob}%</span></td>
-      <td style="text-align:right;font-family:'DM Mono',monospace;color:var(--muted)">₹${n(p.amt*p.prob/100)}</td>
+      <td>${p.client}</td>
+      <td style="color:var(--sub)">${p.asset}</td>
+      <td class="mono">₹${n(p.expectedAmt)}</td>
+      <td class="mono">₹${n(p.expectedRedemption)}</td>
+      <td class="mono">₹${n(p.netPlan)}</td>
+      <td><span class="prob-pill ${probCls(p.prob)}">${p.prob}%</span></td>
     </tr>`).join('');
-  document.getElementById('plan-weighted-total').innerText = '₹' + n(rm.planWeightedAmt) + ' Cr';
+  document.getElementById('p-foot').innerHTML = plan.length ? `
+    <tr>
+      <td colspan="2" style="color:var(--muted);font-size:8px;text-transform:uppercase;letter-spacing:.08em">Total</td>
+      <td>₹${n(rm.planTotalAmt)}</td>
+      <td>₹${n(rm.planTotalRedemption)}</td>
+      <td>₹${n(rm.planNetTotal)}</td>
+      <td style="color:var(--muted);font-size:9px"></td>
+    </tr>` : '';
 
   // ── Activity ──
-  document.getElementById('activity-rows').innerHTML = (rm.activity||[]).map(a=>{
-    const hitP = a.target ? Math.round(a.actual/a.target*100) : 0;
-    const col = pctColor(hitP);
-    return `<tr style="border-bottom:1px solid var(--border)">
-      <td style="padding:8px 0;color:var(--text)">${a.param}</td>
-      <td style="text-align:right;color:var(--muted);font-family:'DM Mono',monospace">${a.target}</td>
-      <td style="text-align:right;font-family:'DM Mono',monospace;color:${col};font-weight:600">${a.actual}</td>
-      <td style="text-align:right"><span style="font-size:9px;font-family:'DM Mono',monospace;color:${col}">${hitP}%</span></td>
+  document.getElementById('act-rows').innerHTML = (rm.activity||[]).map(a=>{
+    const gap = Number(a.gap||0);
+    const gc  = gap<0?'gap-neg':gap>0?'gap-pos':'gap-zero';
+    return `<tr>
+      <td>${a.param}</td>
+      <td>${a.target}</td>
+      <td style="color:var(--text);font-weight:600">${a.actual}</td>
+      <td class="${gc}">${gap>0?'+':''}${gap}</td>
     </tr>`;
   }).join('');
 
   // ── Leverage ──
-  document.getElementById('leverage-rows').innerHTML = (rm.leverage||[]).map(l=>{
+  document.getElementById('lev-list').innerHTML = (rm.leverage||[]).map(l=>{
     const isP = String(l.label).toLowerCase().includes('penetration')||String(l.label).includes('%');
-    const val = isP ? (Number(l.value)<=1?(Number(l.value)*100).toFixed(2):Number(l.value).toFixed(2))+'%' : l.value;
-    return `<div class="lev-row"><span class="lev-label">${l.label}</span><span class="lev-val" style="${isP?'color:var(--green)':''}">${val}</span></div>`;
-  }).join('');
-
-  // ── Snapshot sidebar stats ──
-  const snaps = [
-    {label:'AUM',     val:n(rm.aum)+'Cr',     target:rm.targets?.aum,     actual:rm.aum,     color:'var(--blue)'},
-    {label:'Revenue', val:n(rm.revenue)+'L',   target:rm.targets?.revenue, actual:rm.revenue, color:'var(--purple)'},
-    {label:'Net Mob', val:n(rm.netMob)+'Cr',   target:rm.targets?.netMob,  actual:rm.netMob,  color:'var(--green)'},
-    {label:'M50',     val:String(rm.m50||0),   target:rm.targets?.m50,     actual:rm.m50,     color:'var(--amber)'},
-    {label:'SIP',     val:n(rm.sip)+'L',       target:rm.targets?.sip,     actual:rm.sip,     color:'var(--cyan)'},
-  ];
-  document.getElementById('snapshot-stats').innerHTML = snaps.map(s=>{
-    const p = s.target ? pct(s.actual,s.target) : null;
-    return `<div class="snapshot-stat">
-      <div class="snap-label">${s.label}</div>
-      <div class="snap-val" style="color:${s.color}">${s.val}</div>
-      ${p!==null?`<div class="snap-track"><div class="snap-fill" style="width:${p}%;background:${s.color}"></div></div>`:''}
+    const raw = Number(l.value||0);
+    const val = isP ? (raw<=1?(raw*100).toFixed(2):raw.toFixed(2))+'%' : l.value;
+    return `<div class="lev-row">
+      <span class="lev-l">${l.label}</span>
+      <span class="lev-v" style="${isP?'color:var(--green)':''}">${val}</span>
     </div>`;
   }).join('');
 
-  // ── Ledger month filter ──
+  // ── Snapshot ──
+  const snaps = [
+    { l:'AUM',     v:n(rm.aum)+'Cr',     t:findJourney(j,'aum').target,     a:rm.aum,     c:'var(--blue)' },
+    { l:'Revenue', v:n(rm.revenue)+'L',   t:findJourney(j,'rev').target,     a:rm.revenue, c:'var(--purple)' },
+    { l:'Net Mob', v:n(rm.netMob)+'Cr',   t:findJourney(j,'net').target,     a:rm.netMob,  c:'var(--green)' },
+    { l:'M50',     v:String(rm.m50||0),   t:(findJourney(j,'m50').target||findJourney(j,'mission').target), a:rm.m50, c:'var(--amber)' },
+    { l:'SIP',     v:n(rm.sip)+'L',       t:findJourney(j,'sip').target,     a:rm.sip,     c:'var(--cyan)' },
+  ];
+  document.getElementById('snap-list').innerHTML = snaps.map(s=>{
+    const p = s.t ? pct(s.a,s.t) : null;
+    return `<div class="snap-item">
+      <div class="snap-l">${s.l}</div>
+      <div class="snap-row">
+        <span class="snap-v" style="color:${s.c}">${s.v}</span>
+        ${p!==null?`<span class="snap-pct" style="color:${pctCol(p)}">${p}%</span>`:''}
+      </div>
+      ${p!==null?`<div class="snap-bar"><div class="snap-fill" style="width:${p}%;background:${pctCol(p)}"></div></div>`:''}
+    </div>`;
+  }).join('');
+
+  // ── Ledger ──
   activeLedger = rm.ledger||[];
-  const ledgerMonths = [...new Set(activeLedger.map(l=>l.month))]
-    .filter(m=>m&&m!=='Unspecified').sort();
-  document.getElementById('ledger-month-filter').innerHTML =
-    ['ALL',...ledgerMonths].map(m=>
-      `<button class="month-pill ${m==='ALL'?'active':''}" data-month="${m}" onclick="renderLedger('${m}')">${m==='ALL'?'All':m}</button>`
+  const ledMonths = [...new Set(activeLedger.map(l=>l.month))].filter(m=>m&&m!=='Unspecified').sort();
+  document.getElementById('month-filter').innerHTML =
+    ['ALL',...ledMonths].map(m=>
+      `<button class="mpill ${m==='ALL'?'on':''}" data-m="${m}" onclick="renderLedger('${m}')">${m==='ALL'?'All':m}</button>`
     ).join('');
   renderLedger('ALL');
 
   // Reset collapsibles
-  ['activity-body','ledger-body'].forEach(id=>document.getElementById(id).style.display='none');
-  ['activity-ico','ledger-ico'].forEach(id=>document.getElementById(id).innerText='+');
+  ['act-body','led-body'].forEach(id=>document.getElementById(id).style.display='none');
+  ['act-ico','led-ico'].forEach(id=>document.getElementById(id).innerText='+');
 
-  document.getElementById('modal').style.display='block';
-  document.body.style.overflow='hidden';
+  // Show detail
+  document.getElementById('detail-empty').style.display = 'none';
+  document.getElementById('detail-inner').classList.add('visible');
+  // Scroll detail panel to top
+  document.getElementById('detail-panel').scrollTo({top:0, behavior:'smooth'});
 }
 
 function toggleSec(bodyId, iconId){
-  const el = document.getElementById(bodyId);
+  const el  = document.getElementById(bodyId);
   const ico = document.getElementById(iconId);
   const open = el.style.display==='block';
   el.style.display = open?'none':'block';
   ico.innerText = open?'+':'−';
 }
 
-function closeModal(){
-  document.getElementById('modal').style.display='none';
-  document.body.style.overflow='auto';
+// ── Load ──
+async function load(silent=false){
+  try{
+    const res = await fetch('data/performance.json?t='+Date.now());
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const json = await res.json();
+    data         = Array.isArray(json) ? json : (json.rms||json);
+    teamTargetAUM = json.teamTargetAUM||0;
+    teamTargetRev = json.teamTargetRev||0;
+
+    populateMini();
+    buildRMList();
+
+    // Auto-select first RM
+    if(data.length && !silent) openRM(0);
+
+    const d = json.lastUpdated ? new Date(json.lastUpdated) : new Date();
+    document.getElementById('updated-chip').innerHTML =
+      `<span class="live-dot"></span>${d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`;
+  } catch(e){
+    document.getElementById('rm-list').innerHTML =
+      `<div style="padding:16px;font-size:11px;color:var(--red)">Failed to load</div>`;
+    document.getElementById('err-state').style.display='flex';
+    document.getElementById('detail-empty').style.display='none';
+    document.getElementById('updated-chip').innerHTML='<span style="color:var(--red)">Error</span>';
+    console.error(e);
+  }
 }
 
 load();
