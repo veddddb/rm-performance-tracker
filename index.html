@@ -4,395 +4,278 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Team Piyush | Private Banking</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:       #08080d;
-  --s1:       #101018;
-  --s2:       #16161f;
-  --s3:       #1d1d28;
-  --b1:       #1f1f2e;
-  --b2:       #2a2a3c;
-  --b3:       #363650;
-  --text:     #eeeef5;
-  --sub:      #8888a8;
-  --muted:    #484868;
-  --blue:     #5b8ef0;
-  --blue-d:   rgba(91,142,240,.12);
-  --green:    #3dd68c;
-  --green-d:  rgba(61,214,140,.1);
-  --amber:    #f0a840;
-  --amber-d:  rgba(240,168,64,.1);
-  --red:      #f06060;
-  --red-d:    rgba(240,96,96,.1);
-  --purple:   #a87ef0;
-  --cyan:     #38c8f0;
-  --r:        10px;
-  --r2:       14px;
-  --sidebar-w: 230px;
+  --bg:       #f4f6fb;
+  --surface:  #ffffff;
+  --surface2: #f8f9fc;
+  --border:   #e8eaf2;
+  --border2:  #d4d8ea;
+  --text:     #1a1d2e;
+  --sub:      #5a5f7a;
+  --muted:    #9498b0;
+  --blue:     #4361ee;
+  --blue-l:   #eef0fd;
+  --green:    #2dc87a;
+  --green-l:  #eafaf2;
+  --amber:    #f59e0b;
+  --amber-l:  #fef9ec;
+  --red:      #ef4444;
+  --red-l:    #fef2f2;
+  --purple:   #7c3aed;
+  --purple-l: #f3f0fd;
+  --cyan:     #0891b2;
+  --cyan-l:   #ecfbfd;
+  --sidebar:  220px;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; overflow: hidden; }
-body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column}
 
-/* ── Top header bar ── */
-.topbar {
-  height: 52px;
-  background: var(--s1);
-  border-bottom: 1px solid var(--b1);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  flex-shrink: 0;
-  z-index: 10;
-}
-.topbar-brand { display: flex; align-items: baseline; gap: 10px; }
-.topbar-brand-name { font-size: 13px; font-weight: 600; letter-spacing: .02em; color: var(--text); }
-.topbar-brand-sub  { font-size: 9px;  font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
-.topbar-right { display: flex; align-items: center; gap: 10px; }
-.chip { font-size: 9px; font-weight: 600; padding: 4px 11px; border-radius: 99px; letter-spacing: .08em; text-transform: uppercase; }
-.chip-blue  { background: var(--blue-d);  color: var(--blue);  border: 1px solid rgba(91,142,240,.25); }
-.chip-muted { background: var(--s2);      color: var(--sub);   border: 1px solid var(--b1); }
-.live-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; display: inline-block; margin-right: 5px; vertical-align: middle; }
+/* ── Topbar ── */
+.topbar{height:54px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 24px;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.brand-name{font-size:14px;font-weight:600;color:var(--text)}
+.brand-sep{margin:0 8px;color:var(--border2)}
+.brand-sub{font-size:11px;color:var(--muted)}
+.topbar-right{display:flex;align-items:center;gap:8px}
+.tag{font-size:9px;font-weight:600;padding:4px 11px;border-radius:99px;letter-spacing:.07em;text-transform:uppercase}
+.tag-blue{background:var(--blue-l);color:var(--blue);border:1px solid rgba(67,97,238,.15)}
+.tag-gray{background:var(--surface2);color:var(--muted);border:1px solid var(--border)}
+.live-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;display:inline-block;margin-right:5px;vertical-align:middle}
 
-/* ── Main layout: sidebar + workspace ── */
-.workspace {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
-}
+/* ── Workspace ── */
+.workspace{display:flex;flex:1;overflow:hidden}
 
-/* ── Left sidebar: RM list ── */
-.rm-sidebar {
-  width: var(--sidebar-w);
-  flex-shrink: 0;
-  background: var(--s1);
-  border-right: 1px solid var(--b1);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.rm-sidebar-header {
-  padding: 16px 16px 10px;
-  border-bottom: 1px solid var(--b1);
-  flex-shrink: 0;
-}
-.rm-sidebar-label {
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 10px;
-}
-/* Team scorecard mini */
-.mini-scorecard { display: flex; flex-direction: column; gap: 6px; }
-.mini-sc-row { display: flex; justify-content: space-between; align-items: center; }
-.mini-sc-label { font-size: 9px; color: var(--muted); }
-.mini-sc-val   { font-size: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--sub); }
-
-/* RM list */
-.rm-list { flex: 1; overflow-y: auto; padding: 8px; }
-.rm-list::-webkit-scrollbar { width: 3px; }
-.rm-list::-webkit-scrollbar-track { background: transparent; }
-.rm-list::-webkit-scrollbar-thumb { background: var(--b2); border-radius: 3px; }
-.rm-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 10px;
-  border-radius: var(--r);
-  cursor: pointer;
-  transition: background .15s;
-  border: 1px solid transparent;
-  margin-bottom: 2px;
-}
-.rm-item:hover  { background: var(--s2); }
-.rm-item.active { background: var(--s3); border-color: var(--b2); }
-.rm-color-dot   { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.rm-item-info   { flex: 1; min-width: 0; }
-.rm-item-name   { font-size: 11px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.rm-item-aum    { font-size: 9px; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-top: 1px; }
-.rm-item-pct    { font-size: 9px; font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+/* ── Left sidebar ── */
+.sidebar{width:var(--sidebar);flex-shrink:0;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden}
+.sidebar-top{padding:16px;border-bottom:1px solid var(--border);flex-shrink:0}
+.sidebar-label{font-size:8px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.mini-row{display:flex;justify-content:space-between;align-items:center;padding:2px 0}
+.mini-l{font-size:10px;color:var(--sub)}
+.mini-v{font-size:10px;font-family:'DM Mono',monospace;font-weight:500;color:var(--text)}
+.rm-list{flex:1;overflow-y:auto;padding:8px}
+.rm-list::-webkit-scrollbar{width:3px}
+.rm-list::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+.rm-item{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;margin-bottom:3px;transition:all .15s}
+.rm-item:hover{background:var(--surface2);border-color:var(--border)}
+.rm-item.active{background:var(--blue-l);border-color:rgba(67,97,238,.2)}
+.rm-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.rm-info{flex:1;min-width:0}
+.rm-n{font-size:11px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rm-a{font-size:9px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:1px}
+.rm-pct{font-size:9px;font-family:'DM Mono',monospace;font-weight:600}
 
 /* ── Detail panel ── */
-.detail-panel {
-  flex: 1;
-  overflow-y: auto;
-  background: var(--bg);
-}
-.detail-panel::-webkit-scrollbar { width: 4px; }
-.detail-panel::-webkit-scrollbar-track { background: transparent; }
-.detail-panel::-webkit-scrollbar-thumb { background: var(--b2); border-radius: 4px; }
+.detail{flex:1;overflow-y:auto;background:var(--bg)}
+.detail::-webkit-scrollbar{width:5px}
+.detail::-webkit-scrollbar-thumb{background:var(--border2);border-radius:5px}
+.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;color:var(--muted)}
+.empty-icon{font-size:36px;opacity:.3}
+.empty-text{font-size:13px}
+.err-state{display:none;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px}
 
-/* Empty / skeleton state */
-.detail-empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  gap: 12px;
-  color: var(--muted);
-}
-.detail-empty-icon { font-size: 32px; opacity: .4; }
-.detail-empty-text { font-size: 12px; }
-
-/* ── Detail inner layout ── */
-.detail-inner {
-  padding: 28px 32px;
-  max-width: 1100px;
-  display: none;
-}
-.detail-inner.visible { display: block; }
+/* ── Detail inner ── */
+.detail-inner{padding:28px 32px;max-width:1080px;display:none}
+.detail-inner.on{display:block}
 
 /* Detail header */
-.detail-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 24px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--b1);
-}
-.detail-rm-name    { font-size: 18px; font-weight: 600; letter-spacing: -.02em; }
-.detail-rm-sub     { font-size: 10px; color: var(--muted); margin-top: 4px; font-family: 'JetBrains Mono', monospace; }
-.detail-header-kpis { display: flex; gap: 20px; }
-.hkpi { text-align: right; }
-.hkpi-l { font-size: 8px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
-.hkpi-v { font-size: 16px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
-.hkpi-u { font-size: 9px; color: var(--muted); margin-left: 2px; font-family: 'Inter', sans-serif; }
+.dh{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.dh-left{}
+.dh-name{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.dh-sub{font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:4px}
+.dh-kpis{display:flex;gap:16px}
+.dkpi{text-align:right}
+.dkpi-l{font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.dkpi-v{font-size:16px;font-weight:600;font-family:'DM Mono',monospace}
+.dkpi-u{font-size:9px;color:var(--muted);margin-left:2px;font-family:'DM Sans',sans-serif}
 
-/* ── Two-column grid inside detail ── */
-.detail-grid {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-.detail-col { display: flex; flex-direction: column; gap: 20px; }
+/* ── Two col grid ── */
+.dgrid{display:grid;grid-template-columns:1fr 260px;gap:18px}
+.dcol{display:flex;flex-direction:column;gap:18px}
 
-/* ── Section card ── */
-.sec-card {
-  background: var(--s1);
-  border: 1px solid var(--b1);
-  border-radius: var(--r2);
-  overflow: hidden;
-}
-.sec-card-header {
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--b1);
-  background: var(--s2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.sec-card-title {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--sub);
-}
-.sec-card-body { padding: 16px 18px; }
+/* ── Card ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.card-head{padding:13px 18px;border-bottom:1px solid var(--border);background:var(--surface2);display:flex;justify-content:space-between;align-items:center}
+.card-title{font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sub)}
+.card-badge{font-size:9px;font-family:'DM Mono',monospace;color:var(--muted)}
+.card-body{padding:16px 18px}
+.card-body.no-pad{padding:0 18px}
 
 /* ── Journey table ── */
-.jtable { width: 100%; border-collapse: collapse; }
-.jtable th {
-  font-size: 8px; font-weight: 600; text-transform: uppercase;
-  letter-spacing: .1em; color: var(--muted);
-  padding: 0 0 10px; border-bottom: 1px solid var(--b1); text-align: left;
-}
-.jtable th.r { text-align: right; }
-.jtable td { padding: 10px 0; border-bottom: 1px solid var(--b1); vertical-align: middle; }
-.jtable tr:last-child td { border-bottom: none; }
-.j-metric   { font-size: 12px; font-weight: 500; }
-.j-mono     { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--sub); }
-.j-rr       { font-size: 8px; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-top: 2px; }
-.j-actual   { font-size: 15px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
-.j-pill     { display: inline-block; font-size: 9px; font-weight: 600; font-family: 'JetBrains Mono', monospace; padding: 3px 8px; border-radius: 5px; }
-.j-bar-wrap { min-width: 80px; }
-.j-bar-track{ height: 3px; background: var(--b2); border-radius: 2px; overflow: hidden; margin-bottom: 3px; }
-.j-bar-fill { height: 100%; border-radius: 2px; transition: width 1.2s cubic-bezier(.4,0,.2,1); }
-.j-newrr    { font-size: 8px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
-.r { text-align: right; }
+.jt{width:100%;border-collapse:collapse}
+.jt th{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:0 6px 10px 0;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap}
+.jt th.r{text-align:right}
+.jt td{padding:11px 6px 11px 0;border-bottom:1px solid var(--border);vertical-align:middle}
+.jt tr:last-child td{border-bottom:none}
+.j-label{font-size:12px;font-weight:500}
+.j-target{font-family:'DM Mono',monospace;font-size:11px;color:var(--sub)}
+.j-rr{font-size:8px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:2px}
+.j-actual{font-size:14px;font-weight:600;font-family:'DM Mono',monospace}
+.j-pill{display:inline-block;font-size:9px;font-weight:600;font-family:'DM Mono',monospace;padding:3px 9px;border-radius:5px}
+.j-bar-wrap{min-width:90px}
+.j-bar-track{height:3px;border-radius:2px;overflow:hidden;margin-bottom:3px}
+.j-bar-fill{height:100%;border-radius:2px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.j-newrr{font-size:8px;color:var(--muted);font-family:'DM Mono',monospace}
+.r{text-align:right}
 
 /* ── Plan table ── */
-.ptable { width: 100%; border-collapse: collapse; font-size: 11px; }
-.ptable th { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 6px 10px 0; border-bottom: 1px solid var(--b1); text-align: right; }
-.ptable th:first-child { text-align: left; }
-.ptable td { padding: 9px 6px 9px 0; border-bottom: 1px solid var(--b1); color: var(--sub); text-align: right; }
-.ptable td:first-child { text-align: left; color: var(--text); font-weight: 500; }
-.ptable tr:last-child td { border-bottom: none; }
-.ptable td.mono { font-family: 'JetBrains Mono', monospace; }
-.ptable tfoot td { font-weight: 600; color: var(--text); font-family: 'JetBrains Mono', monospace; border-top: 1px solid var(--b2); padding-top: 10px; border-bottom: none; }
-.prob-pill { display: inline-block; font-size: 9px; font-weight: 600; font-family: 'JetBrains Mono', monospace; padding: 2px 8px; border-radius: 4px; }
-.p-hi { background: var(--green-d); color: var(--green); }
-.p-md { background: var(--amber-d); color: var(--amber); }
-.p-lo { background: var(--red-d);   color: var(--red);   }
+.pt{width:100%;border-collapse:collapse;font-size:11px}
+.pt th{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:0 6px 10px 0;border-bottom:1px solid var(--border);text-align:right}
+.pt th:first-child{text-align:left}
+.pt td{padding:9px 6px 9px 0;border-bottom:1px solid var(--border);color:var(--sub);text-align:right;font-family:'DM Mono',monospace;font-size:10px}
+.pt td:first-child{text-align:left;font-family:'DM Sans',sans-serif;color:var(--text);font-weight:500;font-size:11px}
+.pt td:nth-child(2){font-family:'DM Sans',sans-serif}
+.pt tr:last-child td{border-bottom:none}
+.pt tfoot td{font-weight:600;color:var(--text);border-top:1px solid var(--border2);padding-top:10px;border-bottom:none;font-family:'DM Mono',monospace}
+.pt tfoot td:first-child{font-family:'DM Sans',sans-serif;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.08em}
+.prob-pill{display:inline-block;font-size:9px;font-weight:600;font-family:'DM Mono',monospace;padding:2px 8px;border-radius:4px}
+.p-hi{background:var(--green-l);color:var(--green)}
+.p-md{background:var(--amber-l);color:var(--amber)}
+.p-lo{background:var(--red-l);color:var(--red)}
 
 /* ── Activity table ── */
-.atable { width: 100%; border-collapse: collapse; font-size: 11px; }
-.atable th { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 6px 10px 0; border-bottom: 1px solid var(--b1); text-align: right; }
-.atable th:first-child { text-align: left; }
-.atable td { padding: 8px 6px 8px 0; border-bottom: 1px solid var(--b1); color: var(--sub); text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
-.atable td:first-child { text-align: left; font-family: 'Inter', sans-serif; color: var(--text); font-weight: 500; font-size: 11px; }
-.atable tr:last-child td { border-bottom: none; }
-.gap-neg { color: var(--red); }
-.gap-pos { color: var(--green); }
-.gap-zero{ color: var(--muted); }
+.at{width:100%;border-collapse:collapse;font-size:11px}
+.at th{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:0 6px 10px 0;border-bottom:1px solid var(--border);text-align:right}
+.at th:first-child{text-align:left}
+.at td{padding:8px 6px 8px 0;border-bottom:1px solid var(--border);color:var(--sub);text-align:right;font-family:'DM Mono',monospace;font-size:11px}
+.at td:first-child{text-align:left;font-family:'DM Sans',sans-serif;color:var(--text);font-weight:500;font-size:11px}
+.at tr:last-child td{border-bottom:none}
+.g-neg{color:var(--red);font-weight:600}
+.g-pos{color:var(--green);font-weight:600}
 
 /* ── Collapsible ── */
-.collap-head {
-  display: flex; justify-content: space-between; align-items: center;
-  cursor: pointer; padding: 14px 18px; background: var(--s2);
-  border-top: 1px solid var(--b1); user-select: none; transition: background .15s;
+.ch{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:13px 18px;background:var(--surface2);border-top:1px solid var(--border);user-select:none;transition:background .15s}
+.ch:hover{background:#eef0f8}
+.ch-title{font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sub)}
+.ch-icon{font-size:16px;color:var(--muted);line-height:1}
+.cb{display:none;padding:16px 18px}
+
+/* ── Month filter ── */
+.mf{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.mp{font-size:9px;font-weight:500;padding:3px 10px;border-radius:99px;border:1px solid var(--border2);color:var(--sub);cursor:pointer;background:none;transition:.15s;font-family:'DM Sans',sans-serif}
+.mp:hover{border-color:var(--border2);color:var(--text)}
+.mp.on{border-color:rgba(67,97,238,.4);color:var(--blue);background:var(--blue-l)}
+
+/* ── Ledger table ── */
+.lt{width:100%;border-collapse:collapse;font-size:10px}
+.lt th{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:0 0 8px;border-bottom:1px solid var(--border);text-align:right}
+.lt th:first-child,.lt th:nth-child(2),.lt th:nth-child(3){text-align:left}
+.lt td{padding:7px 0;border-bottom:1px solid var(--border);color:var(--sub);text-align:right;font-family:'DM Mono',monospace;font-size:10px}
+.lt td:first-child{text-align:left;font-family:'DM Sans',sans-serif;color:var(--text)}
+.lt td:nth-child(2),.lt td:nth-child(3){text-align:left;font-family:'DM Sans',sans-serif}
+.lt tr:last-child td{border-bottom:none}
+.lt .tot td{font-weight:600;color:var(--text);border-top:1px solid var(--border2);padding-top:10px;border-bottom:none}
+.lt .tot td:first-child{font-family:'DM Sans',sans-serif;color:var(--muted);font-size:8px;text-transform:uppercase;letter-spacing:.08em}
+
+/* ── Sidebar stats ── */
+.snap-item{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--border)}
+.snap-item:last-child{border-bottom:none}
+.snap-l{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.snap-row{display:flex;justify-content:space-between;align-items:baseline;margin-top:1px}
+.snap-v{font-size:16px;font-weight:600;font-family:'DM Mono',monospace}
+.snap-pct{font-size:9px;font-family:'DM Mono',monospace;font-weight:600}
+.snap-bar{height:3px;border-radius:2px;overflow:hidden;margin-top:5px}
+.snap-fill{height:100%;border-radius:2px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+
+.lev-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:10px}
+.lev-row:last-child{border-bottom:none}
+.lev-l{color:var(--sub);font-size:9px}
+.lev-v{font-family:'DM Mono',monospace;font-weight:500;font-size:11px}
+
+/* ── Skeleton ── */
+@keyframes shimmer{0%,100%{opacity:.4}50%{opacity:.8}}
+.skel{border-radius:10px;height:44px;background:var(--surface2);animation:shimmer 1.5s infinite;margin-bottom:4px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+@media(max-width:800px){
+  :root{--sidebar:170px}
+  .dgrid{grid-template-columns:1fr}
+  .dh{flex-direction:column;gap:12px}
+  .dh-kpis{flex-wrap:wrap}
 }
-.collap-head:hover { background: var(--s3); }
-.collap-head-title { font-size: 9px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--sub); }
-.collap-icon { font-size: 14px; color: var(--muted); line-height: 1; }
-.collap-body { display: none; padding: 16px 18px; }
-
-/* ── Ledger ── */
-.month-filter { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
-.mpill {
-  font-size: 9px; font-weight: 500; padding: 3px 10px;
-  border-radius: 99px; border: 1px solid var(--b2); color: var(--sub);
-  cursor: pointer; background: none; transition: .15s; font-family: 'Inter', sans-serif;
-}
-.mpill:hover { color: var(--text); border-color: var(--b3); }
-.mpill.on { border-color: rgba(91,142,240,.4); color: var(--blue); background: var(--blue-d); }
-.ltable { width: 100%; border-collapse: collapse; font-size: 10px; }
-.ltable th { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 0 8px; border-bottom: 1px solid var(--b1); text-align: right; }
-.ltable th:first-child,.ltable th:nth-child(2) { text-align: left; }
-.ltable td { padding: 7px 0; border-bottom: 1px solid var(--b1); color: var(--sub); text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 10px; }
-.ltable td:first-child { text-align: left; font-family: 'Inter', sans-serif; color: var(--text); }
-.ltable td:nth-child(2) { text-align: left; }
-.ltable tr:last-child td { border-bottom: none; }
-.ltable .tot-row td { font-weight: 600; color: var(--text); border-top: 1px solid var(--b2); padding-top: 10px; border-bottom: none; }
-
-/* ── Sidebar stats (right col) ── */
-.snap-list { display: flex; flex-direction: column; gap: 10px; }
-.snap-item { display: flex; flex-direction: column; gap: 3px; }
-.snap-l { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
-.snap-row { display: flex; justify-content: space-between; align-items: baseline; }
-.snap-v { font-size: 16px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
-.snap-pct { font-size: 9px; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
-.snap-bar { height: 2px; background: var(--b2); border-radius: 2px; overflow: hidden; margin-top: 4px; }
-.snap-fill { height: 100%; border-radius: 2px; transition: width 1.2s cubic-bezier(.4,0,.2,1); }
-.lev-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--b1); font-size: 10px; }
-.lev-row:last-child { border-bottom: none; }
-.lev-l { font-size: 9px; color: var(--sub); }
-.lev-v { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 11px; }
-
-/* ── Error / skeleton ── */
-@keyframes shimmer { 0%,100%{opacity:.25} 50%{opacity:.5} }
-.skel { border-radius: var(--r); height: 48px; background: var(--s2); animation: shimmer 1.6s infinite; margin-bottom: 4px; }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
-@keyframes spin   { to{transform:rotate(360deg)} }
-.spin { animation: spin .8s linear infinite; }
-
-/* ── Responsive ── */
-@media(max-width:780px){
-  :root { --sidebar-w: 180px; }
-  .detail-grid { grid-template-columns: 1fr; }
-  .detail-header { flex-direction: column; gap: 14px; }
-  .detail-header-kpis { flex-wrap: wrap; }
-}
-@media(max-width:560px){
-  .workspace { flex-direction: column; }
-  .rm-sidebar { width: 100%; height: 200px; border-right: none; border-bottom: 1px solid var(--b1); }
-  .rm-list { flex-direction: row; display: flex; overflow-x: auto; padding: 8px; }
-  .rm-item { flex-direction: column; gap: 4px; min-width: 100px; }
-  html, body { overflow: auto; }
-  .detail-panel { overflow: visible; }
+@media(max-width:550px){
+  html,body{overflow:auto}
+  .workspace{flex-direction:column}
+  .sidebar{width:100%;height:auto;border-right:none;border-bottom:1px solid var(--border)}
+  .detail{overflow:visible}
 }
 </style>
 </head>
 <body>
 
-<!-- ── Top bar ── -->
+<!-- Topbar -->
 <div class="topbar">
-  <div class="topbar-brand">
-    <span class="topbar-brand-name">Team Piyush</span>
-    <span class="topbar-brand-sub">Private Banking</span>
+  <div style="display:flex;align-items:center">
+    <span class="brand-name">Team Piyush</span>
+    <span class="brand-sep">·</span>
+    <span class="brand-sub">Private Banking</span>
   </div>
   <div class="topbar-right">
-    <span class="chip chip-blue">FY 2026–27</span>
-    <span class="chip chip-muted" id="updated-chip">
-      <span class="live-dot"></span>Loading…
-    </span>
+    <span class="tag tag-blue">FY 2026–27</span>
+    <span class="tag tag-gray" id="updated-tag"><span class="live-dot"></span>Loading…</span>
   </div>
 </div>
 
-<!-- ── Workspace ── -->
+<!-- Workspace -->
 <div class="workspace">
 
-  <!-- Left: RM sidebar -->
-  <div class="rm-sidebar">
-    <div class="rm-sidebar-header">
-      <div class="rm-sidebar-label">Team Overview</div>
-      <div class="mini-scorecard" id="mini-scorecard">
-        <!-- populated by JS -->
-      </div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-label">Team Totals</div>
+      <div id="mini-sc"></div>
     </div>
     <div class="rm-list" id="rm-list">
-      <!-- skeleton -->
-      <div class="skel"></div>
-      <div class="skel"></div>
-      <div class="skel"></div>
-      <div class="skel"></div>
-      <div class="skel"></div>
-      <div class="skel"></div>
+      <div class="skel"></div><div class="skel"></div>
+      <div class="skel"></div><div class="skel"></div>
+      <div class="skel"></div><div class="skel"></div>
     </div>
   </div>
 
-  <!-- Right: Detail panel -->
-  <div class="detail-panel" id="detail-panel">
+  <!-- Detail -->
+  <div class="detail" id="detail">
 
-    <!-- Empty state -->
-    <div class="detail-empty" id="detail-empty">
-      <div class="detail-empty-icon">◎</div>
-      <div class="detail-empty-text">Select an RM to view their dashboard</div>
+    <div class="empty-state" id="empty-state">
+      <div class="empty-icon">⬡</div>
+      <div class="empty-text">Select an RM to view their dashboard</div>
     </div>
 
-    <!-- Error state -->
-    <div class="detail-empty" id="err-state" style="display:none">
-      <div style="font-size:13px;color:var(--red);font-weight:600">⚠ Couldn't load data</div>
-      <div style="font-size:11px">Check that <code style="background:var(--s2);padding:2px 6px;border-radius:4px">data/performance.json</code> is accessible.</div>
-      <button onclick="load()" style="margin-top:8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;border:1px solid rgba(240,96,96,.3);color:var(--red);padding:6px 16px;border-radius:99px;cursor:pointer;background:none">Retry</button>
+    <div class="err-state" id="err-state">
+      <div style="font-size:13px;font-weight:600;color:var(--red)">⚠ Could not load data</div>
+      <div style="font-size:11px;color:var(--muted)">Check that <code style="background:var(--surface2);padding:2px 6px;border-radius:4px">data/performance.json</code> is reachable.</div>
+      <button onclick="load()" style="margin-top:4px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;border:1px solid rgba(239,68,68,.3);color:var(--red);padding:6px 16px;border-radius:99px;cursor:pointer;background:none">Retry</button>
     </div>
 
     <!-- Detail content -->
     <div class="detail-inner" id="detail-inner">
 
       <!-- Header -->
-      <div class="detail-header">
-        <div>
-          <div class="detail-rm-name" id="d-name"></div>
-          <div class="detail-rm-sub"  id="d-sub"></div>
+      <div class="dh">
+        <div class="dh-left">
+          <div class="dh-name" id="d-name"></div>
+          <div class="dh-sub"  id="d-sub"></div>
         </div>
-        <div class="detail-header-kpis" id="d-hkpis"></div>
+        <div class="dh-kpis" id="d-kpis"></div>
       </div>
 
-      <!-- Two-column grid -->
-      <div class="detail-grid">
+      <!-- Two-col grid -->
+      <div class="dgrid">
 
-        <!-- Left column: journey + plan + activity + ledger -->
-        <div class="detail-col">
+        <!-- Left -->
+        <div class="dcol">
 
           <!-- Annual Journey -->
-          <div class="sec-card">
-            <div class="sec-card-header">
-              <span class="sec-card-title">FY 2026–27 · Annual Journey</span>
+          <div class="card">
+            <div class="card-head">
+              <span class="card-title">FY 2026–27 · Annual Journey</span>
             </div>
-            <div class="sec-card-body" style="padding:0 18px">
-              <table class="jtable">
+            <div class="card-body no-pad">
+              <table class="jt">
                 <thead>
                   <tr>
-                    <th style="width:90px">Metric</th>
-                    <th>Annual Target<br><span style="font-weight:400;letter-spacing:0;text-transform:none;color:var(--muted)">Monthly RR</span></th>
+                    <th style="width:85px">Metric</th>
+                    <th>Annual Target<br><span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)">Monthly RR</span></th>
                     <th class="r">YTD Actual</th>
                     <th class="r">vs Target</th>
                     <th style="width:110px">Progress</th>
@@ -405,13 +288,13 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
           </div>
 
           <!-- Monthly Plan -->
-          <div class="sec-card">
-            <div class="sec-card-header">
-              <span class="sec-card-title" id="plan-title">Monthly Plan</span>
-              <span style="font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace" id="plan-weighted-badge"></span>
+          <div class="card">
+            <div class="card-head">
+              <span class="card-title" id="plan-title">Monthly Plan</span>
+              <span class="card-badge" id="plan-badge"></span>
             </div>
-            <div class="sec-card-body" style="padding:0 18px">
-              <table class="ptable">
+            <div class="card-body no-pad">
+              <table class="pt">
                 <thead>
                   <tr>
                     <th>Client</th>
@@ -423,52 +306,36 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
                   </tr>
                 </thead>
                 <tbody id="p-rows"></tbody>
-                <tfoot id="p-foot"></tfoot>
+                <tfoot  id="p-foot"></tfoot>
               </table>
             </div>
           </div>
 
           <!-- Activity (collapsible) -->
-          <div class="sec-card">
-            <div class="collap-head" onclick="toggleSec('act-body','act-ico')">
-              <span class="collap-head-title">Monthly Activity Tracker</span>
-              <span class="collap-icon" id="act-ico">+</span>
+          <div class="card">
+            <div class="ch" onclick="toggleSec('act-body','act-ico')">
+              <span class="ch-title">Monthly Activity Tracker</span>
+              <span class="ch-icon" id="act-ico">+</span>
             </div>
-            <div class="collap-body" id="act-body">
-              <table class="atable">
-                <thead>
-                  <tr>
-                    <th>Parameter</th>
-                    <th>Monthly Target</th>
-                    <th>Actual MTD</th>
-                    <th>Gap</th>
-                  </tr>
-                </thead>
+            <div class="cb" id="act-body">
+              <table class="at">
+                <thead><tr><th>Parameter</th><th>Monthly Target</th><th>Actual MTD</th><th>Gap</th></tr></thead>
                 <tbody id="act-rows"></tbody>
               </table>
             </div>
           </div>
 
           <!-- Ledger (collapsible) -->
-          <div class="sec-card">
-            <div class="collap-head" onclick="toggleSec('led-body','led-ico')">
-              <span class="collap-head-title">Transaction Ledger</span>
-              <span class="collap-icon" id="led-ico">+</span>
+          <div class="card">
+            <div class="ch" onclick="toggleSec('led-body','led-ico')">
+              <span class="ch-title">Transaction Ledger</span>
+              <span class="ch-icon" id="led-ico">+</span>
             </div>
-            <div class="collap-body" id="led-body">
-              <div class="month-filter" id="month-filter"></div>
+            <div class="cb" id="led-body">
+              <div class="mf" id="mf"></div>
               <div style="overflow-x:auto">
-                <table class="ltable">
-                  <thead>
-                    <tr>
-                      <th>Client</th>
-                      <th>Asset</th>
-                      <th>Month</th>
-                      <th>Purchase</th>
-                      <th>Redemption</th>
-                      <th>Net</th>
-                    </tr>
-                  </thead>
+                <table class="lt">
+                  <thead><tr><th>Client</th><th>Asset</th><th>Month</th><th>Purchase</th><th>Redemption</th><th>Net</th></tr></thead>
                   <tbody id="led-rows"></tbody>
                 </table>
               </div>
@@ -477,232 +344,231 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 
         </div><!-- /left col -->
 
-        <!-- Right column: snapshot + leverage -->
-        <div class="detail-col">
+        <!-- Right -->
+        <div class="dcol">
 
-          <div class="sec-card">
-            <div class="sec-card-header"><span class="sec-card-title">Snapshot</span></div>
-            <div class="sec-card-body">
-              <div class="snap-list" id="snap-list"></div>
-            </div>
+          <div class="card">
+            <div class="card-head"><span class="card-title">Snapshot</span></div>
+            <div class="card-body" id="snap-body"></div>
           </div>
 
-          <div class="sec-card">
-            <div class="sec-card-header"><span class="sec-card-title">Leverage</span></div>
-            <div class="sec-card-body" style="padding:0 18px">
-              <div id="lev-list"></div>
-            </div>
+          <div class="card">
+            <div class="card-head"><span class="card-title">Leverage</span></div>
+            <div class="card-body no-pad" id="lev-body"></div>
           </div>
 
         </div><!-- /right col -->
 
-      </div><!-- /detail-grid -->
+      </div><!-- /dgrid -->
     </div><!-- /detail-inner -->
-  </div><!-- /detail-panel -->
+  </div><!-- /detail -->
 </div><!-- /workspace -->
 
 <script>
 // ── State ──
-let data = [], teamTargetAUM = 0, teamTargetRev = 0, activeLedger = [], activeRM = -1;
-const RM_COLORS = ['#5b8ef0','#a87ef0','#3dd68c','#f0a840','#f06060','#38c8f0'];
-const MONTHS_LG = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const curMonth  = MONTHS_LG[new Date().getMonth()];
-const curYear   = new Date().getFullYear();
-
-document.addEventListener('keydown', e => { if(e.key==='Escape') { /* nothing to close */ });
+let data = [], activeLedger = [], activeRM = -1;
+const COLORS = ['#4361ee','#7c3aed','#059669','#d97706','#dc2626','#0891b2'];
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const curMonth = MONTHS[new Date().getMonth()];
+const curYear  = new Date().getFullYear();
 
 // ── Helpers ──
 const n   = (v,d=2) => Number(v||0).toFixed(d);
-const pct = (v,t)   => (!t ? 0 : Math.min(100, Math.round(v/t*100)));
-function pctCol(p)  { return p>=90?'var(--green)':p>=60?'var(--amber)':'var(--red)'; }
-function pctBg(p)   { return p>=90?'var(--green-d)':p>=60?'var(--amber-d)':'var(--red-d)'; }
-function probCls(p) { return p>=70?'p-hi':p>=40?'p-md':'p-lo'; }
-function shortName(nm){
+const pct = (v,t)   => (!t ? 0 : Math.min(100,Math.round(v/t*100)));
+
+function pc(p){ return p>=90?'var(--green)':p>=60?'var(--amber)':'var(--red)'; }
+function pb(p){ return p>=90?'var(--green-l)':p>=60?'var(--amber-l)':'var(--red-l)'; }
+function probCls(p){ return p>=70?'p-hi':p>=40?'p-md':'p-lo'; }
+
+function short(nm){
   const p=nm.trim().split(' ');
-  return p.length>1 ? p[0]+' '+p[p.length-1][0]+'.' : nm;
-}
-function findJourney(journey, kw){
-  return journey.find(m=>m.label.toLowerCase().includes(kw.toLowerCase()))
-      || { target:0, actual:0, monthlyRunRate:0, newRunRate:0 };
+  return p.length>1?p[0]+' '+p[p.length-1][0]+'.':nm;
 }
 
-// ── Mini scorecard in sidebar ──
-function populateMini(){
+function findJ(journey, kw){
+  return (journey||[]).find(m=>m.label.toLowerCase().includes(kw.toLowerCase()))
+      || {target:0,actual:0,monthlyRunRate:0,newRunRate:0};
+}
+
+// ── Mini scorecard ──
+function buildMini(){
   const tot = f => data.reduce((s,r)=>s+Number(r[f]||0),0);
-  document.getElementById('mini-scorecard').innerHTML = [
-    { l:'AUM',    v:n(tot('aum'))+'Cr' },
-    { l:'Rev',    v:n(tot('revenue'))+'L' },
-    { l:'NetMob', v:n(tot('netMob'))+'Cr' },
-    { l:'M50',    v:tot('m50') },
-  ].map(s=>`<div class="mini-sc-row">
-    <span class="mini-sc-label">${s.l}</span>
-    <span class="mini-sc-val">${s.v}</span>
-  </div>`).join('');
+  document.getElementById('mini-sc').innerHTML=[
+    {l:'AUM',    v:n(tot('aum'))+'Cr'},
+    {l:'Revenue',v:n(tot('revenue'))+'L'},
+    {l:'Net Mob',v:n(tot('netMob'))+'Cr'},
+    {l:'M50',    v:tot('m50')},
+    {l:'SIP',    v:n(tot('sip'))+'L'},
+  ].map(s=>`<div class="mini-row"><span class="mini-l">${s.l}</span><span class="mini-v">${s.v}</span></div>`).join('');
 }
 
-// ── RM List ──
-function buildRMList(){
-  const list = document.getElementById('rm-list');
-  list.innerHTML = data.map((rm,i)=>{
-    const j    = rm.journey||[];
-    const aumJ = findJourney(j,'aum');
-    const p    = pct(aumJ.actual, aumJ.target);
-    return `<div class="rm-item" id="rm-item-${i}" onclick="openRM(${i})">
-      <div class="rm-color-dot" style="background:${RM_COLORS[i]}"></div>
-      <div class="rm-item-info">
-        <div class="rm-item-name">${shortName(rm.name)}</div>
-        <div class="rm-item-aum">${n(rm.aum)}Cr</div>
+// ── RM list ──
+function buildList(){
+  document.getElementById('rm-list').innerHTML = data.map((rm,i)=>{
+    const j   = rm.journey||[];
+    const aj  = findJ(j,'aum');
+    const p   = pct(aj.actual||rm.aum, aj.target||rm.aumTarget||0);
+    const col = COLORS[i];
+    return `<div class="rm-item" id="rmi-${i}" onclick="openRM(${i})">
+      <div class="rm-dot" style="background:${col}"></div>
+      <div class="rm-info">
+        <div class="rm-n">${short(rm.name)}</div>
+        <div class="rm-a">${n(rm.aum)}Cr AUM</div>
       </div>
-      ${aumJ.target?`<span class="rm-item-pct" style="color:${pctCol(p)}">${p}%</span>`:''}
+      ${(aj.target||rm.aumTarget)?`<span class="rm-pct" style="color:${pc(p)}">${p}%</span>`:''}
     </div>`;
   }).join('');
 }
 
-// ── Ledger render ──
+// ── Ledger ──
 function renderLedger(filter){
-  document.querySelectorAll('.mpill').forEach(b=>b.classList.toggle('on', b.dataset.m===filter));
+  document.querySelectorAll('.mp').forEach(b=>b.classList.toggle('on',b.dataset.m===filter));
   const rows = filter==='ALL' ? activeLedger : activeLedger.filter(l=>l.month===filter);
   const totP = rows.reduce((s,l)=>s+Number(l.purchase||0),0);
   const totR = rows.reduce((s,l)=>s+Number(l.redemption||0),0);
   const totN = rows.reduce((s,l)=>s+Number(l.net||0),0);
   document.getElementById('led-rows').innerHTML =
     rows.map(l=>`<tr>
-      <td>${l.client}</td>
-      <td>${l.asset}</td>
-      <td>${l.month}</td>
-      <td>${n(l.purchase)}</td>
-      <td>${n(l.redemption)}</td>
-      <td style="color:var(--green)">${n(l.net)}</td>
+      <td>${l.client}</td><td>${l.asset}</td><td>${l.month}</td>
+      <td>${n(l.purchase)}</td><td>${n(l.redemption)}</td>
+      <td style="color:var(--green);font-weight:600">${n(l.net)}</td>
     </tr>`).join('') +
-    `<tr class="tot-row">
-      <td colspan="3" style="color:var(--muted);font-size:8px;text-transform:uppercase;letter-spacing:.08em">${filter==='ALL'?'Grand Total':filter+' Total'}</td>
-      <td>${n(totP)}</td>
-      <td>${n(totR)}</td>
-      <td style="color:var(--green)">${n(totN)}</td>
+    `<tr class="tot">
+      <td colspan="3">${filter==='ALL'?'Grand Total':filter+' Total'}</td>
+      <td>${n(totP)}</td><td>${n(totR)}</td>
+      <td style="color:var(--green);font-weight:600">${n(totN)}</td>
     </tr>`;
 }
 
-// ── Open RM detail ──
-function openRM(i){
-  if(activeRM===i) return;
-  activeRM = i;
+// ── Open RM ──
+function openRM(idx){
+  if(activeRM===idx) return;
+  activeRM = idx;
+  document.querySelectorAll('.rm-item').forEach((el,i)=>el.classList.toggle('active',i===idx));
 
-  // Update active state in list
-  document.querySelectorAll('.rm-item').forEach((el,idx)=>el.classList.toggle('active', idx===i));
-
-  const rm  = data[i];
-  const col = RM_COLORS[i];
+  const rm  = data[idx];
+  const col = COLORS[idx];
   const j   = rm.journey||[];
 
   // Header
   document.getElementById('d-name').innerText = rm.name;
   document.getElementById('d-name').style.color = col;
-  document.getElementById('d-sub').innerText  =
-    `Ledger Net ₹${n(rm.ledgerTotal)}Cr  ·  Plan ₹${n(rm.planTotalAmt)}Cr  ·  Wtd Pipeline ₹${n(rm.planWeighted)}Cr`;
+  document.getElementById('d-sub').innerText =
+    `Ledger Net ₹${n(rm.ledgerTotal||0)}Cr  ·  Plan ₹${n(rm.planTotalAmt||0)}Cr  ·  Wtd Pipeline ₹${n(rm.planWeighted||0)}Cr`;
 
-  // Quick KPIs in header
-  document.getElementById('d-hkpis').innerHTML = [
-    { l:'SIP Book', v:n(rm.sip),     u:'L',  c:'var(--cyan)' },
-    { l:'M50',      v:rm.m50||0,     u:'',   c:'var(--amber)' },
-    { l:'Net Mob',  v:n(rm.netMob),  u:'Cr', c:'var(--green)' },
-  ].map(k=>`<div class="hkpi">
-    <div class="hkpi-l">${k.l}</div>
-    <div class="hkpi-v" style="color:${k.c}">${k.v}<span class="hkpi-u">${k.u}</span></div>
+  // Quick KPIs
+  document.getElementById('d-kpis').innerHTML=[
+    {l:'Net Mob', v:n(rm.netMob),  u:'Cr', c:'var(--green)'},
+    {l:'M50',     v:rm.m50||0,     u:'',   c:'var(--amber)'},
+    {l:'SIP',     v:n(rm.sip),     u:'L',  c:'var(--cyan)'},
+  ].map(k=>`<div class="dkpi">
+    <div class="dkpi-l">${k.l}</div>
+    <div class="dkpi-v" style="color:${k.c}">${k.v}<span class="dkpi-u">${k.u}</span></div>
   </div>`).join('');
 
-  // ── Annual Journey table ──
-  document.getElementById('j-rows').innerHTML = j.map(m=>{
-    const p   = pct(m.actual, m.target);
-    const c   = pctCol(p), bg = pctBg(p);
+  // Journey — works whether journey array exists or falls back to flat fields
+  const journeyRows = j.length ? j : [
+    {label:'AUM',     target:rm.aumTarget||0, monthlyRunRate:0, actual:rm.aum,     newRunRate:0},
+    {label:'Revenue', target:rm.revTarget||0, monthlyRunRate:0, actual:rm.revenue, newRunRate:0},
+    {label:'Net Mob', target:0,               monthlyRunRate:0, actual:rm.netMob,  newRunRate:0},
+    {label:'M50',     target:0,               monthlyRunRate:0, actual:rm.m50||0,  newRunRate:0},
+    {label:'SIP',     target:0,               monthlyRunRate:0, actual:rm.sip,     newRunRate:0},
+  ];
+
+  document.getElementById('j-rows').innerHTML = journeyRows.map(m=>{
+    const p=pct(m.actual,m.target), c=pc(p), bg=pb(p);
     return `<tr>
-      <td><span class="j-metric">${m.label}</span></td>
+      <td><span class="j-label">${m.label}</span></td>
       <td>
-        <span class="j-mono">${n(m.target)}</span>
+        <span class="j-target">${n(m.target)}</span>
         <div class="j-rr">${n(m.monthlyRunRate)}/mo</div>
       </td>
       <td class="r"><span class="j-actual" style="color:${c}">${n(m.actual)}</span></td>
       <td class="r"><span class="j-pill" style="background:${bg};color:${c}">${p}%</span></td>
       <td>
         <div class="j-bar-wrap">
-          <div class="j-bar-track"><div class="j-bar-fill" style="width:${p}%;background:${c}"></div></div>
+          <div class="j-bar-track" style="background:var(--border)">
+            <div class="j-bar-fill" style="width:${p}%;background:${c}"></div>
+          </div>
           <div class="j-newrr">New RR: ${n(m.newRunRate)}/mo</div>
         </div>
       </td>
-      <td class="r"><span class="j-mono">${n(m.newRunRate)}</span></td>
+      <td class="r"><span class="j-target">${n(m.newRunRate)}</span></td>
     </tr>`;
   }).join('');
 
-  // ── Monthly Plan ──
-  document.getElementById('plan-title').innerText = curMonth + ' ' + curYear + ' — Monthly Plan';
-  document.getElementById('plan-weighted-badge').innerText = 'Wtd: ₹'+n(rm.planWeighted)+'Cr';
+  // Plan
+  document.getElementById('plan-title').innerText = curMonth+' '+curYear+' — Monthly Plan';
   const plan = rm.plan||[];
-  document.getElementById('p-rows').innerHTML = plan.map(p=>`
-    <tr>
-      <td>${p.client}</td>
-      <td style="color:var(--sub)">${p.asset}</td>
-      <td class="mono">₹${n(p.expectedAmt)}</td>
-      <td class="mono">₹${n(p.expectedRedemption)}</td>
-      <td class="mono">₹${n(p.netPlan)}</td>
-      <td><span class="prob-pill ${probCls(p.prob)}">${p.prob}%</span></td>
-    </tr>`).join('');
-  document.getElementById('p-foot').innerHTML = plan.length ? `
-    <tr>
-      <td colspan="2" style="color:var(--muted);font-size:8px;text-transform:uppercase;letter-spacing:.08em">Total</td>
-      <td>₹${n(rm.planTotalAmt)}</td>
-      <td>₹${n(rm.planTotalRedemption)}</td>
-      <td>₹${n(rm.planNetTotal)}</td>
-      <td style="color:var(--muted);font-size:9px"></td>
-    </tr>` : '';
+  document.getElementById('plan-badge').innerText = plan.length ? 'Wtd ₹'+n(rm.planWeighted||0)+'Cr' : '';
+  document.getElementById('p-rows').innerHTML = plan.map(p=>`<tr>
+    <td>${p.client}</td>
+    <td>${p.asset}</td>
+    <td>${n(p.expectedAmt||p.amt||0)}</td>
+    <td>${n(p.expectedRedemption||0)}</td>
+    <td>${n(p.netPlan||0)}</td>
+    <td><span class="prob-pill ${probCls(p.prob)}">${p.prob}%</span></td>
+  </tr>`).join('');
+  document.getElementById('p-foot').innerHTML = plan.length ? `<tr>
+    <td>Total</td><td></td>
+    <td>${n(rm.planTotalAmt||0)}</td>
+    <td>${n(rm.planTotalRedemption||0)}</td>
+    <td>${n(rm.planNetTotal||0)}</td>
+    <td></td>
+  </tr>` : '';
 
-  // ── Activity ──
-  document.getElementById('act-rows').innerHTML = (rm.activity||[]).map(a=>{
-    const gap = Number(a.gap||0);
-    const gc  = gap<0?'gap-neg':gap>0?'gap-pos':'gap-zero';
-    return `<tr>
-      <td>${a.param}</td>
-      <td>${a.target}</td>
-      <td style="color:var(--text);font-weight:600">${a.actual}</td>
-      <td class="${gc}">${gap>0?'+':''}${gap}</td>
-    </tr>`;
-  }).join('');
+  // Activity
+  document.getElementById('act-rows').innerHTML = (rm.activity||[])
+    .filter(a=>a.param!=='')
+    .map(a=>{
+      const gap=Number(a.gap||0);
+      return `<tr>
+        <td>${a.param}</td>
+        <td>${a.target}</td>
+        <td style="color:var(--text);font-weight:600">${a.actual}</td>
+        <td class="${gap<0?'g-neg':gap>0?'g-pos':''}">${gap>0?'+':''}${gap}</td>
+      </tr>`;
+    }).join('');
 
-  // ── Leverage ──
-  document.getElementById('lev-list').innerHTML = (rm.leverage||[]).map(l=>{
-    const isP = String(l.label).toLowerCase().includes('penetration')||String(l.label).includes('%');
-    const raw = Number(l.value||0);
-    const val = isP ? (raw<=1?(raw*100).toFixed(2):raw.toFixed(2))+'%' : l.value;
-    return `<div class="lev-row">
-      <span class="lev-l">${l.label}</span>
-      <span class="lev-v" style="${isP?'color:var(--green)':''}">${val}</span>
-    </div>`;
-  }).join('');
+  // Leverage
+  document.getElementById('lev-body').innerHTML = (rm.leverage||[])
+    .filter(l=>l.label!=='')
+    .map(l=>{
+      const isP=String(l.label).toLowerCase().includes('penetration')||String(l.label).includes('%');
+      const raw=Number(l.value||0);
+      const val=isP?(raw<=1?(raw*100).toFixed(2):raw.toFixed(2))+'%':l.value;
+      return `<div class="lev-row">
+        <span class="lev-l">${l.label}</span>
+        <span class="lev-v" style="${isP?'color:var(--green)':''}">${val}</span>
+      </div>`;
+    }).join('');
 
-  // ── Snapshot ──
-  const snaps = [
-    { l:'AUM',     v:n(rm.aum)+'Cr',     t:findJourney(j,'aum').target,     a:rm.aum,     c:'var(--blue)' },
-    { l:'Revenue', v:n(rm.revenue)+'L',   t:findJourney(j,'rev').target,     a:rm.revenue, c:'var(--purple)' },
-    { l:'Net Mob', v:n(rm.netMob)+'Cr',   t:findJourney(j,'net').target,     a:rm.netMob,  c:'var(--green)' },
-    { l:'M50',     v:String(rm.m50||0),   t:(findJourney(j,'m50').target||findJourney(j,'mission').target), a:rm.m50, c:'var(--amber)' },
-    { l:'SIP',     v:n(rm.sip)+'L',       t:findJourney(j,'sip').target,     a:rm.sip,     c:'var(--cyan)' },
+  // Snapshot
+  const snaps=[
+    {l:'AUM',     v:n(rm.aum)+'Cr',     t:findJ(j,'aum').target||rm.aumTarget||0,     a:rm.aum,     c:'var(--blue)'},
+    {l:'Revenue', v:n(rm.revenue)+'L',   t:findJ(j,'rev').target||rm.revTarget||0,     a:rm.revenue, c:'var(--purple)'},
+    {l:'Net Mob', v:n(rm.netMob)+'Cr',   t:findJ(j,'net').target||0,                   a:rm.netMob,  c:'var(--green)'},
+    {l:'M50',     v:String(rm.m50||0),   t:findJ(j,'m50').target||findJ(j,'mission').target||0, a:rm.m50||0, c:'var(--amber)'},
+    {l:'SIP',     v:n(rm.sip)+'L',       t:findJ(j,'sip').target||0,                   a:rm.sip,     c:'var(--cyan)'},
   ];
-  document.getElementById('snap-list').innerHTML = snaps.map(s=>{
-    const p = s.t ? pct(s.a,s.t) : null;
+  document.getElementById('snap-body').innerHTML = snaps.map(s=>{
+    const p=s.t?pct(s.a,s.t):null;
     return `<div class="snap-item">
       <div class="snap-l">${s.l}</div>
       <div class="snap-row">
         <span class="snap-v" style="color:${s.c}">${s.v}</span>
-        ${p!==null?`<span class="snap-pct" style="color:${pctCol(p)}">${p}%</span>`:''}
+        ${p!==null?`<span class="snap-pct" style="color:${pc(p)}">${p}%</span>`:''}
       </div>
-      ${p!==null?`<div class="snap-bar"><div class="snap-fill" style="width:${p}%;background:${pctCol(p)}"></div></div>`:''}
+      ${p!==null?`<div class="snap-bar" style="background:var(--border)"><div class="snap-fill" style="width:${p}%;background:${pc(p)}"></div></div>`:''}
     </div>`;
   }).join('');
 
-  // ── Ledger ──
+  // Ledger
   activeLedger = rm.ledger||[];
-  const ledMonths = [...new Set(activeLedger.map(l=>l.month))].filter(m=>m&&m!=='Unspecified').sort();
-  document.getElementById('month-filter').innerHTML =
-    ['ALL',...ledMonths].map(m=>
-      `<button class="mpill ${m==='ALL'?'on':''}" data-m="${m}" onclick="renderLedger('${m}')">${m==='ALL'?'All':m}</button>`
+  const months=[...new Set(activeLedger.map(l=>l.month))].filter(m=>m&&m!=='Unspecified').sort();
+  document.getElementById('mf').innerHTML=
+    ['ALL',...months].map(m=>
+      `<button class="mp ${m==='ALL'?'on':''}" data-m="${m}" onclick="renderLedger('${m}')">${m==='ALL'?'All':m}</button>`
     ).join('');
   renderLedger('ALL');
 
@@ -710,52 +576,52 @@ function openRM(i){
   ['act-body','led-body'].forEach(id=>document.getElementById(id).style.display='none');
   ['act-ico','led-ico'].forEach(id=>document.getElementById(id).innerText='+');
 
-  // Show detail
-  document.getElementById('detail-empty').style.display = 'none';
-  document.getElementById('detail-inner').classList.add('visible');
-  // Scroll detail panel to top
-  document.getElementById('detail-panel').scrollTo({top:0, behavior:'smooth'});
+  document.getElementById('empty-state').style.display='none';
+  document.getElementById('detail-inner').classList.add('on');
+  document.getElementById('detail').scrollTo({top:0,behavior:'smooth'});
 }
 
-function toggleSec(bodyId, iconId){
-  const el  = document.getElementById(bodyId);
-  const ico = document.getElementById(iconId);
-  const open = el.style.display==='block';
-  el.style.display = open?'none':'block';
-  ico.innerText = open?'+':'−';
+function toggleSec(bId,iId){
+  const el=document.getElementById(bId),ico=document.getElementById(iId);
+  const open=el.style.display==='block';
+  el.style.display=open?'none':'block';
+  ico.innerText=open?'+':'−';
 }
 
-// ── Load ──
+// ── Load — handles BOTH array and {rms:[]} formats ──
 async function load(silent=false){
   try{
-    const res = await fetch('data/performance.json?t='+Date.now());
+    const res=await fetch('data/performance.json?t='+Date.now());
     if(!res.ok) throw new Error('HTTP '+res.status);
-    const json = await res.json();
-    data         = Array.isArray(json) ? json : (json.rms||json);
-    teamTargetAUM = json.teamTargetAUM||0;
-    teamTargetRev = json.teamTargetRev||0;
+    const json=await res.json();
 
-    populateMini();
-    buildRMList();
+    // Your push script sends a plain array; new script sends {rms:[]}
+    // This handles both gracefully
+    data = Array.isArray(json) ? json : (json.rms || []);
 
-    // Auto-select first RM
-    if(data.length && !silent) openRM(0);
+    if(!data.length) throw new Error('Empty data');
 
-    const d = json.lastUpdated ? new Date(json.lastUpdated) : new Date();
-    document.getElementById('updated-chip').innerHTML =
-      `<span class="live-dot"></span>${d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`;
+    buildMini();
+    buildList();
+    if(!silent) openRM(0); // auto-select first RM
+
+    const lastUpdate = data[0]?.lastUpdated;
+    const d = lastUpdate ? new Date(lastUpdate) : new Date();
+    const timeStr = isNaN(d) ? 'Live' : d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+    document.getElementById('updated-tag').innerHTML=`<span class="live-dot"></span>${timeStr}`;
+
   } catch(e){
-    document.getElementById('rm-list').innerHTML =
+    document.getElementById('rm-list').innerHTML=
       `<div style="padding:16px;font-size:11px;color:var(--red)">Failed to load</div>`;
+    document.getElementById('empty-state').style.display='none';
     document.getElementById('err-state').style.display='flex';
-    document.getElementById('detail-empty').style.display='none';
-    document.getElementById('updated-chip').innerHTML='<span style="color:var(--red)">Error</span>';
-    console.error(e);
+    document.getElementById('updated-tag').innerHTML='<span style="color:var(--red)">Error</span>';
+    console.error('Load error:',e);
   }
 }
 
 load();
-setInterval(()=>load(true), 300000);
+setInterval(()=>load(true),300000);
 </script>
 </body>
 </html>
