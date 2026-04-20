@@ -188,14 +188,14 @@
         "net": -0.15
       }
     ],
-    "lastUpdated": "2026-04-20T06:07:40.795Z"
+    "lastUpdated": "2026-04-20T06:45:08.086Z"
   },
   {
     "name": "Piyush Dungarpuria",
     "aum": 0,
     "revenue": 0,
     "netMob": 0,
-    "m50": 1,
+    "m50": 0,
     "sip": 0,
     "aumTarget": 0,
     "revTarget": 0,
@@ -226,8 +226,8 @@
         "label": "Mission 50",
         "target": 0,
         "monthlyRunRate": 0,
-        "actual": 1,
-        "newRunRate": -0.08333333333333333
+        "actual": 0,
+        "newRunRate": 0
       },
       {
         "label": "SIP Book",
@@ -329,14 +329,14 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-20T06:07:41.003Z"
+    "lastUpdated": "2026-04-20T06:45:08.320Z"
   },
   {
     "name": "Majid Shaikh",
     "aum": 0,
     "revenue": 0,
     "netMob": 0,
-    "m50": 1,
+    "m50": 0,
     "sip": 0,
     "aumTarget": 0,
     "revTarget": 0,
@@ -367,8 +367,8 @@
         "label": "Mission 50",
         "target": 0,
         "monthlyRunRate": 0,
-        "actual": 1,
-        "newRunRate": -0.08333333333333333
+        "actual": 0,
+        "newRunRate": 0
       },
       {
         "label": "SIP Book",
@@ -470,14 +470,14 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-20T06:07:41.226Z"
+    "lastUpdated": "2026-04-20T06:45:08.536Z"
   },
   {
     "name": "Karan Desai",
     "aum": 0,
     "revenue": 0,
     "netMob": 0,
-    "m50": 1,
+    "m50": 0,
     "sip": 0,
     "aumTarget": 0,
     "revTarget": 0,
@@ -508,8 +508,8 @@
         "label": "Mission 50",
         "target": 0,
         "monthlyRunRate": 0,
-        "actual": 1,
-        "newRunRate": -0.08333333333333333
+        "actual": 0,
+        "newRunRate": 0
       },
       {
         "label": "SIP Book",
@@ -611,7 +611,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-20T06:07:41.453Z"
+    "lastUpdated": "2026-04-20T06:45:08.761Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -938,14 +938,14 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-20T06:07:41.672Z"
+    "lastUpdated": "2026-04-20T06:45:08.984Z"
   },
   {
     "name": "Pawan Vyas",
     "aum": 0,
     "revenue": 0,
     "netMob": 0,
-    "m50": 1,
+    "m50": 0,
     "sip": 0,
     "aumTarget": 0,
     "revTarget": 0,
@@ -976,8 +976,8 @@
         "label": "Mission 50",
         "target": 0,
         "monthlyRunRate": 0,
-        "actual": 1,
-        "newRunRate": -0.08333333333333333
+        "actual": 0,
+        "newRunRate": 0
       },
       {
         "label": "SIP Book",
@@ -1079,6 +1079,6 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-20T06:07:41.879Z"
+    "lastUpdated": "2026-04-20T06:45:09.190Z"
   }
 ]
