@@ -742,7 +742,7 @@ function activityHTML(rm){
           <td>${a.param}</td>
           <td>${a.target}</td>
           <td style="color:var(--text);font-weight:700">${a.actual}</td>
-          <td class="${gap<0?'g-neg':gap>0?'g-pos':''}">${gap>0?'+':''}${gap}</td>
+          <td class="${gap>0?'g-neg':gap<0?'g-pos':''}">${gap>0?'+':''}${gap}</td>
         </tr>`;
       }).join('')}
     </tbody>
