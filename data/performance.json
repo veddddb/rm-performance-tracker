@@ -50,14 +50,14 @@
       {
         "param": "Client Meetings",
         "target": 44,
-        "actual": 2,
-        "gap": 42
+        "actual": 20,
+        "gap": 24
       },
       {
         "param": "Product Meetings",
         "target": 10,
-        "actual": 0,
-        "gap": 10
+        "actual": 2,
+        "gap": 8
       },
       {
         "param": "WILLs",
@@ -80,14 +80,14 @@
       {
         "param": "PMS Audit",
         "target": 1,
-        "actual": 0,
-        "gap": 1
+        "actual": 1,
+        "gap": 0
       },
       {
         "param": "Insurance Audit",
         "target": 1,
-        "actual": 0,
-        "gap": 1
+        "actual": 1,
+        "gap": 0
       },
       {
         "param": "TNC Calculator",
@@ -188,7 +188,7 @@
         "net": -0.15
       }
     ],
-    "lastUpdated": "2026-04-20T06:49:32.815Z"
+    "lastUpdated": "2026-04-21T04:35:55.181Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -329,7 +329,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-20T06:49:33.054Z"
+    "lastUpdated": "2026-04-21T04:35:55.357Z"
   },
   {
     "name": "Majid Shaikh",
@@ -470,7 +470,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-20T06:49:33.266Z"
+    "lastUpdated": "2026-04-21T04:35:55.531Z"
   },
   {
     "name": "Karan Desai",
@@ -611,7 +611,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-20T06:49:33.445Z"
+    "lastUpdated": "2026-04-21T04:35:55.690Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -938,7 +938,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-20T06:49:33.672Z"
+    "lastUpdated": "2026-04-21T04:35:55.853Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1079,6 +1079,6 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-20T06:49:34.406Z"
+    "lastUpdated": "2026-04-21T04:35:56.002Z"
   }
 ]
