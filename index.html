@@ -515,6 +515,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   </div>
   <div class="tbr">
     <span class="chip chip-ind">FY 2026–27</span>
+    <span class="chip chip-gl" id="month-chip" style="color:var(--sub);font-weight:600"></span>
     <span class="chip chip-amb" id="qtr-chip">Q1</span>
     <span class="chip chip-gl" id="upd-tag"><span class="ld"></span>Loading…</span>
   </div>
@@ -630,6 +631,7 @@ function buildQtr(){
   const dL=Math.max(0,Math.ceil((qEnd-now)/(1000*60*60*24)));
   const prog=Math.min(100,Math.round((92-dL)/92*100));
   document.getElementById('qtr-chip').textContent=q+'·'+dL+'d';
+  const mc=document.getElementById('month-chip');if(mc) mc.textContent=curM+' '+curY;
   document.getElementById('qtr-q').textContent=q;
   document.getElementById('qtr-days').textContent=dL+' days left';
   document.getElementById('qtr-fill').style.width=prog+'%';
@@ -646,7 +648,7 @@ function rmCardHTML(rm,i){
   const st=sj.target||0,sa=sj.actual||rm.sip;
   const aP=pct(aa,at);
   const isBoss=(rm.name===BOSS);
-  return `<div class="rm-card" id="rmc-${i}" style="--cc:${col};--cg:${cg}" onclick="openRM(${i})">
+  return `<div class="rm-card" id="rmc-${i}" data-rmidx="${i}" style="--cc:${col};--cg:${cg}" onclick="openRM(${i})">
     <div class="rc-h">
       <div class="rc-dot" style="background:${col};color:${col}"></div>
       <div class="rc-name">${short(rm.name)}</div>
@@ -763,7 +765,7 @@ function openRM(idx){
   const rm=data[idx],col=COLORS[idx%COLORS.length],j=rm.journey||[];
   activeLedger=rm.ledger||[];
 
-  document.querySelectorAll('.rm-card').forEach((el,i)=>el.classList.toggle('active',i===idx));
+  document.querySelectorAll('.rm-card').forEach(el=>el.classList.toggle('active',Number(el.dataset.rmidx)===idx));
 
   const jrows=j.length?j:[
     {label:'AUM',    target:rm.aumTarget||0,monthlyRunRate:0,actual:rm.aum,    newRunRate:0},
