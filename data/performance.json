@@ -3,12 +3,12 @@
     "name": "Vedant Bhansali",
     "aum": 74,
     "revenue": 0.04,
-    "netMob": 0.1,
+    "netMob": 0.85,
     "m50": 1,
     "sip": 21,
     "aumTarget": 116,
     "revTarget": 1.6,
-    "ledgerTotal": 0.1,
+    "ledgerTotal": 0.85,
     "journey": [
       {
         "label": "AUM",
@@ -28,8 +28,8 @@
         "label": "Net Mob",
         "target": 27,
         "monthlyRunRate": 2.25,
-        "actual": 0.1,
-        "newRunRate": 2.2416666666666667
+        "actual": 0.85,
+        "newRunRate": 2.1791666666666667
       },
       {
         "label": "Mission 50",
@@ -56,8 +56,8 @@
       {
         "param": "Product Meetings",
         "target": 10,
-        "actual": 2,
-        "gap": 8
+        "actual": 4,
+        "gap": 6
       },
       {
         "param": "WILLs",
@@ -164,20 +164,28 @@
         "expectedRedemption": 0,
         "netPlan": 0.25,
         "prob": 20
+      },
+      {
+        "client": "Murali",
+        "asset": "MF",
+        "expectedAmt": 1,
+        "expectedRedemption": 0,
+        "netPlan": 1,
+        "prob": 100
       }
     ],
-    "planTotalAmt": 3.45,
+    "planTotalAmt": 4.45,
     "planTotalRedemption": 0,
-    "planNetTotal": 3.45,
-    "planWeighted": 1.4900000000000002,
+    "planNetTotal": 4.45,
+    "planWeighted": 2.49,
     "ledger": [
       {
         "client": "Murali",
         "asset": "MF",
         "month": "April",
-        "purchase": 0.25,
+        "purchase": 1,
         "redemption": 0,
-        "net": 0.25
+        "net": 1
       },
       {
         "client": "Fatnani",
@@ -188,7 +196,7 @@
         "net": -0.15
       }
     ],
-    "lastUpdated": "2026-04-21T04:35:55.181Z"
+    "lastUpdated": "2026-04-23T09:33:43.204Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -329,7 +337,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-21T04:35:55.357Z"
+    "lastUpdated": "2026-04-23T09:33:43.363Z"
   },
   {
     "name": "Majid Shaikh",
@@ -470,7 +478,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-21T04:35:55.531Z"
+    "lastUpdated": "2026-04-23T09:33:43.535Z"
   },
   {
     "name": "Karan Desai",
@@ -611,7 +619,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-21T04:35:55.690Z"
+    "lastUpdated": "2026-04-23T09:33:43.940Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -938,7 +946,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-21T04:35:55.853Z"
+    "lastUpdated": "2026-04-23T09:33:44.103Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1079,6 +1087,6 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-21T04:35:56.002Z"
+    "lastUpdated": "2026-04-23T09:33:44.263Z"
   }
 ]
