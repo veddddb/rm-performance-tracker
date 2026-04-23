@@ -962,89 +962,168 @@ function doShare(){
   const ledN=curLed.reduce((s,l)=>s+Number(l.net||0),0);
   const netMob=Number(rm.netMob||0);
   const W=860,ROW=30;
-  const pRows=Math.max(plan.length,1),lRows=Math.max(curLed.length,1);
-  const H=108+(pRows*ROW)+ROW+26+(lRows*ROW)+ROW+48;
+
+  // Compute exact canvas height by tracing the same y increments as drawing
+  // Header block: name(56) + subtitle(76) + strip(84..106) = ends at y=116
+  let yCalc=116;
+  yCalc+=22; // plan section label
+  yCalc+=24; // plan header row
+  yCalc+=Math.max(plan.length,1)*ROW; // plan data rows
+  yCalc+=ROW; // plan total row
+  yCalc+=20; // gap
+  yCalc+=22; // ledger section label
+  yCalc+=24; // ledger header row
+  yCalc+=Math.max(curLed.length,1)*ROW; // ledger data rows
+  yCalc+=ROW; // ledger total row
+  yCalc+=10; // small gap before footer
+  yCalc+=28; // footer
+  const H=yCalc+28; // 28px bottom padding inside card
+
   const cv=document.getElementById('share-cv');
   cv.width=W;cv.height=H;
   const ctx=cv.getContext('2d');
-  // BG
+
+  // BG gradient
   const bg=ctx.createLinearGradient(0,0,W,H);
   bg.addColorStop(0,'#f0f4ff');bg.addColorStop(.4,'#f5f0ff');bg.addColorStop(.7,'#fff0f9');bg.addColorStop(1,'#fff8f0');
   ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
-  // Card
+
+  // White card
   ctx.fillStyle='rgba(255,255,255,.92)';rrect(ctx,20,20,W-40,H-40,12);ctx.fill();
+
   // Accent bar
   const acc=ctx.createLinearGradient(20,0,W-20,0);
   acc.addColorStop(0,col);acc.addColorStop(.5,'#8b5cf6');acc.addColorStop(1,'transparent');
   ctx.fillStyle=acc;rrect(ctx,20,20,W-40,4,3);ctx.fill();
-  // Header
+
+  // RM name + subtitle
   ctx.fillStyle=col;ctx.font='700 20px Outfit,system-ui,sans-serif';ctx.fillText(rm.name,38,56);
   ctx.fillStyle='#8884a8';ctx.font='500 11.5px Outfit,system-ui,sans-serif';
   ctx.fillText(`${curM} ${curY}  ·  Monthly Plan & Net Mob Ledger`,38,76);
+
   // Net mob strip
   const nmCol=netMob>=0?'#059669':'#e11d48';
   ctx.fillStyle=netMob>=0?'rgba(13,148,136,.10)':'rgba(225,29,72,.09)';
   rrect(ctx,38,84,W-76,22,6);ctx.fill();
   ctx.fillStyle=nmCol;ctx.font='600 11px Outfit,system-ui,sans-serif';ctx.fillText('Net Mobilization MTD:',48,100);
   ctx.font='700 11.5px DM Mono,monospace,sans-serif';ctx.fillText(`₹${n(netMob)} Cr`,208,100);
-  // PLAN section
+
+  // ── PLAN SECTION ──
   let y=116;
-  ctx.fillStyle='#1e1b2e';ctx.font='700 11.5px Outfit,system-ui,sans-serif';ctx.fillText('Monthly Plan',38,y+13);y+=22;
+  ctx.fillStyle='#1e1b2e';ctx.font='700 11.5px Outfit,system-ui,sans-serif';
+  ctx.fillText('Monthly Plan',38,y+13);y+=22;
+
   const pCols=[{x:38,l:'Client'},{x:232,l:'Asset'},{x:364,l:'Exp Amt'},{x:464,l:'Redemp'},{x:564,l:'Net Plan'},{x:660,l:'Probability'}];
   ctx.fillStyle='rgba(210,215,240,.48)';ctx.fillRect(38,y,W-76,24);
   ctx.fillStyle='#8884a8';ctx.font='700 8.5px Outfit,system-ui,sans-serif';
   pCols.forEach(c=>ctx.fillText(c.l.toUpperCase(),c.x+3,y+16));y+=24;
+
   plan.forEach((p,ri)=>{
     if(ri%2===1){ctx.fillStyle='rgba(210,215,240,.14)';ctx.fillRect(38,y,W-76,ROW)}
-    ctx.fillStyle='#1e1b2e';ctx.font='600 10.5px Outfit,system-ui,sans-serif';ctx.fillText(String(p.client||'').substring(0,22),pCols[0].x+3,y+ROW/2+4);
-    ctx.fillStyle='#4a4870';ctx.font='400 10px Outfit,system-ui,sans-serif';ctx.fillText(String(p.asset||'').substring(0,12),pCols[1].x+3,y+ROW/2+4);
+    ctx.fillStyle='#1e1b2e';ctx.font='600 10.5px Outfit,system-ui,sans-serif';
+    ctx.fillText(String(p.client||'').substring(0,22),pCols[0].x+3,y+ROW/2+4);
+    ctx.fillStyle='#4a4870';ctx.font='400 10px Outfit,system-ui,sans-serif';
+    ctx.fillText(String(p.asset||'').substring(0,12),pCols[1].x+3,y+ROW/2+4);
     ctx.font='500 10.5px DM Mono,monospace,sans-serif';
     ctx.fillText(`₹${n(p.expectedAmt||p.amt||0)}Cr`,pCols[2].x+3,y+ROW/2+4);
     ctx.fillText(`₹${n(p.expectedRedemption||0)}Cr`,pCols[3].x+3,y+ROW/2+4);
     ctx.fillText(`₹${n(p.netPlan||0)}Cr`,pCols[4].x+3,y+ROW/2+4);
     const prob=p.prob||0;
-    const pC=prob>=70?'#059669':prob>=40?'#d97706':'#e11d48',pBg=prob>=70?'rgba(5,150,105,.12)':prob>=40?'rgba(217,119,6,.12)':'rgba(225,29,72,.10)';
+    const pC=prob>=70?'#059669':prob>=40?'#d97706':'#e11d48';
+    const pBg=prob>=70?'rgba(5,150,105,.12)':prob>=40?'rgba(217,119,6,.12)':'rgba(225,29,72,.10)';
     ctx.fillStyle=pBg;rrect(ctx,pCols[5].x+2,y+ROW/2-9,60,18,4);ctx.fill();
-    ctx.fillStyle=pC;ctx.font='700 10.5px DM Mono,monospace,sans-serif';ctx.fillText(`${prob}%`,pCols[5].x+9,y+ROW/2+4);
+    ctx.fillStyle=pC;ctx.font='700 10.5px DM Mono,monospace,sans-serif';
+    ctx.fillText(`${prob}%`,pCols[5].x+9,y+ROW/2+4);
     y+=ROW;
   });
-  // Plan totals
+
+  // Plan total row
   ctx.fillStyle='rgba(210,215,240,.32)';ctx.fillRect(38,y,W-76,ROW);
-  ctx.strokeStyle='rgba(210,215,240,.6)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(38,y);ctx.lineTo(W-38,y);ctx.stroke();
-  ctx.fillStyle='#1e1b2e';ctx.font='700 10.5px Outfit,system-ui,sans-serif';ctx.fillText('Total',pCols[0].x+3,y+ROW/2+4);
+  ctx.strokeStyle='rgba(210,215,240,.6)';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(38,y);ctx.lineTo(W-38,y);ctx.stroke();
+  ctx.fillStyle='#1e1b2e';ctx.font='700 10.5px Outfit,system-ui,sans-serif';
+  ctx.fillText('Total',pCols[0].x+3,y+ROW/2+4);
   ctx.font='700 10.5px DM Mono,monospace,sans-serif';
   ctx.fillText(`₹${n(rm.planTotalAmt||0)}Cr`,pCols[2].x+3,y+ROW/2+4);
   ctx.fillText(`₹${n(rm.planTotalRedemption||0)}Cr`,pCols[3].x+3,y+ROW/2+4);
   ctx.fillText(`₹${n(rm.planNetTotal||0)}Cr`,pCols[4].x+3,y+ROW/2+4);
-  ctx.fillStyle='#8884a8';ctx.font='500 9px Outfit,system-ui,sans-serif';ctx.fillText(`Wtd ₹${n(rm.planWeighted||0)}Cr`,pCols[5].x,y+ROW/2+4);
+  ctx.fillStyle='#8884a8';ctx.font='500 9px Outfit,system-ui,sans-serif';
+  ctx.fillText(`Wtd ₹${n(rm.planWeighted||0)}Cr`,pCols[5].x,y+ROW/2+4);
   y+=ROW+20;
-  // LEDGER section
-  ctx.fillStyle='#1e1b2e';ctx.font='700 11.5px Outfit,system-ui,sans-serif';ctx.fillText(`${curM} Ledger — Net Mobilization`,38,y+13);y+=22;
+
+  // ── LEDGER SECTION ──
+  ctx.fillStyle='#1e1b2e';ctx.font='700 11.5px Outfit,system-ui,sans-serif';
+  ctx.fillText(`${curM} Ledger — Net Mobilization`,38,y+13);y+=22;
+
   const lCols=[{x:38,l:'Client'},{x:232,l:'Asset'},{x:364,l:'Month'},{x:464,l:'Purchase'},{x:564,l:'Redemption'},{x:674,l:'Net Total'}];
   ctx.fillStyle='rgba(210,215,240,.48)';ctx.fillRect(38,y,W-76,24);
-  ctx.fillStyle='#8884a8';ctx.font='700 8.5px Outfit,system-ui,sans-serif';lCols.forEach(c=>ctx.fillText(c.l.toUpperCase(),c.x+3,y+16));y+=24;
-  if(curLed.length===0){ctx.fillStyle='#8884a8';ctx.font='400 10.5px Outfit,system-ui,sans-serif';ctx.fillText('No ledger entries for '+curM,38+3,y+ROW/2+4);y+=ROW;}
-  else curLed.forEach((l,ri)=>{
-    if(ri%2===1){ctx.fillStyle='rgba(210,215,240,.12)';ctx.fillRect(38,y,W-76,ROW)}
-    ctx.fillStyle='#1e1b2e';ctx.font='500 10.5px Outfit,system-ui,sans-serif';ctx.fillText(String(l.client||'').substring(0,22),lCols[0].x+3,y+ROW/2+4);
-    ctx.fillStyle='#4a4870';ctx.font='400 10px Outfit,system-ui,sans-serif';ctx.fillText(String(l.asset||'').substring(0,12),lCols[1].x+3,y+ROW/2+4);ctx.fillText(String(l.month||''),lCols[2].x+3,y+ROW/2+4);
-    ctx.fillStyle='#059669';ctx.font='500 10.5px DM Mono,monospace,sans-serif';ctx.fillText(`${n(l.purchase)}`,lCols[3].x+3,y+ROW/2+4);
-    ctx.fillStyle='#e11d48';ctx.fillText(`${n(l.redemption)}`,lCols[4].x+3,y+ROW/2+4);
-    const nv=Number(l.net||0);ctx.fillStyle=nv>=0?'#059669':'#e11d48';ctx.font='700 10.5px DM Mono,monospace,sans-serif';ctx.fillText(`${n(nv)}`,lCols[5].x+3,y+ROW/2+4);y+=ROW;
-  });
-  // Ledger totals
-  ctx.fillStyle='rgba(210,215,240,.32)';ctx.fillRect(38,y,W-76,ROW);ctx.strokeStyle='rgba(210,215,240,.6)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(38,y);ctx.lineTo(W-38,y);ctx.stroke();
-  ctx.fillStyle='#1e1b2e';ctx.font='700 10.5px Outfit,system-ui,sans-serif';ctx.fillText(`${curM} Total`,lCols[0].x+3,y+ROW/2+4);
-  ctx.fillStyle='#059669';ctx.font='700 10.5px DM Mono,monospace,sans-serif';ctx.fillText(`${n(ledP)}`,lCols[3].x+3,y+ROW/2+4);
-  ctx.fillStyle='#e11d48';ctx.fillText(`${n(ledR)}`,lCols[4].x+3,y+ROW/2+4);
-  ctx.fillStyle=ledN>=0?'#059669':'#e11d48';ctx.fillText(`${n(ledN)}`,lCols[5].x+3,y+ROW/2+4);y+=ROW+10;
-  // Footer
-  ctx.fillStyle='rgba(136,132,168,.45)';ctx.font='500 9px Outfit,system-ui,sans-serif';
+  ctx.fillStyle='#8884a8';ctx.font='700 8.5px Outfit,system-ui,sans-serif';
+  lCols.forEach(c=>ctx.fillText(c.l.toUpperCase(),c.x+3,y+16));y+=24;
+
+  if(curLed.length===0){
+    ctx.fillStyle='#8884a8';ctx.font='400 10.5px Outfit,system-ui,sans-serif';
+    ctx.fillText('No ledger entries for '+curM,lCols[0].x+3,y+ROW/2+4);
+    y+=ROW;
+  } else {
+    curLed.forEach((l,ri)=>{
+      if(ri%2===1){ctx.fillStyle='rgba(210,215,240,.12)';ctx.fillRect(38,y,W-76,ROW)}
+      ctx.fillStyle='#1e1b2e';ctx.font='500 10.5px Outfit,system-ui,sans-serif';
+      ctx.fillText(String(l.client||'').substring(0,22),lCols[0].x+3,y+ROW/2+4);
+      ctx.fillStyle='#4a4870';ctx.font='400 10px Outfit,system-ui,sans-serif';
+      ctx.fillText(String(l.asset||'').substring(0,12),lCols[1].x+3,y+ROW/2+4);
+      ctx.fillText(String(l.month||''),lCols[2].x+3,y+ROW/2+4);
+      ctx.fillStyle='#059669';ctx.font='500 10.5px DM Mono,monospace,sans-serif';
+      ctx.fillText(`${n(l.purchase)}`,lCols[3].x+3,y+ROW/2+4);
+      ctx.fillStyle='#e11d48';
+      ctx.fillText(`${n(l.redemption)}`,lCols[4].x+3,y+ROW/2+4);
+      const nv=Number(l.net||0);
+      ctx.fillStyle=nv>=0?'#059669':'#e11d48';ctx.font='700 10.5px DM Mono,monospace,sans-serif';
+      ctx.fillText(`${n(nv)}`,lCols[5].x+3,y+ROW/2+4);
+      y+=ROW;
+    });
+  }
+
+  // Ledger total row — now always has room because H is computed correctly
+  ctx.fillStyle='rgba(210,215,240,.32)';ctx.fillRect(38,y,W-76,ROW);
+  ctx.strokeStyle='rgba(210,215,240,.6)';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(38,y);ctx.lineTo(W-38,y);ctx.stroke();
+  ctx.fillStyle='#1e1b2e';ctx.font='700 10.5px Outfit,system-ui,sans-serif';
+  ctx.fillText(`${curM} Total`,lCols[0].x+3,y+ROW/2+4);
+  ctx.fillStyle='#059669';ctx.font='700 10.5px DM Mono,monospace,sans-serif';
+  ctx.fillText(`${n(ledP)}`,lCols[3].x+3,y+ROW/2+4);
+  ctx.fillStyle='#e11d48';
+  ctx.fillText(`${n(ledR)}`,lCols[4].x+3,y+ROW/2+4);
+  ctx.fillStyle=ledN>=0?'#059669':'#e11d48';
+  ctx.fillText(`${n(ledN)}`,lCols[5].x+3,y+ROW/2+4);
+  y+=ROW+10;
+
+  // Footer watermark
+  ctx.fillStyle='rgba(136,132,168,.42)';ctx.font='500 9px Outfit,system-ui,sans-serif';
   ctx.fillText('Team Piyush · Private Banking · FY 2026–27',38,y+14);
   ctx.fillText(new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}),W-110,y+14);
-  const link=document.createElement('a');
-  link.download=`${rm.name.replace(/ /g,'_')}_${curM}${curY}.jpg`;
-  link.href=cv.toDataURL('image/jpeg',0.94);link.click();
+
+  // ── Share via Web Share API (native share sheet) or fallback to download ──
+  const fileName=`${rm.name.replace(/ /g,'_')}_${curM}${curY}.jpg`;
+  cv.toBlob(async blob=>{
+    if(navigator.canShare&&navigator.canShare({files:[new File([blob],fileName,{type:'image/jpeg'})]})){
+      try{
+        await navigator.share({
+          title:`${rm.name} — ${curM} ${curY} Plan`,
+          text:`Monthly Plan & Net Mob Ledger for ${rm.name}`,
+          files:[new File([blob],fileName,{type:'image/jpeg'})]
+        });
+        return;
+      }catch(e){
+        if(e.name==='AbortError') return; // user cancelled — don't fallback to download
+      }
+    }
+    // Fallback: download
+    const link=document.createElement('a');
+    link.download=fileName;
+    link.href=URL.createObjectURL(blob);
+    link.click();
+    setTimeout(()=>URL.revokeObjectURL(link.href),60000);
+  },'image/jpeg',0.94);
 }
 
 function rrect(ctx,x,y,w,h,r){
