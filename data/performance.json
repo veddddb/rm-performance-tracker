@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-26T09:42:00.042Z"
+    "lastUpdated": "2026-04-26T09:44:59.694Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,7 +353,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-26T09:42:00.239Z"
+    "lastUpdated": "2026-04-26T09:45:00.321Z"
   },
   {
     "name": "Majid Shaikh",
@@ -494,7 +494,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-26T09:42:00.446Z"
+    "lastUpdated": "2026-04-26T09:45:00.616Z"
   },
   {
     "name": "Karan Desai",
@@ -632,7 +632,7 @@
     "plan": [
       {
         "client": "Hemen Vimadalal",
-        "asset": "",
+        "asset": "MF",
         "expectedAmt": 0.95,
         "expectedRedemption": 0,
         "netPlan": 0.95,
@@ -640,7 +640,7 @@
       },
       {
         "client": "Sharad Gupta",
-        "asset": "",
+        "asset": "SP",
         "expectedAmt": 1.1,
         "expectedRedemption": 0,
         "netPlan": 1.1,
@@ -648,7 +648,7 @@
       },
       {
         "client": "Gautam Bavishi",
-        "asset": "",
+        "asset": "MF",
         "expectedAmt": 0.25,
         "expectedRedemption": 0,
         "netPlan": 0.25,
@@ -701,7 +701,7 @@
         "net": 0.18
       }
     ],
-    "lastUpdated": "2026-04-26T09:42:00.652Z"
+    "lastUpdated": "2026-04-26T09:45:00.905Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1028,7 +1028,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-26T09:42:00.861Z"
+    "lastUpdated": "2026-04-26T09:45:01.174Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1169,6 +1169,6 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-26T09:42:01.063Z"
+    "lastUpdated": "2026-04-26T09:45:01.448Z"
   }
 ]
