@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-26T09:03:21.655Z"
+    "lastUpdated": "2026-04-26T09:41:57.061Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,7 +353,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-26T09:03:21.878Z"
+    "lastUpdated": "2026-04-26T09:41:57.247Z"
   },
   {
     "name": "Majid Shaikh",
@@ -494,84 +494,84 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-26T09:03:22.109Z"
+    "lastUpdated": "2026-04-26T09:41:57.439Z"
   },
   {
     "name": "Karan Desai",
-    "aum": 0,
-    "revenue": 0,
-    "netMob": 0,
+    "aum": 182,
+    "revenue": 9,
+    "netMob": 2.3400000000000003,
     "m50": 0,
     "sip": 0,
-    "aumTarget": 0,
-    "revTarget": 0,
-    "ledgerTotal": 0,
+    "aumTarget": 234,
+    "revTarget": 300,
+    "ledgerTotal": 2.3400000000000003,
     "journey": [
       {
         "label": "AUM",
-        "target": 0,
-        "monthlyRunRate": 0,
-        "actual": 0,
-        "newRunRate": 0
+        "target": 234,
+        "monthlyRunRate": 4.333333333333333,
+        "actual": 182,
+        "newRunRate": 4.333333333333333
       },
       {
         "label": "Revenue",
-        "target": 0,
-        "monthlyRunRate": 0,
-        "actual": 0,
-        "newRunRate": 0
+        "target": 300,
+        "monthlyRunRate": 25,
+        "actual": 9,
+        "newRunRate": 24.25
       },
       {
         "label": "Net Mob",
-        "target": 0,
-        "monthlyRunRate": 0,
-        "actual": 0,
-        "newRunRate": 0
+        "target": 40,
+        "monthlyRunRate": 3.3333333333333335,
+        "actual": 2.3400000000000003,
+        "newRunRate": 3.138333333333333
       },
       {
         "label": "Mission 50",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 10,
+        "monthlyRunRate": 0.8333333333333334,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 0.8333333333333334
       },
       {
         "label": "SIP Book",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 15,
+        "monthlyRunRate": 1.25,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 1.25
       }
     ],
     "activity": [
       {
         "param": "Client Meetings",
-        "target": 0,
-        "actual": 0,
-        "gap": 0
+        "target": 33,
+        "actual": 25,
+        "gap": 8
       },
       {
         "param": "Product Meetings",
-        "target": 0,
-        "actual": 0,
+        "target": 12,
+        "actual": 12,
         "gap": 0
       },
       {
         "param": "WILLs",
-        "target": 0,
+        "target": 1,
         "actual": 0,
-        "gap": 0
+        "gap": 1
       },
       {
         "param": "DE Audit",
-        "target": 0,
+        "target": 1,
         "actual": 0,
-        "gap": 0
+        "gap": 1
       },
       {
         "param": "MF Audit",
-        "target": 0,
-        "actual": 0,
+        "target": 2,
+        "actual": 2,
         "gap": 0
       },
       {
@@ -588,9 +588,9 @@
       },
       {
         "param": "TNC Calculator",
-        "target": 0,
+        "target": 2,
         "actual": 0,
-        "gap": 0
+        "gap": 2
       },
       {
         "param": "Leverage",
@@ -600,21 +600,21 @@
       },
       {
         "param": "SIP",
-        "target": 0,
-        "actual": 0,
+        "target": 1,
+        "actual": 1,
         "gap": 0
       },
       {
         "param": "M50",
-        "target": 0,
+        "target": 1,
         "actual": 0,
-        "gap": 0
+        "gap": 1
       }
     ],
     "leverage": [
       {
         "label": "Leverage Done till FY26",
-        "value": 0
+        "value": 1.5
       },
       {
         "label": "New Leverage Done",
@@ -622,20 +622,86 @@
       },
       {
         "label": "Total",
-        "value": 0
+        "value": 1.5
       },
       {
         "label": "% of Total AUM",
-        "value": "#DIV/0!"
+        "value": 0.008241758241758242
       }
     ],
-    "plan": [],
-    "planTotalAmt": 0,
+    "plan": [
+      {
+        "client": "Hemen Vimadalal",
+        "asset": "",
+        "expectedAmt": 0.95,
+        "expectedRedemption": 0,
+        "netPlan": 0.95,
+        "prob": 80
+      },
+      {
+        "client": "Sharad Gupta",
+        "asset": "",
+        "expectedAmt": 1.1,
+        "expectedRedemption": 0,
+        "netPlan": 1.1,
+        "prob": 80
+      },
+      {
+        "client": "Gautam Bavishi",
+        "asset": "",
+        "expectedAmt": 0.25,
+        "expectedRedemption": 0,
+        "netPlan": 0.25,
+        "prob": 80
+      }
+    ],
+    "planTotalAmt": 2.3,
     "planTotalRedemption": 0,
-    "planNetTotal": 0,
-    "planWeighted": 0,
-    "ledger": [],
-    "lastUpdated": "2026-04-26T09:03:22.332Z"
+    "planNetTotal": 2.3,
+    "planWeighted": 1.84,
+    "ledger": [
+      {
+        "client": "Hemen Vimadalal",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 1.63,
+        "redemption": 0,
+        "net": 1.63
+      },
+      {
+        "client": "Deepak Patkar",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0.1,
+        "redemption": 0,
+        "net": 0.1
+      },
+      {
+        "client": "Navneet Bansal",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0.2,
+        "redemption": 0,
+        "net": 0.2
+      },
+      {
+        "client": "Gautam Bavishi",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0.23,
+        "redemption": 0,
+        "net": 0.23
+      },
+      {
+        "client": "Reginald Sequeira",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0.18,
+        "redemption": 0,
+        "net": 0.18
+      }
+    ],
+    "lastUpdated": "2026-04-26T09:41:57.698Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -962,7 +1028,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-26T09:03:22.545Z"
+    "lastUpdated": "2026-04-26T09:41:57.872Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1103,6 +1169,6 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-26T09:03:22.781Z"
+    "lastUpdated": "2026-04-26T09:41:58.053Z"
   }
 ]
