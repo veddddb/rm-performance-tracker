@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-27T10:56:01.573Z"
+    "lastUpdated": "2026-04-27T11:53:59.450Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,7 +353,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T10:56:01.810Z"
+    "lastUpdated": "2026-04-27T11:53:59.691Z"
   },
   {
     "name": "Majid Shaikh",
@@ -744,7 +744,7 @@
         "net": 0.000099
       }
     ],
-    "lastUpdated": "2026-04-27T10:56:02.012Z"
+    "lastUpdated": "2026-04-27T11:53:59.939Z"
   },
   {
     "name": "Karan Desai",
@@ -951,7 +951,7 @@
         "net": 0.18
       }
     ],
-    "lastUpdated": "2026-04-27T10:56:02.225Z"
+    "lastUpdated": "2026-04-27T11:54:00.116Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1278,11 +1278,11 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-27T10:56:02.414Z"
+    "lastUpdated": "2026-04-27T11:54:00.670Z"
   },
   {
     "name": "Pawan Vyas",
-    "aum": -0.12,
+    "aum": 17.6,
     "revenue": 0.01,
     "netMob": -0.245,
     "m50": 0,
@@ -1295,8 +1295,8 @@
         "label": "AUM",
         "target": 40,
         "monthlyRunRate": 1.8666666666666665,
-        "actual": -0.12,
-        "newRunRate": 3.3433333333333333
+        "actual": 17.6,
+        "newRunRate": 1.8666666666666665
       },
       {
         "label": "Revenue",
@@ -1493,6 +1493,6 @@
         "net": -0.31
       }
     ],
-    "lastUpdated": "2026-04-27T10:56:02.766Z"
+    "lastUpdated": "2026-04-27T11:54:00.845Z"
   }
 ]
