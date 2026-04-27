@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-27T09:02:32.844Z"
+    "lastUpdated": "2026-04-27T10:19:11.414Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,7 +353,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T09:02:33.013Z"
+    "lastUpdated": "2026-04-27T10:19:11.663Z"
   },
   {
     "name": "Majid Shaikh",
@@ -362,76 +362,76 @@
     "netMob": 0,
     "m50": 0,
     "sip": 0,
-    "aumTarget": 0,
-    "revTarget": 0,
+    "aumTarget": 389.42023034286,
+    "revTarget": 4.1914544125,
     "ledgerTotal": 0,
     "journey": [
       {
         "label": "AUM",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 389.42023034286,
+        "monthlyRunRate": 9.902619161866753,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 32.451685861905
       },
       {
         "label": "Revenue",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 4.1914544125,
+        "monthlyRunRate": 0.3492878677083333,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 0.3492878677083333
       },
       {
         "label": "Net Mob",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 64.27,
+        "monthlyRunRate": 5.355833333333333,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 5.355833333333333
       },
       {
         "label": "Mission 50",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 34,
+        "monthlyRunRate": 2.8333333333333335,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 2.8333333333333335
       },
       {
         "label": "SIP Book",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 34.23,
+        "monthlyRunRate": 2.8524999999999996,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 2.8524999999999996
       }
     ],
     "activity": [
       {
         "param": "Client Meetings",
-        "target": 0,
-        "actual": 0,
-        "gap": 0
+        "target": 20,
+        "actual": 18,
+        "gap": 2
       },
       {
         "param": "Product Meetings",
-        "target": 0,
-        "actual": 0,
-        "gap": 0
+        "target": 10,
+        "actual": 8,
+        "gap": 2
       },
       {
         "param": "WILLs",
-        "target": 0,
+        "target": 1,
         "actual": 0,
-        "gap": 0
+        "gap": 1
       },
       {
         "param": "DE Audit",
-        "target": 0,
-        "actual": 0,
+        "target": 1,
+        "actual": 1,
         "gap": 0
       },
       {
         "param": "MF Audit",
-        "target": 0,
-        "actual": 0,
-        "gap": 0
+        "target": 2,
+        "actual": 1,
+        "gap": 1
       },
       {
         "param": "PMS Audit",
@@ -447,33 +447,33 @@
       },
       {
         "param": "TNC Calculator",
-        "target": 0,
+        "target": 1,
         "actual": 0,
-        "gap": 0
+        "gap": 1
       },
       {
         "param": "Leverage",
-        "target": 0,
+        "target": 1.1,
         "actual": 0,
-        "gap": 0
+        "gap": 1.1
       },
       {
         "param": "SIP",
-        "target": 0,
+        "target": 4,
         "actual": 0,
-        "gap": 0
+        "gap": 4
       },
       {
         "param": "M50",
-        "target": 0,
+        "target": 1,
         "actual": 0,
-        "gap": 0
+        "gap": 1
       }
     ],
     "leverage": [
       {
         "label": "Leverage Done till FY26",
-        "value": 0
+        "value": 31
       },
       {
         "label": "New Leverage Done",
@@ -481,11 +481,11 @@
       },
       {
         "label": "Total Leverage Done",
-        "value": 0
+        "value": 31
       },
       {
         "label": "% of Total AUM",
-        "value": "#DIV/0!"
+        "value": 0.15816326530612246
       }
     ],
     "plan": [],
@@ -494,7 +494,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T09:02:33.183Z"
+    "lastUpdated": "2026-04-27T10:19:12.019Z"
   },
   {
     "name": "Karan Desai",
@@ -701,7 +701,7 @@
         "net": 0.18
       }
     ],
-    "lastUpdated": "2026-04-27T09:02:33.400Z"
+    "lastUpdated": "2026-04-27T10:19:12.251Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1028,7 +1028,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-27T09:02:33.739Z"
+    "lastUpdated": "2026-04-27T10:19:12.533Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1243,6 +1243,6 @@
         "net": -0.31
       }
     ],
-    "lastUpdated": "2026-04-27T09:02:33.915Z"
+    "lastUpdated": "2026-04-27T10:19:12.767Z"
   }
 ]
