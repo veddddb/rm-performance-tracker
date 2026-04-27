@@ -124,12 +124,12 @@
         "value": 0
       },
       {
-        "label": "Qualified AUM",
-        "value": 12
-      },
-      {
         "label": "Total Leverage Done",
         "value": 1.8
+      },
+      {
+        "label": "% of Total AUM",
+        "value": 0.15
       }
     ],
     "plan": [
@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-27T08:34:00.193Z"
+    "lastUpdated": "2026-04-27T08:37:50.156Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -339,7 +339,7 @@
         "value": 0
       },
       {
-        "label": "Total",
+        "label": "Total Leverage Done",
         "value": 0
       },
       {
@@ -353,7 +353,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T08:34:00.474Z"
+    "lastUpdated": "2026-04-27T08:37:50.329Z"
   },
   {
     "name": "Majid Shaikh",
@@ -480,7 +480,7 @@
         "value": 0
       },
       {
-        "label": "Total",
+        "label": "Total Leverage Done",
         "value": 0
       },
       {
@@ -494,7 +494,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T08:34:00.716Z"
+    "lastUpdated": "2026-04-27T08:37:50.472Z"
   },
   {
     "name": "Karan Desai",
@@ -621,12 +621,12 @@
         "value": 0
       },
       {
-        "label": "Total",
+        "label": "Total Leverage Done",
         "value": 1.5
       },
       {
         "label": "% of Total AUM",
-        "value": 0.008241758241758242
+        "value": 0.125
       }
     ],
     "plan": [
@@ -701,7 +701,7 @@
         "net": 0.18
       }
     ],
-    "lastUpdated": "2026-04-27T08:34:00.977Z"
+    "lastUpdated": "2026-04-27T08:37:50.627Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -828,12 +828,12 @@
         "value": 0
       },
       {
-        "label": "Total",
+        "label": "Total Leverage Done",
         "value": 0
       },
       {
         "label": "% of Total AUM",
-        "value": 0
+        "value": "#DIV/0!"
       }
     ],
     "plan": [
@@ -1028,7 +1028,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-27T08:34:01.303Z"
+    "lastUpdated": "2026-04-27T08:37:50.801Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1155,7 +1155,7 @@
         "value": 0
       },
       {
-        "label": "Total",
+        "label": "Total Leverage Done",
         "value": 0
       },
       {
@@ -1169,6 +1169,6 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T08:34:01.578Z"
+    "lastUpdated": "2026-04-27T08:37:50.948Z"
   }
 ]
