@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-27T10:49:54.024Z"
+    "lastUpdated": "2026-04-27T10:51:49.088Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,15 +353,15 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T10:49:54.310Z"
+    "lastUpdated": "2026-04-27T10:51:49.311Z"
   },
   {
     "name": "Majid Shaikh",
-    "aum": 0,
-    "revenue": 0,
+    "aum": 270,
+    "revenue": 0.13,
     "netMob": -3.4761555,
     "m50": 0,
-    "sip": 0,
+    "sip": 35.98,
     "aumTarget": 389.42023034286,
     "revTarget": 4.1914544125,
     "ledgerTotal": -3.4761555,
@@ -370,15 +370,15 @@
         "label": "AUM",
         "target": 389.42023034286,
         "monthlyRunRate": 9.902619161866753,
-        "actual": 0,
-        "newRunRate": 32.451685861905
+        "actual": 270,
+        "newRunRate": 9.951685861905
       },
       {
         "label": "Revenue",
         "target": 4.1914544125,
         "monthlyRunRate": 0.3492878677083333,
-        "actual": 0,
-        "newRunRate": 0.3492878677083333
+        "actual": 0.13,
+        "newRunRate": 0.338454534375
       },
       {
         "label": "Net Mob",
@@ -398,8 +398,8 @@
         "label": "SIP Book",
         "target": 46.61,
         "monthlyRunRate": 3.8841666666666668,
-        "actual": 0,
-        "newRunRate": 3.8841666666666668
+        "actual": 35.98,
+        "newRunRate": 0.8858333333333336
       }
     ],
     "activity": [
@@ -744,7 +744,7 @@
         "net": 0.000099
       }
     ],
-    "lastUpdated": "2026-04-27T10:49:54.583Z"
+    "lastUpdated": "2026-04-27T10:51:49.541Z"
   },
   {
     "name": "Karan Desai",
@@ -951,7 +951,7 @@
         "net": 0.18
       }
     ],
-    "lastUpdated": "2026-04-27T10:49:54.811Z"
+    "lastUpdated": "2026-04-27T10:51:49.737Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1278,7 +1278,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-27T10:49:56.369Z"
+    "lastUpdated": "2026-04-27T10:51:49.946Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1493,6 +1493,6 @@
         "net": -0.31
       }
     ],
-    "lastUpdated": "2026-04-27T10:49:57.415Z"
+    "lastUpdated": "2026-04-27T10:51:50.186Z"
   }
 ]
