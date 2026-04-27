@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-27T06:18:44.845Z"
+    "lastUpdated": "2026-04-27T06:38:44.189Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,7 +353,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T06:18:44.975Z"
+    "lastUpdated": "2026-04-27T06:38:44.365Z"
   },
   {
     "name": "Majid Shaikh",
@@ -494,7 +494,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T06:18:45.112Z"
+    "lastUpdated": "2026-04-27T06:38:44.539Z"
   },
   {
     "name": "Karan Desai",
@@ -701,7 +701,7 @@
         "net": 0.18
       }
     ],
-    "lastUpdated": "2026-04-27T06:18:45.305Z"
+    "lastUpdated": "2026-04-27T06:38:44.750Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1028,7 +1028,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-27T06:18:45.626Z"
+    "lastUpdated": "2026-04-27T06:38:44.912Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1037,37 +1037,37 @@
     "netMob": 0,
     "m50": 0,
     "sip": 0,
-    "aumTarget": 0,
-    "revTarget": 0,
+    "aumTarget": 40,
+    "revTarget": 0.4,
     "ledgerTotal": 0,
     "journey": [
       {
         "label": "AUM",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 40,
+        "monthlyRunRate": 1.8666666666666665,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 3.3333333333333335
       },
       {
         "label": "Revenue",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 0.4,
+        "monthlyRunRate": 0.03333333333333333,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 0.03333333333333333
       },
       {
         "label": "Net Mob",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 20,
+        "monthlyRunRate": 1.6666666666666667,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 1.6666666666666667
       },
       {
         "label": "Mission 50",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 12,
+        "monthlyRunRate": 1,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 1
       },
       {
         "label": "SIP Book",
@@ -1169,6 +1169,6 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T06:18:45.784Z"
+    "lastUpdated": "2026-04-27T06:38:45.073Z"
   }
 ]
