@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-27T08:37:50.156Z"
+    "lastUpdated": "2026-04-27T09:02:18.707Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,7 +353,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T08:37:50.329Z"
+    "lastUpdated": "2026-04-27T09:02:18.973Z"
   },
   {
     "name": "Majid Shaikh",
@@ -494,7 +494,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T08:37:50.472Z"
+    "lastUpdated": "2026-04-27T09:02:19.241Z"
   },
   {
     "name": "Karan Desai",
@@ -701,7 +701,7 @@
         "net": 0.18
       }
     ],
-    "lastUpdated": "2026-04-27T08:37:50.627Z"
+    "lastUpdated": "2026-04-27T09:02:19.493Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1028,39 +1028,39 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-27T08:37:50.801Z"
+    "lastUpdated": "2026-04-27T09:02:19.755Z"
   },
   {
     "name": "Pawan Vyas",
-    "aum": 0,
-    "revenue": 0,
-    "netMob": 0,
+    "aum": -0.12,
+    "revenue": 0.01,
+    "netMob": -0.245,
     "m50": 0,
     "sip": 0,
     "aumTarget": 40,
     "revTarget": 0.4,
-    "ledgerTotal": 0,
+    "ledgerTotal": -0.245,
     "journey": [
       {
         "label": "AUM",
         "target": 40,
         "monthlyRunRate": 1.8666666666666665,
-        "actual": 0,
-        "newRunRate": 3.3333333333333335
+        "actual": -0.12,
+        "newRunRate": 3.3433333333333333
       },
       {
         "label": "Revenue",
         "target": 0.4,
         "monthlyRunRate": 0.03333333333333333,
-        "actual": 0,
-        "newRunRate": 0.03333333333333333
+        "actual": 0.01,
+        "newRunRate": 0.0325
       },
       {
         "label": "Net Mob",
         "target": 20,
         "monthlyRunRate": 1.6666666666666667,
-        "actual": 0,
-        "newRunRate": 1.6666666666666667
+        "actual": -0.245,
+        "newRunRate": 1.6870833333333335
       },
       {
         "label": "Mission 50",
@@ -1071,23 +1071,23 @@
       },
       {
         "label": "SIP Book",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 5,
+        "monthlyRunRate": 0.4166666666666667,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 0.4166666666666667
       }
     ],
     "activity": [
       {
         "param": "Client Meetings",
-        "target": 0,
-        "actual": 0,
-        "gap": 0
+        "target": 9,
+        "actual": 10,
+        "gap": -1
       },
       {
         "param": "Product Meetings",
-        "target": 0,
-        "actual": 0,
+        "target": 1,
+        "actual": 1,
         "gap": 0
       },
       {
@@ -1098,15 +1098,15 @@
       },
       {
         "param": "DE Audit",
-        "target": 0,
+        "target": 1,
         "actual": 0,
-        "gap": 0
+        "gap": 1
       },
       {
         "param": "MF Audit",
-        "target": 0,
+        "target": 1,
         "actual": 0,
-        "gap": 0
+        "gap": 1
       },
       {
         "param": "PMS Audit",
@@ -1117,13 +1117,13 @@
       {
         "param": "Insurance Audit",
         "target": 0,
-        "actual": 0,
-        "gap": 0
+        "actual": 1,
+        "gap": -1
       },
       {
         "param": "TNC Calculator",
-        "target": 0,
-        "actual": 0,
+        "target": 1,
+        "actual": 1,
         "gap": 0
       },
       {
@@ -1140,15 +1140,15 @@
       },
       {
         "param": "M50",
-        "target": 0,
+        "target": 1,
         "actual": 0,
-        "gap": 0
+        "gap": 1
       }
     ],
     "leverage": [
       {
         "label": "Leverage Done till FY26",
-        "value": 0
+        "value": 0.75
       },
       {
         "label": "New Leverage Done",
@@ -1156,19 +1156,93 @@
       },
       {
         "label": "Total Leverage Done",
-        "value": 0
+        "value": 0.75
       },
       {
         "label": "% of Total AUM",
-        "value": "#DIV/0!"
+        "value": 0.075
       }
     ],
-    "plan": [],
-    "planTotalAmt": 0,
-    "planTotalRedemption": 0,
-    "planNetTotal": 0,
-    "planWeighted": 0,
-    "ledger": [],
-    "lastUpdated": "2026-04-27T08:37:50.948Z"
+    "plan": [
+      {
+        "client": "Raorane Family",
+        "asset": "MF",
+        "expectedAmt": 1,
+        "expectedRedemption": 0,
+        "netPlan": 1,
+        "prob": 80
+      },
+      {
+        "client": "Ameeta Munshi",
+        "asset": "MF",
+        "expectedAmt": 0,
+        "expectedRedemption": 0.1,
+        "netPlan": -0.1,
+        "prob": 80
+      },
+      {
+        "client": "Sanjay Karwa",
+        "asset": "MF",
+        "expectedAmt": 0.2,
+        "expectedRedemption": 0,
+        "netPlan": 0.2,
+        "prob": 80
+      },
+      {
+        "client": "Abdul Patni",
+        "asset": "SP",
+        "expectedAmt": 0.25,
+        "expectedRedemption": 0,
+        "netPlan": 0.25,
+        "prob": 80
+      },
+      {
+        "client": "Akhilesh",
+        "asset": "MF",
+        "expectedAmt": 0.15,
+        "expectedRedemption": 0,
+        "netPlan": 0.15,
+        "prob": 80
+      }
+    ],
+    "planTotalAmt": 1.5999999999999999,
+    "planTotalRedemption": 0.1,
+    "planNetTotal": 1.5,
+    "planWeighted": 1.2800000000000002,
+    "ledger": [
+      {
+        "client": "Sanjay Karwa",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0.015,
+        "redemption": 0,
+        "net": 0.015
+      },
+      {
+        "client": "Ameeta Munshi",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0,
+        "redemption": 0.12,
+        "net": -0.12
+      },
+      {
+        "client": "Raorane Family",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0.17,
+        "redemption": 0,
+        "net": 0.17
+      },
+      {
+        "client": "Abdul Patni",
+        "asset": "SP",
+        "month": "April",
+        "purchase": 0,
+        "redemption": 0.31,
+        "net": -0.31
+      }
+    ],
+    "lastUpdated": "2026-04-27T09:02:20.219Z"
   }
 ]
