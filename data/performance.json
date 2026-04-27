@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-27T10:19:22.865Z"
+    "lastUpdated": "2026-04-27T10:49:54.024Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,18 +353,18 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-27T10:19:23.122Z"
+    "lastUpdated": "2026-04-27T10:49:54.310Z"
   },
   {
     "name": "Majid Shaikh",
     "aum": 0,
     "revenue": 0,
-    "netMob": 0,
+    "netMob": -3.4761555,
     "m50": 0,
     "sip": 0,
     "aumTarget": 389.42023034286,
     "revTarget": 4.1914544125,
-    "ledgerTotal": 0,
+    "ledgerTotal": -3.4761555,
     "journey": [
       {
         "label": "AUM",
@@ -384,8 +384,8 @@
         "label": "Net Mob",
         "target": 64.27,
         "monthlyRunRate": 5.355833333333333,
-        "actual": 0,
-        "newRunRate": 5.355833333333333
+        "actual": -3.4761555,
+        "newRunRate": 5.645512958333334
       },
       {
         "label": "Mission 50",
@@ -396,10 +396,10 @@
       },
       {
         "label": "SIP Book",
-        "target": 34.23,
-        "monthlyRunRate": 2.8524999999999996,
+        "target": 46.61,
+        "monthlyRunRate": 3.8841666666666668,
         "actual": 0,
-        "newRunRate": 2.8524999999999996
+        "newRunRate": 3.8841666666666668
       }
     ],
     "activity": [
@@ -488,13 +488,263 @@
         "value": 0.15816326530612246
       }
     ],
-    "plan": [],
-    "planTotalAmt": 0,
+    "plan": [
+      {
+        "client": "K T Jithendran",
+        "asset": "NSP",
+        "expectedAmt": 2,
+        "expectedRedemption": 0,
+        "netPlan": 2,
+        "prob": 80
+      },
+      {
+        "client": "Jayant Shripad Jambotkar",
+        "asset": "NSP",
+        "expectedAmt": 1.1,
+        "expectedRedemption": 0,
+        "netPlan": 1.1,
+        "prob": 80
+      },
+      {
+        "client": "Chetan Shah",
+        "asset": "Leverage",
+        "expectedAmt": 1.1,
+        "expectedRedemption": 0,
+        "netPlan": 1.1,
+        "prob": 80
+      },
+      {
+        "client": "Adyasha Rath",
+        "asset": "NSP",
+        "expectedAmt": 1.1,
+        "expectedRedemption": 0,
+        "netPlan": 1.1,
+        "prob": 80
+      },
+      {
+        "client": "Vijay Mayekar",
+        "asset": "EMF",
+        "expectedAmt": 1,
+        "expectedRedemption": 0,
+        "netPlan": 1,
+        "prob": 80
+      },
+      {
+        "client": "Pranay Shetty",
+        "asset": "EMF",
+        "expectedAmt": 1,
+        "expectedRedemption": 0,
+        "netPlan": 1,
+        "prob": 80
+      }
+    ],
+    "planTotalAmt": 7.300000000000001,
     "planTotalRedemption": 0,
-    "planNetTotal": 0,
-    "planWeighted": 0,
-    "ledger": [],
-    "lastUpdated": "2026-04-27T10:19:23.359Z"
+    "planNetTotal": 7.300000000000001,
+    "planWeighted": 5.84,
+    "ledger": [
+      {
+        "client": "Adithya Janardhan Bhat",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.019998,
+        "redemption": 0,
+        "net": 0.019998
+      },
+      {
+        "client": "Ajay Kurhekar",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.000998,
+        "redemption": 0,
+        "net": 0.000998
+      },
+      {
+        "client": "Adyasha Rath",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0,
+        "redemption": 0.716521,
+        "net": -0.716521
+      },
+      {
+        "client": "Adyasha Rath",
+        "asset": "NSP",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 1.1,
+        "redemption": 0,
+        "net": 1.1
+      },
+      {
+        "client": "Ashok Chandrashekhar Vaidya",
+        "asset": "NSP",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0,
+        "redemption": 0.42067,
+        "net": -0.42067
+      },
+      {
+        "client": "Bhaskar Subramanian",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0,
+        "redemption": 0.045301,
+        "net": -0.045301
+      },
+      {
+        "client": "Gaurav Jain",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.074995,
+        "redemption": 0,
+        "net": 0.074995
+      },
+      {
+        "client": "Hrishikesh Dinkar Samant",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.009998,
+        "redemption": 0,
+        "net": 0.009998
+      },
+      {
+        "client": "Imran Azizur Rehman Siddiqui",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0,
+        "redemption": 0.00009,
+        "net": -0.00009
+      },
+      {
+        "client": "Jayant Shripad Jambotkar",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.376685,
+        "redemption": 0.502655,
+        "net": -0.12596999999999997
+      },
+      {
+        "client": "Karat Tazhtetil Jithendran",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.079996,
+        "redemption": 0.933687,
+        "net": -0.8536910000000001
+      },
+      {
+        "client": "Karat Tazhtetil Jithendran",
+        "asset": "NSP",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 2,
+        "redemption": 1.88488,
+        "net": 0.11511999999999989
+      },
+      {
+        "client": "Karat Tazhtetil Jithendran",
+        "asset": "Shares",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0,
+        "redemption": 2.0067575,
+        "net": -2.0067575
+      },
+      {
+        "client": "Milind S Korde",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.039986,
+        "redemption": 0,
+        "net": 0.039986
+      },
+      {
+        "client": "Nimit S Chavan",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.000099,
+        "redemption": 0,
+        "net": 0.000099
+      },
+      {
+        "client": "Paras Ram Vishwakarma",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.019998,
+        "redemption": 0,
+        "net": 0.019998
+      },
+      {
+        "client": "Purushothaman KG",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.32855,
+        "redemption": 0.312289,
+        "net": 0.016261000000000025
+      },
+      {
+        "client": "Ravindra N Katre",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0,
+        "redemption": 0.704608,
+        "net": -0.704608
+      },
+      {
+        "client": "Ravindra N Katre",
+        "asset": "NSP",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 1.4625,
+        "redemption": 0,
+        "net": 1.4625
+      },
+      {
+        "client": "Rajesh J Doshi",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.100984,
+        "redemption": 0,
+        "net": 0.100984
+      },
+      {
+        "client": "Shivkumar Ananthakrishnan",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.045469,
+        "redemption": 0.085194,
+        "net": -0.039725
+      },
+      {
+        "client": "Sumit Mohan Nadgir",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.3354055,
+        "redemption": 0.075423,
+        "net": 0.2599825
+      },
+      {
+        "client": "Shoaib Fakhruddin Padaria",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.144297,
+        "redemption": 0.162608,
+        "net": -0.018310999999999994
+      },
+      {
+        "client": "Sunita Anil Gajwani",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.019998,
+        "redemption": 0,
+        "net": 0.019998
+      },
+      {
+        "client": "Yukta Kondiba Sakpal",
+        "asset": "EMF",
+        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "purchase": 0.000099,
+        "redemption": 0,
+        "net": 0.000099
+      }
+    ],
+    "lastUpdated": "2026-04-27T10:49:54.583Z"
   },
   {
     "name": "Karan Desai",
@@ -701,7 +951,7 @@
         "net": 0.18
       }
     ],
-    "lastUpdated": "2026-04-27T10:19:23.943Z"
+    "lastUpdated": "2026-04-27T10:49:54.811Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1028,7 +1278,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-27T10:19:24.179Z"
+    "lastUpdated": "2026-04-27T10:49:56.369Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1243,6 +1493,6 @@
         "net": -0.31
       }
     ],
-    "lastUpdated": "2026-04-27T10:19:24.393Z"
+    "lastUpdated": "2026-04-27T10:49:57.415Z"
   }
 ]
