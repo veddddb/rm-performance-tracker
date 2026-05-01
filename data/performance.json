@@ -15,35 +15,35 @@
         "target": 116,
         "monthlyRunRate": 3.5,
         "actual": 74,
-        "newRunRate": 3.5
+        "newRunRate": 3.8181818181818183
       },
       {
         "label": "Revenue",
         "target": 1.6,
         "monthlyRunRate": 0.13333333333333333,
         "actual": 0.04,
-        "newRunRate": 0.13
+        "newRunRate": 0.14181818181818182
       },
       {
         "label": "Net Mob",
         "target": 27,
         "monthlyRunRate": 2.25,
         "actual": 1.0899999999999999,
-        "newRunRate": 2.1591666666666667
+        "newRunRate": 2.3554545454545455
       },
       {
         "label": "Mission 50",
         "target": 12,
         "monthlyRunRate": 1,
         "actual": 2,
-        "newRunRate": 0.8333333333333334
+        "newRunRate": 0.9090909090909091
       },
       {
         "label": "SIP Book",
         "target": 36,
         "monthlyRunRate": 3,
         "actual": 21,
-        "newRunRate": 1.25
+        "newRunRate": 1.3636363636363635
       }
     ],
     "activity": [
@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-04-30T15:45:53.224Z"
+    "lastUpdated": "2026-05-01T04:38:50.029Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,67 +353,67 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-04-30T15:45:53.556Z"
+    "lastUpdated": "2026-05-01T04:38:50.224Z"
   },
   {
     "name": "Majid Shaikh",
     "aum": 270.59,
     "revenue": 0.5,
-    "netMob": -3.4761555,
+    "netMob": -1.3890355,
     "m50": 0,
     "sip": 35.98,
     "aumTarget": 389.42023034286,
     "revTarget": 4.1914544125,
-    "ledgerTotal": -3.4761555,
+    "ledgerTotal": -1.3890355,
     "journey": [
       {
         "label": "AUM",
         "target": 389.42023034286,
         "monthlyRunRate": 9.902619161866753,
         "actual": 270.59,
-        "newRunRate": 9.902519195238336
+        "newRunRate": 10.802748212987275
       },
       {
         "label": "Revenue",
         "target": 4.1914544125,
         "monthlyRunRate": 0.3492878677083333,
         "actual": 0.5,
-        "newRunRate": 0.3076212010416666
+        "newRunRate": 0.33558676477272725
       },
       {
         "label": "Net Mob",
         "target": 64.27,
         "monthlyRunRate": 5.355833333333333,
-        "actual": -3.4761555,
-        "newRunRate": 5.645512958333334
+        "actual": -1.3890355,
+        "newRunRate": 5.969003227272728
       },
       {
         "label": "Mission 50",
         "target": 34,
         "monthlyRunRate": 2.8333333333333335,
         "actual": 0,
-        "newRunRate": 2.8333333333333335
+        "newRunRate": 3.090909090909091
       },
       {
         "label": "SIP Book",
         "target": 46.61,
         "monthlyRunRate": 3.8841666666666668,
         "actual": 35.98,
-        "newRunRate": 0.8858333333333336
+        "newRunRate": 0.9663636363636366
       }
     ],
     "activity": [
       {
         "param": "Client Meetings",
         "target": 20,
-        "actual": 18,
-        "gap": 2
+        "actual": 20,
+        "gap": 0
       },
       {
         "param": "Product Meetings",
         "target": 10,
-        "actual": 8,
-        "gap": 2
+        "actual": 10,
+        "gap": 0
       },
       {
         "param": "WILLs",
@@ -546,15 +546,15 @@
       {
         "client": "Adithya Janardhan Bhat",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
-        "purchase": 0.019998,
+        "month": "April",
+        "purchase": 0.029998,
         "redemption": 0,
-        "net": 0.019998
+        "net": 0.029998
       },
       {
         "client": "Ajay Kurhekar",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0.000998,
         "redemption": 0,
         "net": 0.000998
@@ -562,15 +562,15 @@
       {
         "client": "Adyasha Rath",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0,
-        "redemption": 0.716521,
-        "net": -0.716521
+        "redemption": 0.74652,
+        "net": -0.74652
       },
       {
         "client": "Adyasha Rath",
         "asset": "NSP",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 1.1,
         "redemption": 0,
         "net": 1.1
@@ -578,7 +578,7 @@
       {
         "client": "Ashok Chandrashekhar Vaidya",
         "asset": "NSP",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0,
         "redemption": 0.42067,
         "net": -0.42067
@@ -586,7 +586,7 @@
       {
         "client": "Bhaskar Subramanian",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0,
         "redemption": 0.045301,
         "net": -0.045301
@@ -594,15 +594,15 @@
       {
         "client": "Gaurav Jain",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
-        "purchase": 0.074995,
+        "month": "April",
+        "purchase": 0.099995,
         "redemption": 0,
-        "net": 0.074995
+        "net": 0.099995
       },
       {
         "client": "Hrishikesh Dinkar Samant",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0.009998,
         "redemption": 0,
         "net": 0.009998
@@ -610,7 +610,7 @@
       {
         "client": "Imran Azizur Rehman Siddiqui",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0,
         "redemption": 0.00009,
         "net": -0.00009
@@ -618,23 +618,23 @@
       {
         "client": "Jayant Shripad Jambotkar",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
-        "purchase": 0.376685,
+        "month": "April",
+        "purchase": 0.502626,
         "redemption": 0.502655,
-        "net": -0.12596999999999997
+        "net": -0.000028999999999945736
       },
       {
         "client": "Karat Tazhtetil Jithendran",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
-        "purchase": 0.079996,
-        "redemption": 0.933687,
-        "net": -0.8536910000000001
+        "month": "April",
+        "purchase": 0.331949,
+        "redemption": 1.185653,
+        "net": -0.853704
       },
       {
         "client": "Karat Tazhtetil Jithendran",
         "asset": "NSP",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 2,
         "redemption": 1.88488,
         "net": 0.11511999999999989
@@ -642,15 +642,15 @@
       {
         "client": "Karat Tazhtetil Jithendran",
         "asset": "Shares",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
-        "purchase": 0,
+        "month": "April",
+        "purchase": 1.986875,
         "redemption": 2.0067575,
-        "net": -2.0067575
+        "net": -0.019882500000000025
       },
       {
         "client": "Milind S Korde",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0.039986,
         "redemption": 0,
         "net": 0.039986
@@ -658,7 +658,7 @@
       {
         "client": "Nimit S Chavan",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0.000099,
         "redemption": 0,
         "net": 0.000099
@@ -666,7 +666,7 @@
       {
         "client": "Paras Ram Vishwakarma",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0.019998,
         "redemption": 0,
         "net": 0.019998
@@ -674,23 +674,23 @@
       {
         "client": "Purushothaman KG",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
-        "purchase": 0.32855,
-        "redemption": 0.312289,
-        "net": 0.016261000000000025
+        "month": "April",
+        "purchase": 0.37401,
+        "redemption": 0.368419,
+        "net": 0.005591000000000013
       },
       {
         "client": "Ravindra N Katre",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0,
-        "redemption": 0.704608,
-        "net": -0.704608
+        "redemption": 0.724622,
+        "net": -0.724622
       },
       {
         "client": "Ravindra N Katre",
         "asset": "NSP",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 1.4625,
         "redemption": 0,
         "net": 1.4625
@@ -698,15 +698,15 @@
       {
         "client": "Rajesh J Doshi",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
-        "purchase": 0.100984,
-        "redemption": 0,
-        "net": 0.100984
+        "month": "April",
+        "purchase": 0.683947,
+        "redemption": 0.582963,
+        "net": 0.10098399999999996
       },
       {
         "client": "Shivkumar Ananthakrishnan",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0.045469,
         "redemption": 0.085194,
         "net": -0.039725
@@ -714,15 +714,15 @@
       {
         "client": "Sumit Mohan Nadgir",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
-        "purchase": 0.3354055,
-        "redemption": 0.075423,
-        "net": 0.2599825
+        "month": "April",
+        "purchase": 0.377903,
+        "redemption": 0.105423,
+        "net": 0.27248
       },
       {
         "client": "Shoaib Fakhruddin Padaria",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0.144297,
         "redemption": 0.162608,
         "net": -0.018310999999999994
@@ -730,7 +730,7 @@
       {
         "client": "Sunita Anil Gajwani",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0.019998,
         "redemption": 0,
         "net": 0.019998
@@ -738,13 +738,21 @@
       {
         "client": "Yukta Kondiba Sakpal",
         "asset": "EMF",
-        "month": "Sun Jan 04 2026 00:00:00 GMT+0530 (India Standard Time)",
+        "month": "April",
         "purchase": 0.000099,
         "redemption": 0,
         "net": 0.000099
+      },
+      {
+        "client": "Deepak Dhar",
+        "asset": "EMF",
+        "month": "April",
+        "purchase": 0,
+        "redemption": 0.099214,
+        "net": -0.099214
       }
     ],
-    "lastUpdated": "2026-04-30T15:45:53.764Z"
+    "lastUpdated": "2026-05-01T04:38:50.418Z"
   },
   {
     "name": "Karan Desai",
@@ -762,35 +770,35 @@
         "target": 234,
         "monthlyRunRate": 4.333333333333333,
         "actual": 182,
-        "newRunRate": 4.333333333333333
+        "newRunRate": 4.7272727272727275
       },
       {
         "label": "Revenue",
         "target": 3,
         "monthlyRunRate": 0.25,
         "actual": 0.29,
-        "newRunRate": 0.22583333333333333
+        "newRunRate": 0.24636363636363637
       },
       {
         "label": "Net Mob",
         "target": 40,
         "monthlyRunRate": 3.3333333333333335,
         "actual": 4.859999999999999,
-        "newRunRate": 2.9283333333333332
+        "newRunRate": 3.194545454545455
       },
       {
         "label": "Mission 50",
         "target": 10,
         "monthlyRunRate": 0.8333333333333334,
         "actual": 0,
-        "newRunRate": 0.8333333333333334
+        "newRunRate": 0.9090909090909091
       },
       {
         "label": "SIP Book",
         "target": 15,
         "monthlyRunRate": 1.25,
         "actual": 0,
-        "newRunRate": 1.25
+        "newRunRate": 1.3636363636363635
       }
     ],
     "activity": [
@@ -959,7 +967,7 @@
         "net": 2.5
       }
     ],
-    "lastUpdated": "2026-04-30T15:45:54.634Z"
+    "lastUpdated": "2026-05-01T04:38:50.610Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -977,35 +985,35 @@
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
         "actual": 28,
-        "newRunRate": 2.3833333333333333
+        "newRunRate": 2.6
       },
       {
         "label": "Revenue",
         "target": 0.5589999999999999,
         "monthlyRunRate": 0.04658333333333333,
         "actual": 0.06,
-        "newRunRate": 0.041583333333333326
+        "newRunRate": 0.045363636363636356
       },
       {
         "label": "Net Mob",
         "target": 24.5,
         "monthlyRunRate": 2.0416666666666665,
         "actual": -0.3218542999999999,
-        "newRunRate": 2.068487858333333
+        "newRunRate": 2.256532209090909
       },
       {
         "label": "Mission 50",
         "target": 12,
         "monthlyRunRate": 1,
         "actual": 1,
-        "newRunRate": 0.9166666666666666
+        "newRunRate": 1
       },
       {
         "label": "SIP Book",
         "target": 0.08,
         "monthlyRunRate": 0.006666666666666667,
         "actual": 0.0296,
-        "newRunRate": 0.0042
+        "newRunRate": 0.004581818181818182
       }
     ],
     "activity": [
@@ -1286,7 +1294,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-04-30T15:45:54.975Z"
+    "lastUpdated": "2026-05-01T04:38:50.802Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1304,35 +1312,35 @@
         "target": 40,
         "monthlyRunRate": 1.8666666666666665,
         "actual": 17.6,
-        "newRunRate": 1.8666666666666665
+        "newRunRate": 2.036363636363636
       },
       {
         "label": "Revenue",
         "target": 0.4,
         "monthlyRunRate": 0.03333333333333333,
         "actual": 0.01,
-        "newRunRate": 0.0325
+        "newRunRate": 0.035454545454545454
       },
       {
         "label": "Net Mob",
         "target": 20,
         "monthlyRunRate": 1.6666666666666667,
         "actual": -0.245,
-        "newRunRate": 1.6870833333333335
+        "newRunRate": 1.8404545454545456
       },
       {
         "label": "Mission 50",
         "target": 12,
         "monthlyRunRate": 1,
         "actual": 0,
-        "newRunRate": 1
+        "newRunRate": 1.0909090909090908
       },
       {
         "label": "SIP Book",
         "target": 5,
         "monthlyRunRate": 0.4166666666666667,
         "actual": 0,
-        "newRunRate": 0.4166666666666667
+        "newRunRate": 0.45454545454545453
       }
     ],
     "activity": [
@@ -1501,6 +1509,6 @@
         "net": -0.31
       }
     ],
-    "lastUpdated": "2026-04-30T15:45:55.157Z"
+    "lastUpdated": "2026-05-01T04:38:50.999Z"
   }
 ]
