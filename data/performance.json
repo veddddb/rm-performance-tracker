@@ -2,13 +2,13 @@
   {
     "name": "Vedant Bhansali",
     "aum": 74,
-    "revenue": 0.04,
-    "netMob": 1.0899999999999999,
+    "revenue": 0.08,
+    "netMob": 1.54,
     "m50": 2,
     "sip": 21,
     "aumTarget": 116,
     "revTarget": 1.6,
-    "ledgerTotal": 1.0899999999999999,
+    "ledgerTotal": 1.54,
     "journey": [
       {
         "label": "AUM",
@@ -21,15 +21,15 @@
         "label": "Revenue",
         "target": 1.6,
         "monthlyRunRate": 0.13333333333333333,
-        "actual": 0.04,
-        "newRunRate": 0.14181818181818182
+        "actual": 0.08,
+        "newRunRate": 0.13818181818181818
       },
       {
         "label": "Net Mob",
         "target": 27,
         "monthlyRunRate": 2.25,
-        "actual": 1.0899999999999999,
-        "newRunRate": 2.3554545454545455
+        "actual": 1.54,
+        "newRunRate": 2.3145454545454545
       },
       {
         "label": "Mission 50",
@@ -134,28 +134,28 @@
     ],
     "plan": [
       {
-        "client": "Kothari",
-        "asset": "MF",
-        "expectedAmt": 1,
+        "client": "Jeswani",
+        "asset": "AR Shares",
+        "expectedAmt": 0.4,
         "expectedRedemption": 0,
-        "netPlan": 1,
-        "prob": 1
+        "netPlan": 0.4,
+        "prob": 100
       },
       {
         "client": "Kothari",
         "asset": "SP",
-        "expectedAmt": 1.1,
+        "expectedAmt": 2.1,
         "expectedRedemption": 0,
-        "netPlan": 1.1,
-        "prob": 50
+        "netPlan": 2.1,
+        "prob": 100
       },
       {
-        "client": "Nensey",
+        "client": "Prabhu",
         "asset": "SP",
-        "expectedAmt": 1.1,
+        "expectedAmt": 0.25,
         "expectedRedemption": 0,
-        "netPlan": 1.1,
-        "prob": 80
+        "netPlan": 0.25,
+        "prob": 100
       },
       {
         "client": "Wala",
@@ -163,21 +163,45 @@
         "expectedAmt": 0.25,
         "expectedRedemption": 0,
         "netPlan": 0.25,
-        "prob": 20
+        "prob": 100
+      },
+      {
+        "client": "Rajesh Rai",
+        "asset": "MF",
+        "expectedAmt": 0.2,
+        "expectedRedemption": 0,
+        "netPlan": 0.2,
+        "prob": 100
+      },
+      {
+        "client": "Krishnan",
+        "asset": "MF",
+        "expectedAmt": 0.15,
+        "expectedRedemption": 0,
+        "netPlan": 0.15,
+        "prob": 100
       },
       {
         "client": "Murali",
         "asset": "MF",
-        "expectedAmt": 1,
+        "expectedAmt": 0.25,
         "expectedRedemption": 0,
-        "netPlan": 1,
+        "netPlan": 0.25,
+        "prob": 100
+      },
+      {
+        "client": "Pramod",
+        "asset": "MF",
+        "expectedAmt": 0.2,
+        "expectedRedemption": 0,
+        "netPlan": 0.2,
         "prob": 100
       }
     ],
-    "planTotalAmt": 4.45,
+    "planTotalAmt": 3.8000000000000003,
     "planTotalRedemption": 0,
-    "planNetTotal": 4.45,
-    "planWeighted": 2.49,
+    "planNetTotal": 3.8000000000000003,
+    "planWeighted": 3.8000000000000003,
     "ledger": [
       {
         "client": "Murali",
@@ -192,8 +216,8 @@
         "asset": "MF",
         "month": "April",
         "purchase": 0,
-        "redemption": 0.15,
-        "net": -0.15
+        "redemption": 0.2,
+        "net": -0.2
       },
       {
         "client": "Markmart",
@@ -210,9 +234,17 @@
         "purchase": 0.14,
         "redemption": 0,
         "net": 0.14
+      },
+      {
+        "client": "Nensey",
+        "asset": "SP",
+        "month": "April",
+        "purchase": 0.5,
+        "redemption": 0,
+        "net": 0.5
       }
     ],
-    "lastUpdated": "2026-05-01T04:40:53.756Z"
+    "lastUpdated": "2026-05-01T05:19:15.572Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,7 +385,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-05-01T04:40:53.914Z"
+    "lastUpdated": "2026-05-01T05:19:16.335Z"
   },
   {
     "name": "Majid Shaikh",
@@ -752,7 +784,7 @@
         "net": -0.099214
       }
     ],
-    "lastUpdated": "2026-05-01T04:40:54.087Z"
+    "lastUpdated": "2026-05-01T05:19:16.585Z"
   },
   {
     "name": "Karan Desai",
@@ -967,7 +999,7 @@
         "net": 2.5
       }
     ],
-    "lastUpdated": "2026-05-01T04:40:54.252Z"
+    "lastUpdated": "2026-05-01T05:19:16.852Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1294,7 +1326,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-05-01T04:40:54.697Z"
+    "lastUpdated": "2026-05-01T05:19:17.096Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1509,6 +1541,6 @@
         "net": -0.31
       }
     ],
-    "lastUpdated": "2026-05-01T04:40:54.869Z"
+    "lastUpdated": "2026-05-01T05:19:17.395Z"
   }
 ]
