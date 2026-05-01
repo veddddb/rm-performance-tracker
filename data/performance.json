@@ -212,7 +212,7 @@
         "net": 0.14
       }
     ],
-    "lastUpdated": "2026-05-01T04:38:50.029Z"
+    "lastUpdated": "2026-05-01T04:40:53.756Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -353,18 +353,18 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-05-01T04:38:50.224Z"
+    "lastUpdated": "2026-05-01T04:40:53.914Z"
   },
   {
     "name": "Majid Shaikh",
     "aum": 270.59,
-    "revenue": 0.5,
-    "netMob": -1.3890355,
+    "revenue": 0.49,
+    "netMob": 0.30977549999999976,
     "m50": 0,
     "sip": 35.98,
     "aumTarget": 389.42023034286,
     "revTarget": 4.1914544125,
-    "ledgerTotal": -1.3890355,
+    "ledgerTotal": 0.30977549999999976,
     "journey": [
       {
         "label": "AUM",
@@ -377,15 +377,15 @@
         "label": "Revenue",
         "target": 4.1914544125,
         "monthlyRunRate": 0.3492878677083333,
-        "actual": 0.5,
-        "newRunRate": 0.33558676477272725
+        "actual": 0.49,
+        "newRunRate": 0.3364958556818181
       },
       {
         "label": "Net Mob",
         "target": 64.27,
         "monthlyRunRate": 5.355833333333333,
-        "actual": -1.3890355,
-        "newRunRate": 5.969003227272728
+        "actual": 0.30977549999999976,
+        "newRunRate": 5.814565863636363
       },
       {
         "label": "Mission 50",
@@ -752,7 +752,7 @@
         "net": -0.099214
       }
     ],
-    "lastUpdated": "2026-05-01T04:38:50.418Z"
+    "lastUpdated": "2026-05-01T04:40:54.087Z"
   },
   {
     "name": "Karan Desai",
@@ -967,7 +967,7 @@
         "net": 2.5
       }
     ],
-    "lastUpdated": "2026-05-01T04:38:50.610Z"
+    "lastUpdated": "2026-05-01T04:40:54.252Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1294,7 +1294,7 @@
         "net": 0.0406446
       }
     ],
-    "lastUpdated": "2026-05-01T04:38:50.802Z"
+    "lastUpdated": "2026-05-01T04:40:54.697Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1509,6 +1509,6 @@
         "net": -0.31
       }
     ],
-    "lastUpdated": "2026-05-01T04:38:50.999Z"
+    "lastUpdated": "2026-05-01T04:40:54.869Z"
   }
 ]
