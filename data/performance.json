@@ -244,7 +244,7 @@
         "net": 0.5
       }
     ],
-    "lastUpdated": "2026-05-01T05:19:15.572Z"
+    "lastUpdated": "2026-05-07T07:04:52.908Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -385,7 +385,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-05-01T05:19:16.335Z"
+    "lastUpdated": "2026-05-07T07:04:53.162Z"
   },
   {
     "name": "Majid Shaikh",
@@ -784,7 +784,7 @@
         "net": -0.099214
       }
     ],
-    "lastUpdated": "2026-05-01T05:19:16.585Z"
+    "lastUpdated": "2026-05-07T07:04:53.432Z"
   },
   {
     "name": "Karan Desai",
@@ -999,39 +999,39 @@
         "net": 2.5
       }
     ],
-    "lastUpdated": "2026-05-01T05:19:16.852Z"
+    "lastUpdated": "2026-05-07T07:04:53.712Z"
   },
   {
     "name": "Gaurav Kumar",
-    "aum": 28,
-    "revenue": 0.06,
-    "netMob": -0.3218542999999999,
+    "aum": 31.05,
+    "revenue": 1.63,
+    "netMob": 0.550905735,
     "m50": 1,
     "sip": 0.0296,
     "aumTarget": 56.6,
     "revTarget": 0.5589999999999999,
-    "ledgerTotal": -0.3218542999999999,
+    "ledgerTotal": 0.550905735,
     "journey": [
       {
         "label": "AUM",
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
-        "actual": 28,
-        "newRunRate": 2.6
+        "actual": 31.05,
+        "newRunRate": 2.3227272727272728
       },
       {
         "label": "Revenue",
         "target": 0.5589999999999999,
         "monthlyRunRate": 0.04658333333333333,
-        "actual": 0.06,
-        "newRunRate": 0.045363636363636356
+        "actual": 1.63,
+        "newRunRate": -0.09736363636363636
       },
       {
         "label": "Net Mob",
         "target": 24.5,
         "monthlyRunRate": 2.0416666666666665,
-        "actual": -0.3218542999999999,
-        "newRunRate": 2.256532209090909
+        "actual": 0.550905735,
+        "newRunRate": 2.1771903877272725
       },
       {
         "label": "Mission 50",
@@ -1052,8 +1052,8 @@
       {
         "param": "Client Meetings",
         "target": 13,
-        "actual": 5,
-        "gap": 8
+        "actual": 3,
+        "gap": 10
       },
       {
         "param": "Product Meetings",
@@ -1076,8 +1076,8 @@
       {
         "param": "MF Audit",
         "target": 1,
-        "actual": 0,
-        "gap": 1
+        "actual": 2,
+        "gap": -1
       },
       {
         "param": "PMS Audit",
@@ -1088,8 +1088,8 @@
       {
         "param": "Insurance Audit",
         "target": 0,
-        "actual": 1,
-        "gap": -1
+        "actual": 0,
+        "gap": 0
       },
       {
         "param": "TNC Calculator",
@@ -1141,7 +1141,7 @@
         "expectedAmt": 1.5,
         "expectedRedemption": 1.8,
         "netPlan": -0.30000000000000004,
-        "prob": 50
+        "prob": 80
       },
       {
         "client": "PALLAVI VISHWAS WAD",
@@ -1149,7 +1149,7 @@
         "expectedAmt": 0.3,
         "expectedRedemption": 0,
         "netPlan": 0.3,
-        "prob": 50
+        "prob": 100
       },
       {
         "client": "Kumar Ram Kanuga",
@@ -1157,23 +1157,23 @@
         "expectedAmt": 0.15,
         "expectedRedemption": 0,
         "netPlan": 0.15,
-        "prob": 50
+        "prob": 80
       },
       {
         "client": "PIYUSH DUNGARPARIA",
         "asset": "MF",
-        "expectedAmt": 0.2,
+        "expectedAmt": 0.34,
         "expectedRedemption": 0,
-        "netPlan": 0.2,
-        "prob": 80
+        "netPlan": 0.34,
+        "prob": 70
       },
       {
-        "client": "ARUN KUMAR SRIVASTAVA",
+        "client": "VIJAY KUMAR AGARWAL",
         "asset": "MF",
-        "expectedAmt": 0.25,
+        "expectedAmt": 0.5,
         "expectedRedemption": 0,
-        "netPlan": 0.25,
-        "prob": 40
+        "netPlan": 0.5,
+        "prob": 100
       },
       {
         "client": "ALIASGAR H SUNASARA",
@@ -1186,10 +1186,10 @@
       {
         "client": "BALASUBRAMANIAM VENKATESH IYER",
         "asset": "MF",
-        "expectedAmt": 0.2,
+        "expectedAmt": 0.05,
         "expectedRedemption": 0,
-        "netPlan": 0.2,
-        "prob": 50
+        "netPlan": 0.05,
+        "prob": 70
       },
       {
         "client": "NEELAM RAJESH GEHANI",
@@ -1198,135 +1198,119 @@
         "expectedRedemption": 0,
         "netPlan": 0.15,
         "prob": 50
+      },
+      {
+        "client": "Ajinkya Choudhari",
+        "asset": "MF",
+        "expectedAmt": 1,
+        "expectedRedemption": 0,
+        "netPlan": 1,
+        "prob": 50
       }
     ],
-    "planTotalAmt": 2.8,
+    "planTotalAmt": 4.039999999999999,
     "planTotalRedemption": 1.8,
-    "planNetTotal": 1,
-    "planWeighted": 1.4500000000000002,
+    "planNetTotal": 2.24,
+    "planWeighted": 3.0080000000000005,
     "ledger": [
       {
-        "client": "Harshala Anant Mankame",
-        "asset": "MF",
-        "month": "April",
-        "purchase": 0.00249988,
-        "redemption": 0,
-        "net": 0.00249988
-      },
-      {
-        "client": "Harshala Anant Mankame",
-        "asset": "MF",
-        "month": "April",
-        "purchase": 0.00249988,
-        "redemption": 0,
-        "net": 0.00249988
-      },
-      {
-        "client": "Harshala Anant Mankame",
-        "asset": "MF",
-        "month": "April",
-        "purchase": 0.00499975,
-        "redemption": 0,
-        "net": 0.00499975
-      },
-      {
-        "client": "PIYUSH DUNGARPURIYA",
-        "asset": "MF",
-        "month": "April",
-        "purchase": 0.00249988,
-        "redemption": 0,
-        "net": 0.00249988
-      },
-      {
         "client": "ALIASGAR H SUNASARA",
         "asset": "MF",
         "month": "April",
-        "purchase": 0.0099995,
+        "purchase": 0.05,
         "redemption": 0,
-        "net": 0.0099995
+        "net": 0.05
       },
       {
-        "client": "ALIASGAR H SUNASARA",
+        "client": "BALASUBRAMANIAM VENKATESH IYER",
         "asset": "MF",
-        "month": "April",
-        "purchase": 0.019999,
-        "redemption": 0,
-        "net": 0.019999
-      },
-      {
-        "client": "ALIASGAR H SUNASARA",
-        "asset": "MF",
-        "month": "April",
-        "purchase": 0.0099995,
-        "redemption": 0,
-        "net": 0.0099995
-      },
-      {
-        "client": "ALIASGAR H SUNASARA",
-        "asset": "MF",
-        "month": "April",
-        "purchase": 0.0099995,
-        "redemption": 0,
-        "net": 0.0099995
-      },
-      {
-        "client": "VINITA DUNGARPURIA",
-        "asset": "SP",
         "month": "April",
         "purchase": 0,
-        "redemption": 0.3904509,
-        "net": -0.3904509
-      },
-      {
-        "client": "PIYUSH DUNGARPURIYA",
-        "asset": "MF",
-        "month": "April",
-        "purchase": 0.00249988,
-        "redemption": 0,
-        "net": 0.00249988
-      },
-      {
-        "client": "HARSHIL DUNGARPURIA REP BY PIYUSH DUNGARPURIA",
-        "asset": "MF",
-        "month": "April",
-        "purchase": 0.00249988,
-        "redemption": 0,
-        "net": 0.00249988
-      },
-      {
-        "client": "HARSHIL DUNGARPURIA REP BY PIYUSH DUNGARPURIA",
-        "asset": "MF",
-        "month": "April",
-        "purchase": 0.00099995,
-        "redemption": 0,
-        "net": 0.00099995
+        "redemption": 0.02,
+        "net": -0.02
       },
       {
         "client": "GAURAV KUMAR",
         "asset": "MF",
         "month": "April",
-        "purchase": 0.0001,
+        "purchase": 0,
         "redemption": 0,
-        "net": 0.0001
+        "net": 0
+      },
+      {
+        "client": "Harshala Anant Mankame",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0.02,
+        "redemption": 0,
+        "net": 0.02
+      },
+      {
+        "client": "PIYUSH DUNGARPURIYA",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0.03,
+        "redemption": 0,
+        "net": 0.03
+      },
+      {
+        "client": "PIYUSH DUNGARPURIYA",
+        "asset": "SP",
+        "month": "April",
+        "purchase": 0,
+        "redemption": 0.39,
+        "net": -0.39
+      },
+      {
+        "client": "Vinay Kumar Santuka",
+        "asset": "SP",
+        "month": "April",
+        "purchase": 0.43,
+        "redemption": 0,
+        "net": 0.43
+      },
+      {
+        "client": "VIRENDRA NATH GUPTA",
+        "asset": "MF",
+        "month": "April",
+        "purchase": 0.04,
+        "redemption": 0,
+        "net": 0.04
       },
       {
         "client": "VIRENDRA NATH GUPTA",
         "asset": "SP",
         "month": "April",
         "purchase": 0,
-        "redemption": 0.0406446,
-        "net": -0.0406446
+        "redemption": 0.04,
+        "net": -0.04
       },
       {
-        "client": "VIRENDRA NATH GUPTA",
+        "client": "PIYUSH DUNGARPURIYA",
         "asset": "MF",
-        "month": "April",
-        "purchase": 0.0406446,
+        "month": "May",
+        "purchase": 0.18,
         "redemption": 0,
-        "net": 0.0406446
+        "net": 0.18
+      },
+      {
+        "client": "PALLAVI VISHWAS WAD",
+        "asset": "MF",
+        "month": "May",
+        "purchase": 0,
+        "redemption": 0.249094265,
+        "net": -0.249094265
+      },
+      {
+        "client": "PALLAVI VISHWAS WAD",
+        "asset": "Others",
+        "month": "May",
+        "purchase": 0.5,
+        "redemption": 0,
+        "net": 0.5
       }
     ],
-    "lastUpdated": "2026-05-01T05:19:17.096Z"
+    "lastUpdated": "2026-05-07T07:04:54.007Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1541,6 +1525,6 @@
         "net": -0.31
       }
     ],
-    "lastUpdated": "2026-05-01T05:19:17.395Z"
+    "lastUpdated": "2026-05-07T07:04:54.305Z"
   }
 ]
