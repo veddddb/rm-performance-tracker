@@ -244,7 +244,7 @@
         "net": 0.5
       }
     ],
-    "lastUpdated": "2026-05-12T19:54:30.615Z"
+    "lastUpdated": "2026-05-14T17:44:09.102Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -385,7 +385,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-05-12T19:54:30.907Z"
+    "lastUpdated": "2026-05-14T17:44:09.414Z"
   },
   {
     "name": "Majid Shaikh",
@@ -784,7 +784,7 @@
         "net": -0.099214
       }
     ],
-    "lastUpdated": "2026-05-12T19:54:31.096Z"
+    "lastUpdated": "2026-05-14T17:44:10.315Z"
   },
   {
     "name": "Karan Desai",
@@ -1047,25 +1047,25 @@
         "net": -0.15
       }
     ],
-    "lastUpdated": "2026-05-12T19:54:31.321Z"
+    "lastUpdated": "2026-05-14T17:44:10.774Z"
   },
   {
     "name": "Gaurav Kumar",
-    "aum": 31.05,
+    "aum": 31.3,
     "revenue": 0.0163,
-    "netMob": 0.550905735,
+    "netMob": 0.755905735,
     "m50": 0,
     "sip": 0.0296,
     "aumTarget": 56.6,
     "revTarget": 0.5589999999999999,
-    "ledgerTotal": 0.550905735,
+    "ledgerTotal": 0.755905735,
     "journey": [
       {
         "label": "AUM",
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
-        "actual": 31.05,
-        "newRunRate": 2.3227272727272728
+        "actual": 31.3,
+        "newRunRate": 2.3000000000000003
       },
       {
         "label": "Revenue",
@@ -1078,8 +1078,8 @@
         "label": "Net Mob",
         "target": 24.5,
         "monthlyRunRate": 2.0416666666666665,
-        "actual": 0.550905735,
-        "newRunRate": 2.1771903877272725
+        "actual": 0.755905735,
+        "newRunRate": 2.1585540240909094
       },
       {
         "label": "Mission 50",
@@ -1356,9 +1356,25 @@
         "purchase": 0.5,
         "redemption": 0,
         "net": 0.5
+      },
+      {
+        "client": "VIRENDRA NATH GUPTA",
+        "asset": "Others",
+        "month": "May",
+        "purchase": 0.15,
+        "redemption": 0,
+        "net": 0.15
+      },
+      {
+        "client": "NEELAM RAJESH GEHANI",
+        "asset": "Others",
+        "month": "May",
+        "purchase": 0.055,
+        "redemption": 0,
+        "net": 0.055
       }
     ],
-    "lastUpdated": "2026-05-12T19:54:31.535Z"
+    "lastUpdated": "2026-05-14T17:44:11.075Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1573,6 +1589,6 @@
         "net": -0.31
       }
     ],
-    "lastUpdated": "2026-05-12T19:54:31.769Z"
+    "lastUpdated": "2026-05-14T17:44:11.367Z"
   }
 ]
