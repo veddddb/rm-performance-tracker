@@ -244,7 +244,7 @@
         "net": 0.5
       }
     ],
-    "lastUpdated": "2026-05-21T09:11:25.379Z"
+    "lastUpdated": "2026-05-21T09:12:27.339Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -385,7 +385,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-05-21T09:11:25.743Z"
+    "lastUpdated": "2026-05-21T09:12:27.740Z"
   },
   {
     "name": "Majid Shaikh",
@@ -784,7 +784,7 @@
         "net": -0.099214
       }
     ],
-    "lastUpdated": "2026-05-21T09:11:26.233Z"
+    "lastUpdated": "2026-05-21T09:12:27.998Z"
   },
   {
     "name": "Karan Desai",
@@ -1047,7 +1047,7 @@
         "net": -0.15
       }
     ],
-    "lastUpdated": "2026-05-21T09:11:26.866Z"
+    "lastUpdated": "2026-05-21T09:12:28.255Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1100,14 +1100,14 @@
       {
         "param": "Client Meetings",
         "target": 13,
-        "actual": 3,
-        "gap": 10
+        "actual": 8,
+        "gap": 5
       },
       {
         "param": "Product Meetings",
         "target": 2,
-        "actual": 1,
-        "gap": 1
+        "actual": 2,
+        "gap": 0
       },
       {
         "param": "WILLs",
@@ -1118,8 +1118,8 @@
       {
         "param": "DE Audit",
         "target": 1,
-        "actual": 0,
-        "gap": 1
+        "actual": 1,
+        "gap": 0
       },
       {
         "param": "MF Audit",
@@ -1160,8 +1160,8 @@
       {
         "param": "M50",
         "target": 1,
-        "actual": 0,
-        "gap": 1
+        "actual": 1,
+        "gap": 0
       }
     ],
     "leverage": [
@@ -1390,7 +1390,7 @@
         "net": 0.1
       }
     ],
-    "lastUpdated": "2026-05-21T09:11:27.359Z"
+    "lastUpdated": "2026-05-21T09:12:28.603Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1661,6 +1661,6 @@
         "net": -1.19
       }
     ],
-    "lastUpdated": "2026-05-21T09:11:27.853Z"
+    "lastUpdated": "2026-05-21T09:12:28.951Z"
   }
 ]
