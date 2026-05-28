@@ -244,7 +244,7 @@
         "net": 0.5
       }
     ],
-    "lastUpdated": "2026-05-21T09:12:27.339Z"
+    "lastUpdated": "2026-05-28T10:19:54.753Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -385,7 +385,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-05-21T09:12:27.740Z"
+    "lastUpdated": "2026-05-28T10:19:55.100Z"
   },
   {
     "name": "Majid Shaikh",
@@ -784,18 +784,18 @@
         "net": -0.099214
       }
     ],
-    "lastUpdated": "2026-05-21T09:12:27.998Z"
+    "lastUpdated": "2026-05-28T10:19:55.389Z"
   },
   {
     "name": "Karan Desai",
     "aum": 199.3,
     "revenue": 0.37,
-    "netMob": 1.4499999999999997,
+    "netMob": 2.2399999999999998,
     "m50": 0,
     "sip": 0,
     "aumTarget": 234,
     "revTarget": 3,
-    "ledgerTotal": 1.4499999999999997,
+    "ledgerTotal": 2.2399999999999998,
     "journey": [
       {
         "label": "AUM",
@@ -815,8 +815,8 @@
         "label": "Net Mob",
         "target": 40,
         "monthlyRunRate": 3.3333333333333335,
-        "actual": 1.4499999999999997,
-        "newRunRate": 3.5045454545454544
+        "actual": 2.2399999999999998,
+        "newRunRate": 3.4327272727272726
       },
       {
         "label": "Mission 50",
@@ -1018,9 +1018,9 @@
         "client": "Hemen Vimadalal",
         "asset": "MF",
         "month": "May",
-        "purchase": 0.5,
+        "purchase": 0.75,
         "redemption": 4.4,
-        "net": -3.9000000000000004
+        "net": -3.6500000000000004
       },
       {
         "client": "Navneet Bansal",
@@ -1043,11 +1043,43 @@
         "asset": "MF",
         "month": "May",
         "purchase": 0,
-        "redemption": 0.15,
-        "net": -0.15
+        "redemption": 0.25,
+        "net": -0.25
+      },
+      {
+        "client": "Alam Sisodia",
+        "asset": "MF",
+        "month": "May",
+        "purchase": 0.1,
+        "redemption": 0,
+        "net": 0.1
+      },
+      {
+        "client": "Nagarajan",
+        "asset": "MF",
+        "month": "May",
+        "purchase": 0.08,
+        "redemption": 0,
+        "net": 0.08
+      },
+      {
+        "client": "Mukesh Mehta",
+        "asset": "MF",
+        "month": "May",
+        "purchase": 0.31,
+        "redemption": 0,
+        "net": 0.31
+      },
+      {
+        "client": "NSFT",
+        "asset": "Shares",
+        "month": "May",
+        "purchase": 0.15,
+        "redemption": 0,
+        "net": 0.15
       }
     ],
-    "lastUpdated": "2026-05-21T09:12:28.255Z"
+    "lastUpdated": "2026-05-28T10:19:55.684Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1390,7 +1422,7 @@
         "net": 0.1
       }
     ],
-    "lastUpdated": "2026-05-21T09:12:28.603Z"
+    "lastUpdated": "2026-05-28T10:19:56.026Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1661,6 +1693,6 @@
         "net": -1.19
       }
     ],
-    "lastUpdated": "2026-05-21T09:12:28.951Z"
+    "lastUpdated": "2026-05-28T10:19:56.380Z"
   }
 ]
