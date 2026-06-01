@@ -80,14 +80,14 @@
       {
         "param": "PMS Audit",
         "target": 1,
-        "actual": 1,
-        "gap": 0
+        "actual": 0,
+        "gap": 1
       },
       {
         "param": "Insurance Audit",
         "target": 1,
-        "actual": 1,
-        "gap": 0
+        "actual": 0,
+        "gap": 1
       },
       {
         "param": "TNC Calculator",
@@ -104,8 +104,8 @@
       {
         "param": "SIP",
         "target": 0,
-        "actual": 1,
-        "gap": -1
+        "actual": 0,
+        "gap": 0
       },
       {
         "param": "M50",
@@ -260,7 +260,7 @@
         "net": 0.37
       }
     ],
-    "lastUpdated": "2026-06-01T11:48:24.926Z"
+    "lastUpdated": "2026-06-01T11:49:07.586Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -401,7 +401,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-06-01T11:48:25.237Z"
+    "lastUpdated": "2026-06-01T11:49:07.907Z"
   },
   {
     "name": "Majid Shaikh",
@@ -800,7 +800,7 @@
         "net": -0.099214
       }
     ],
-    "lastUpdated": "2026-06-01T11:48:25.448Z"
+    "lastUpdated": "2026-06-01T11:49:08.118Z"
   },
   {
     "name": "Karan Desai",
@@ -1095,7 +1095,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-06-01T11:48:25.693Z"
+    "lastUpdated": "2026-06-01T11:49:08.261Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1446,7 +1446,7 @@
         "net": 0.01
       }
     ],
-    "lastUpdated": "2026-06-01T11:48:25.957Z"
+    "lastUpdated": "2026-06-01T11:49:08.434Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1717,6 +1717,6 @@
         "net": -1.19
       }
     ],
-    "lastUpdated": "2026-06-01T11:48:26.215Z"
+    "lastUpdated": "2026-06-01T11:49:08.586Z"
   }
 ]
