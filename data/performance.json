@@ -260,7 +260,7 @@
         "net": 0.37
       }
     ],
-    "lastUpdated": "2026-06-03T10:53:48.515Z"
+    "lastUpdated": "2026-06-03T11:02:53.981Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -401,7 +401,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-06-03T10:53:48.824Z"
+    "lastUpdated": "2026-06-03T11:02:54.165Z"
   },
   {
     "name": "Majid Shaikh",
@@ -412,7 +412,7 @@
     "sip": 35.98,
     "aumTarget": 379.42,
     "revTarget": 4.1914544125,
-    "ledgerTotal": 0.25139909299999996,
+    "ledgerTotal": 2.013117593,
     "journey": [
       {
         "label": "AUM",
@@ -662,9 +662,81 @@
         "purchase": 0.144303897,
         "redemption": 0.162613529,
         "net": -0.01830963200000002
+      },
+      {
+        "client": "SIPs",
+        "asset": "EMF",
+        "month": "May",
+        "purchase": 0.190172,
+        "redemption": 0,
+        "net": 0.190172
+      },
+      {
+        "client": "Ajay Kurhekar",
+        "asset": "EMF",
+        "month": "May",
+        "purchase": 0.000998,
+        "redemption": 0.419485,
+        "net": -0.418487
+      },
+      {
+        "client": "Ajay Kurhekar",
+        "asset": "NSP",
+        "month": "May",
+        "purchase": 1.1,
+        "redemption": 0.5504825,
+        "net": 0.5495175000000001
+      },
+      {
+        "client": "Karat Tazhtetil Jithendran",
+        "asset": "EMF",
+        "month": "May",
+        "purchase": 0.079996,
+        "redemption": 0.050306,
+        "net": 0.02969
+      },
+      {
+        "client": "Muffazal Arsiwalla",
+        "asset": "EMF",
+        "month": "May",
+        "purchase": 1.499919,
+        "redemption": 0,
+        "net": 1.499919
+      },
+      {
+        "client": "New Age Super Express",
+        "asset": "EMF",
+        "month": "May",
+        "purchase": 0,
+        "redemption": 0.180605,
+        "net": -0.180605
+      },
+      {
+        "client": "RAVINDRA N KATRE",
+        "asset": "EMF",
+        "month": "May",
+        "purchase": 0,
+        "redemption": 0.020038,
+        "net": -0.020038
+      },
+      {
+        "client": "Rajesh Doshi",
+        "asset": "EMF",
+        "month": "May",
+        "purchase": 1.18423,
+        "redemption": 1.090174,
+        "net": 0.09405599999999992
+      },
+      {
+        "client": "Sumit Mohan Nadgir",
+        "asset": "EMF",
+        "month": "May",
+        "purchase": 0.1128115,
+        "redemption": 0.0953175,
+        "net": 0.017493999999999996
       }
     ],
-    "lastUpdated": "2026-06-03T10:53:49.119Z"
+    "lastUpdated": "2026-06-03T11:02:54.366Z"
   },
   {
     "name": "Karan Desai",
@@ -951,7 +1023,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-06-03T10:53:49.834Z"
+    "lastUpdated": "2026-06-03T11:02:54.583Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1302,7 +1374,7 @@
         "net": 0.01
       }
     ],
-    "lastUpdated": "2026-06-03T10:53:50.219Z"
+    "lastUpdated": "2026-06-03T11:02:54.767Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1581,6 +1653,6 @@
         "net": 0.03
       }
     ],
-    "lastUpdated": "2026-06-03T10:53:50.632Z"
+    "lastUpdated": "2026-06-03T11:02:54.998Z"
   }
 ]
