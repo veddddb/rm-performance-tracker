@@ -260,7 +260,7 @@
         "net": 0.37
       }
     ],
-    "lastUpdated": "2026-06-04T11:00:18.219Z"
+    "lastUpdated": "2026-06-04T11:01:38.234Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -401,7 +401,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-06-04T11:00:18.967Z"
+    "lastUpdated": "2026-06-04T11:01:38.693Z"
   },
   {
     "name": "Majid Shaikh",
@@ -412,7 +412,7 @@
     "sip": 35.98,
     "aumTarget": 379.42,
     "revTarget": 4.1914544125,
-    "ledgerTotal": 1.9317356079999997,
+    "ledgerTotal": 1.9015899759999997,
     "journey": [
       {
         "label": "AUM",
@@ -734,9 +734,17 @@
         "purchase": 0.1203122335,
         "redemption": 0.0953182495,
         "net": 0.02499398400000001
+      },
+      {
+        "client": "Adyasha Rath",
+        "asset": "EMF",
+        "month": "May",
+        "purchase": 0,
+        "redemption": 0.030145632,
+        "net": -0.030145632
       }
     ],
-    "lastUpdated": "2026-06-04T11:00:19.591Z"
+    "lastUpdated": "2026-06-04T11:01:39.008Z"
   },
   {
     "name": "Karan Desai",
@@ -1023,7 +1031,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-06-04T11:00:20.833Z"
+    "lastUpdated": "2026-06-04T11:01:39.326Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1374,7 +1382,7 @@
         "net": 0.01
       }
     ],
-    "lastUpdated": "2026-06-04T11:00:21.293Z"
+    "lastUpdated": "2026-06-04T11:01:39.696Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1653,6 +1661,6 @@
         "net": 0.03
       }
     ],
-    "lastUpdated": "2026-06-04T11:00:21.564Z"
+    "lastUpdated": "2026-06-04T11:01:40.014Z"
   }
 ]
