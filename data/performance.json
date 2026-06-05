@@ -260,7 +260,7 @@
         "net": 0.37
       }
     ],
-    "lastUpdated": "2026-06-04T11:01:38.234Z"
+    "lastUpdated": "2026-06-05T04:31:24.034Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -401,13 +401,13 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-06-04T11:01:38.693Z"
+    "lastUpdated": "2026-06-05T04:31:24.715Z"
   },
   {
     "name": "Majid Shaikh",
-    "aum": 292.81,
-    "revenue": 0.7087,
-    "netMob": 2.01,
+    "aum": 293.67,
+    "revenue": 0.7152,
+    "netMob": 1.9,
     "m50": 0,
     "sip": 35.98,
     "aumTarget": 379.42,
@@ -418,22 +418,22 @@
         "label": "AUM",
         "target": 379.42,
         "monthlyRunRate": 9.069266633295086,
-        "actual": 292.81,
-        "newRunRate": 8.661000000000001
+        "actual": 293.67,
+        "newRunRate": 8.575
       },
       {
         "label": "Revenue",
         "target": 4.1914544125,
         "monthlyRunRate": 0.3492878677083333,
-        "actual": 0.7087,
-        "newRunRate": 0.34827544125
+        "actual": 0.7152,
+        "newRunRate": 0.34762544125
       },
       {
         "label": "Net Mob",
         "target": 64.27,
         "monthlyRunRate": 5.355833333333333,
-        "actual": 2.01,
-        "newRunRate": 6.226
+        "actual": 1.9,
+        "newRunRate": 6.237
       },
       {
         "label": "Mission 50",
@@ -454,14 +454,14 @@
       {
         "param": "Client Meetings",
         "target": 20,
-        "actual": 3,
-        "gap": 17
+        "actual": 9,
+        "gap": 11
       },
       {
         "param": "Product Meetings",
         "target": 10,
-        "actual": 1,
-        "gap": 9
+        "actual": 2,
+        "gap": 8
       },
       {
         "param": "WILLs",
@@ -744,12 +744,12 @@
         "net": -0.030145632
       }
     ],
-    "lastUpdated": "2026-06-04T11:01:39.008Z"
+    "lastUpdated": "2026-06-05T04:31:24.960Z"
   },
   {
     "name": "Karan Desai",
-    "aum": 195,
-    "revenue": 0.45,
+    "aum": 193.3,
+    "revenue": 0.44,
     "netMob": 2.2399999999999998,
     "m50": 0,
     "sip": 0,
@@ -761,15 +761,15 @@
         "label": "AUM",
         "target": 234,
         "monthlyRunRate": 4.333333333333333,
-        "actual": 195,
-        "newRunRate": 3.9
+        "actual": 193.3,
+        "newRunRate": 4.0699999999999985
       },
       {
         "label": "Revenue",
         "target": 3,
         "monthlyRunRate": 0.25,
-        "actual": 0.45,
-        "newRunRate": 0.255
+        "actual": 0.44,
+        "newRunRate": 0.256
       },
       {
         "label": "Net Mob",
@@ -1031,7 +1031,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-06-04T11:01:39.326Z"
+    "lastUpdated": "2026-06-05T04:31:25.209Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1382,7 +1382,7 @@
         "net": 0.01
       }
     ],
-    "lastUpdated": "2026-06-04T11:01:39.696Z"
+    "lastUpdated": "2026-06-05T04:31:25.468Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1661,6 +1661,6 @@
         "net": 0.03
       }
     ],
-    "lastUpdated": "2026-06-04T11:01:40.014Z"
+    "lastUpdated": "2026-06-05T04:31:25.720Z"
   }
 ]
