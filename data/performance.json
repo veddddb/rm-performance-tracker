@@ -260,7 +260,7 @@
         "net": 0.37
       }
     ],
-    "lastUpdated": "2026-06-05T04:31:24.034Z"
+    "lastUpdated": "2026-06-15T11:09:31.394Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -401,7 +401,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-06-05T04:31:24.715Z"
+    "lastUpdated": "2026-06-15T11:09:31.671Z"
   },
   {
     "name": "Majid Shaikh",
@@ -744,18 +744,18 @@
         "net": -0.030145632
       }
     ],
-    "lastUpdated": "2026-06-05T04:31:24.960Z"
+    "lastUpdated": "2026-06-15T11:09:32.508Z"
   },
   {
     "name": "Karan Desai",
     "aum": 193.3,
     "revenue": 0.44,
-    "netMob": 2.2399999999999998,
+    "netMob": 2.3899999999999997,
     "m50": 0,
     "sip": 0,
     "aumTarget": 234,
     "revTarget": 3,
-    "ledgerTotal": 2.2399999999999998,
+    "ledgerTotal": 2.3899999999999997,
     "journey": [
       {
         "label": "AUM",
@@ -775,8 +775,8 @@
         "label": "Net Mob",
         "target": 40,
         "monthlyRunRate": 3.3333333333333335,
-        "actual": 2.2399999999999998,
-        "newRunRate": 3.776
+        "actual": 2.3899999999999997,
+        "newRunRate": 3.761
       },
       {
         "label": "Mission 50",
@@ -906,7 +906,7 @@
       },
       {
         "client": "Alam Ali Sisodia",
-        "asset": "Levrage",
+        "asset": "Leverage",
         "expectedAmt": 1.1,
         "expectedRedemption": 0,
         "netPlan": 1.1,
@@ -1029,9 +1029,33 @@
         "purchase": 0.15,
         "redemption": 0,
         "net": 0.15
+      },
+      {
+        "client": "Navneet Bansal",
+        "asset": "MF",
+        "month": "June",
+        "purchase": 0,
+        "redemption": 0.5,
+        "net": -0.5
+      },
+      {
+        "client": "Avananta",
+        "asset": "MF",
+        "month": "June",
+        "purchase": 0.5,
+        "redemption": 0,
+        "net": 0.5
+      },
+      {
+        "client": "Nilesh Shah",
+        "asset": "Shares",
+        "month": "June",
+        "purchase": 0.15,
+        "redemption": 0,
+        "net": 0.15
       }
     ],
-    "lastUpdated": "2026-06-05T04:31:25.209Z"
+    "lastUpdated": "2026-06-15T11:09:32.750Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1382,7 +1406,7 @@
         "net": 0.01
       }
     ],
-    "lastUpdated": "2026-06-05T04:31:25.468Z"
+    "lastUpdated": "2026-06-15T11:09:33.041Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1661,6 +1685,6 @@
         "net": 0.03
       }
     ],
-    "lastUpdated": "2026-06-05T04:31:25.720Z"
+    "lastUpdated": "2026-06-15T11:09:33.292Z"
   }
 ]
