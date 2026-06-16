@@ -260,7 +260,7 @@
         "net": 0.37
       }
     ],
-    "lastUpdated": "2026-06-15T11:09:31.394Z"
+    "lastUpdated": "2026-06-16T08:16:39.847Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -401,7 +401,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-06-15T11:09:31.671Z"
+    "lastUpdated": "2026-06-16T08:16:40.006Z"
   },
   {
     "name": "Majid Shaikh",
@@ -744,7 +744,7 @@
         "net": -0.030145632
       }
     ],
-    "lastUpdated": "2026-06-15T11:09:32.508Z"
+    "lastUpdated": "2026-06-16T08:16:40.157Z"
   },
   {
     "name": "Karan Desai",
@@ -1055,39 +1055,39 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-06-15T11:09:32.750Z"
+    "lastUpdated": "2026-06-16T08:16:40.299Z"
   },
   {
     "name": "Gaurav Kumar",
-    "aum": 31.52,
-    "revenue": 0.0163,
-    "netMob": 1.015905735,
+    "aum": 31.58,
+    "revenue": 0.0275,
+    "netMob": 1.035905735,
     "m50": 0,
     "sip": 0.0296,
     "aumTarget": 56.6,
     "revTarget": 0.5589999999999999,
-    "ledgerTotal": 1.015905735,
+    "ledgerTotal": 1.035905735,
     "journey": [
       {
         "label": "AUM",
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
-        "actual": 31.52,
-        "newRunRate": 2.508
+        "actual": 31.58,
+        "newRunRate": 2.5020000000000002
       },
       {
         "label": "Revenue",
         "target": 0.5589999999999999,
         "monthlyRunRate": 0.04658333333333333,
-        "actual": 0.0163,
-        "newRunRate": 0.05427
+        "actual": 0.0275,
+        "newRunRate": 0.053149999999999996
       },
       {
         "label": "Net Mob",
         "target": 24.5,
         "monthlyRunRate": 2.0416666666666665,
-        "actual": 1.015905735,
-        "newRunRate": 2.3484094265
+        "actual": 1.035905735,
+        "newRunRate": 2.3464094265
       },
       {
         "label": "Mission 50",
@@ -1108,38 +1108,38 @@
       {
         "param": "Client Meetings",
         "target": 13,
-        "actual": 8,
-        "gap": 5
+        "actual": 6,
+        "gap": 7
       },
       {
         "param": "Product Meetings",
         "target": 2,
-        "actual": 2,
-        "gap": 0
+        "actual": 1,
+        "gap": 1
       },
       {
         "param": "WILLs",
-        "target": 2,
+        "target": 1,
         "actual": 0,
-        "gap": 2
+        "gap": 1
       },
       {
         "param": "DE Audit",
-        "target": 1,
-        "actual": 1,
+        "target": 0,
+        "actual": 0,
         "gap": 0
       },
       {
         "param": "MF Audit",
         "target": 1,
-        "actual": 2,
-        "gap": -1
+        "actual": 0,
+        "gap": 1
       },
       {
         "param": "PMS Audit",
-        "target": 2,
+        "target": 1,
         "actual": 0,
-        "gap": 2
+        "gap": 1
       },
       {
         "param": "Insurance Audit",
@@ -1149,9 +1149,9 @@
       },
       {
         "param": "TNC Calculator",
-        "target": 2,
-        "actual": 0,
-        "gap": 2
+        "target": 1,
+        "actual": 1,
+        "gap": 0
       },
       {
         "param": "Leverage",
@@ -1195,37 +1195,37 @@
         "client": "PALLAVI VISHWAS WAD",
         "asset": "NSP",
         "expectedAmt": 1.5,
-        "expectedRedemption": 1.8,
-        "netPlan": -0.30000000000000004,
+        "expectedRedemption": 1.9,
+        "netPlan": -0.3999999999999999,
         "prob": 80
       },
       {
         "client": "PALLAVI VISHWAS WAD",
-        "asset": "Others",
-        "expectedAmt": 0.3,
+        "asset": "MF",
+        "expectedAmt": 0.4,
         "expectedRedemption": 0,
-        "netPlan": 0.3,
+        "netPlan": 0.4,
         "prob": 100
       },
       {
         "client": "Kumar Ram Kanuga",
         "asset": "MF",
-        "expectedAmt": 0.15,
+        "expectedAmt": 0.25,
         "expectedRedemption": 0,
-        "netPlan": 0.15,
+        "netPlan": 0.25,
         "prob": 80
       },
       {
         "client": "PIYUSH DUNGARPARIA",
         "asset": "MF",
-        "expectedAmt": 0.34,
+        "expectedAmt": 0.16,
         "expectedRedemption": 0,
-        "netPlan": 0.34,
+        "netPlan": 0.16,
         "prob": 70
       },
       {
         "client": "VIJAY KUMAR AGARWAL",
-        "asset": "MF",
+        "asset": "NSP",
         "expectedAmt": 0.5,
         "expectedRedemption": 0,
         "netPlan": 0.5,
@@ -1264,10 +1264,10 @@
         "prob": 50
       }
     ],
-    "planTotalAmt": 4.039999999999999,
-    "planTotalRedemption": 1.8,
-    "planNetTotal": 2.24,
-    "planWeighted": 3.0080000000000005,
+    "planTotalAmt": 4.06,
+    "planTotalRedemption": 1.9,
+    "planNetTotal": 2.16,
+    "planWeighted": 3.0620000000000003,
     "ledger": [
       {
         "client": "ALIASGAR H SUNASARA",
@@ -1345,9 +1345,9 @@
         "client": "PIYUSH DUNGARPURIYA",
         "asset": "MF",
         "month": "May",
-        "purchase": 0.18,
-        "redemption": 0,
-        "net": 0.18
+        "purchase": 0.21,
+        "redemption": 0.05,
+        "net": 0.15999999999999998
       },
       {
         "client": "PALLAVI VISHWAS WAD",
@@ -1404,9 +1404,25 @@
         "purchase": 0.01,
         "redemption": 0,
         "net": 0.01
+      },
+      {
+        "client": "BALASUBRAMANIAM VENKATESH IYER",
+        "asset": "MF",
+        "month": "May",
+        "purchase": 0.04,
+        "redemption": 0,
+        "net": 0.04
+      },
+      {
+        "client": "Vinay Kumar Santuka",
+        "asset": "SP",
+        "month": "June",
+        "purchase": 0.205476,
+        "redemption": 0,
+        "net": 0.205476
       }
     ],
-    "lastUpdated": "2026-06-15T11:09:33.041Z"
+    "lastUpdated": "2026-06-16T08:16:40.447Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1685,6 +1701,6 @@
         "net": 0.03
       }
     ],
-    "lastUpdated": "2026-06-15T11:09:33.292Z"
+    "lastUpdated": "2026-06-16T08:16:40.635Z"
   }
 ]
