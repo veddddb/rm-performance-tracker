@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-07-14T18:23:16.965Z"
+    "lastUpdated": "2026-07-15T05:35:33.394Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -393,7 +393,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-07-14T18:23:17.671Z"
+    "lastUpdated": "2026-07-15T05:35:33.823Z"
   },
   {
     "name": "Majid Shaikh",
@@ -736,7 +736,7 @@
         "net": -0.030145632
       }
     ],
-    "lastUpdated": "2026-07-14T18:23:17.989Z"
+    "lastUpdated": "2026-07-15T05:35:34.170Z"
   },
   {
     "name": "Karan Desai",
@@ -1047,11 +1047,11 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-07-14T18:23:18.187Z"
+    "lastUpdated": "2026-07-15T05:35:34.501Z"
   },
   {
     "name": "Gaurav Kumar",
-    "aum": 33.56,
+    "aum": 33.96,
     "revenue": 0.2073,
     "netMob": 1.035905735,
     "m50": 1,
@@ -1064,8 +1064,8 @@
         "label": "AUM",
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
-        "actual": 33.56,
-        "newRunRate": 2.56
+        "actual": 33.96,
+        "newRunRate": 2.5155555555555558
       },
       {
         "label": "Revenue",
@@ -1456,7 +1456,7 @@
       {
         "client": "PALLAVI VISHWAS WAD",
         "asset": "SP",
-        "month": "June",
+        "month": "July",
         "purchase": 1.65,
         "redemption": 1.95,
         "net": -0.30000000000000004
@@ -1464,13 +1464,21 @@
       {
         "client": "PALLAVI VISHWAS WAD",
         "asset": "MF",
-        "month": "June",
+        "month": "July",
         "purchase": 0.3,
         "redemption": 0,
         "net": 0.3
+      },
+      {
+        "client": "PALLAVI VISHWAS WAD",
+        "asset": "MF",
+        "month": "July",
+        "purchase": 0.4,
+        "redemption": 0,
+        "net": 0.4
       }
     ],
-    "lastUpdated": "2026-07-14T18:23:18.389Z"
+    "lastUpdated": "2026-07-15T05:35:34.816Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1789,6 +1797,6 @@
         "net": -0.29
       }
     ],
-    "lastUpdated": "2026-07-14T18:23:18.649Z"
+    "lastUpdated": "2026-07-15T05:35:35.086Z"
   }
 ]
