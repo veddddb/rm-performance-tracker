@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-07-15T05:35:33.394Z"
+    "lastUpdated": "2026-07-30T09:37:49.241Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -393,7 +393,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-07-15T05:35:33.823Z"
+    "lastUpdated": "2026-07-30T09:37:50.632Z"
   },
   {
     "name": "Majid Shaikh",
@@ -736,7 +736,7 @@
         "net": -0.030145632
       }
     ],
-    "lastUpdated": "2026-07-15T05:35:34.170Z"
+    "lastUpdated": "2026-07-30T09:37:51.557Z"
   },
   {
     "name": "Karan Desai",
@@ -1047,7 +1047,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-07-15T05:35:34.501Z"
+    "lastUpdated": "2026-07-30T09:37:52.859Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1478,18 +1478,18 @@
         "net": 0.4
       }
     ],
-    "lastUpdated": "2026-07-15T05:35:34.816Z"
+    "lastUpdated": "2026-07-30T09:37:53.833Z"
   },
   {
     "name": "Pawan Vyas",
     "aum": 18.2,
     "revenue": 0.0732,
-    "netMob": -0.615,
+    "netMob": -0.295,
     "m50": 0,
     "sip": 0,
     "aumTarget": 40,
     "revTarget": 0.4,
-    "ledgerTotal": -0.615,
+    "ledgerTotal": -0.295,
     "journey": [
       {
         "label": "AUM",
@@ -1509,8 +1509,8 @@
         "label": "Net Mob",
         "target": 20,
         "monthlyRunRate": 1.6666666666666667,
-        "actual": -0.615,
-        "newRunRate": 2.2905555555555552
+        "actual": -0.295,
+        "newRunRate": 2.2550000000000003
       },
       {
         "label": "Mission 50",
@@ -1549,14 +1549,14 @@
       {
         "param": "DE Audit",
         "target": 1,
-        "actual": 0,
-        "gap": 1
+        "actual": 1,
+        "gap": 0
       },
       {
         "param": "MF Audit",
         "target": 1,
-        "actual": 0,
-        "gap": 1
+        "actual": 2,
+        "gap": -1
       },
       {
         "param": "PMS Audit",
@@ -1615,66 +1615,66 @@
     ],
     "plan": [
       {
-        "client": "Shreyash",
+        "client": "Kajal Sunar",
         "asset": "MF",
-        "expectedAmt": 0.5,
+        "expectedAmt": 0.3,
         "expectedRedemption": 0,
-        "netPlan": 0.5,
+        "netPlan": 0.3,
         "prob": 80
       },
       {
-        "client": "Shreyash",
-        "asset": "SP",
+        "client": "Sanjay Karwa",
+        "asset": "MF",
         "expectedAmt": 0.25,
         "expectedRedemption": 0,
         "netPlan": 0.25,
         "prob": 80
       },
       {
-        "client": "Khushru",
-        "asset": "SP",
-        "expectedAmt": 0.75,
-        "expectedRedemption": 0.75,
-        "netPlan": 0,
+        "client": "Abdul Patni",
+        "asset": "MF",
+        "expectedAmt": 0.3,
+        "expectedRedemption": 0,
+        "netPlan": 0.3,
         "prob": 80
       },
       {
-        "client": "Sanjay Karwa",
-        "asset": "AR",
+        "client": "Khushru bacha",
+        "asset": "SP",
+        "expectedAmt": 0,
+        "expectedRedemption": 0.25,
+        "netPlan": -0.25,
+        "prob": 80
+      },
+      {
+        "client": "Sudhir Sood",
+        "asset": "MF",
         "expectedAmt": 0.5,
         "expectedRedemption": 0,
         "netPlan": 0.5,
         "prob": 80
       },
       {
-        "client": "Khushru",
-        "asset": "AR",
-        "expectedAmt": 0.15,
-        "expectedRedemption": 0,
-        "netPlan": 0.15,
-        "prob": 80
-      },
-      {
-        "client": "Abdul Patni",
-        "asset": "MF",
-        "expectedAmt": 0.4,
-        "expectedRedemption": 0,
-        "netPlan": 0.4,
-        "prob": 80
-      },
-      {
-        "client": "Sudhir Sood",
+        "client": "Ameeta Munshi",
         "asset": "MF",
         "expectedAmt": 0.2,
         "expectedRedemption": 0,
         "netPlan": 0.2,
         "prob": 80
+      },
+      {
+        "client": "Abdul Patni",
+        "asset": "SP",
+        "expectedAmt": 0.5,
+        "expectedRedemption": 0,
+        "netPlan": 0.5,
+        "prob": 80
       }
     ],
-    "planTotalAmt": 2.75,
-    "planTotalRedemption": 0.75,
-    "planNetTotal": 1.9999999999999998,
-    "planWeighted": 2.2,
+    "planTotalAmt": 2.05,
+    "planTotalRedemption": 0.25,
+    "planNetTotal": 1.8,
+    "planWeighted": 1.6400000000000001,
     "ledger": [
       {
         "client": "Sanjay Karwa",
@@ -1795,8 +1795,40 @@
         "purchase": 0,
         "redemption": 0.29,
         "net": -0.29
+      },
+      {
+        "client": "Abdul Patni",
+        "asset": "MF",
+        "month": "July",
+        "purchase": 0.25,
+        "redemption": 0,
+        "net": 0.25
+      },
+      {
+        "client": "Abdul Patni",
+        "asset": "Stock",
+        "month": "July",
+        "purchase": 0.05,
+        "redemption": 0,
+        "net": 0.05
+      },
+      {
+        "client": "Sanjay Karwa",
+        "asset": "MF",
+        "month": "July",
+        "purchase": 0.02,
+        "redemption": 0,
+        "net": 0.02
+      },
+      {
+        "client": "Sudhir Sood",
+        "asset": "MF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.12,
+        "net": -0.12
       }
     ],
-    "lastUpdated": "2026-07-15T05:35:35.086Z"
+    "lastUpdated": "2026-07-30T09:37:54.717Z"
   }
 ]
