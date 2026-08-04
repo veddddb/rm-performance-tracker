@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-04T10:08:02.715Z"
+    "lastUpdated": "2026-08-04T10:28:45.382Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -393,7 +393,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-08-04T10:08:02.900Z"
+    "lastUpdated": "2026-08-04T10:28:45.616Z"
   },
   {
     "name": "Majid Shaikh",
@@ -976,7 +976,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-04T10:08:03.150Z"
+    "lastUpdated": "2026-08-04T10:28:45.803Z"
   },
   {
     "name": "Karan Desai",
@@ -1287,11 +1287,11 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-04T10:08:03.306Z"
+    "lastUpdated": "2026-08-04T10:28:45.966Z"
   },
   {
     "name": "Gaurav Kumar",
-    "aum": 33.910000000000004,
+    "aum": 34.09,
     "revenue": 0.2073,
     "netMob": 1.035905735,
     "m50": 1,
@@ -1304,8 +1304,8 @@
         "label": "AUM",
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
-        "actual": 33.910000000000004,
-        "newRunRate": 2.8362499999999997
+        "actual": 34.09,
+        "newRunRate": 2.8137499999999998
       },
       {
         "label": "Revenue",
@@ -1748,9 +1748,57 @@
         "purchase": 0.4,
         "redemption": 0,
         "net": 0.4
+      },
+      {
+        "client": "BALASUBRAMANIAM VENKATESH IYER",
+        "asset": "MF",
+        "month": "July",
+        "purchase": 0.03,
+        "redemption": 0.02,
+        "net": 0.009999999999999998
+      },
+      {
+        "client": "Harshala Anant Mankame",
+        "asset": "MF",
+        "month": "July",
+        "purchase": 0.01,
+        "redemption": 0,
+        "net": 0.01
+      },
+      {
+        "client": "PIYUSH DUNGARPURIYA",
+        "asset": "MF",
+        "month": "July",
+        "purchase": 0.11,
+        "redemption": 0.19,
+        "net": -0.08
+      },
+      {
+        "client": "NEELAM RAJESH GEHANI",
+        "asset": "MF",
+        "month": "August",
+        "purchase": 0.04,
+        "redemption": 0,
+        "net": 0.04
+      },
+      {
+        "client": "BALASUBRAMANIAM VENKATESH IYER",
+        "asset": "MF",
+        "month": "August",
+        "purchase": 0,
+        "redemption": 0.015,
+        "net": -0.015
+      },
+      {
+        "client": "PIYUSH DUNGARPURIYA",
+        "asset": "MF",
+        "month": "August",
+        "purchase": 0.1185,
+        "redemption": 0,
+        "net": 0.1185
       }
     ],
-    "lastUpdated": "2026-08-04T10:08:03.888Z"
+    "lastUpdated": "2026-08-04T10:28:46.116Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2101,6 +2149,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-04T10:08:04.080Z"
+    "lastUpdated": "2026-08-04T10:28:46.272Z"
   }
 ]
