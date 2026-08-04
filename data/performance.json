@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-04T09:12:11.734Z"
+    "lastUpdated": "2026-08-04T09:21:55.318Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -393,7 +393,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-08-04T09:12:12.042Z"
+    "lastUpdated": "2026-08-04T09:21:55.594Z"
   },
   {
     "name": "Majid Shaikh",
@@ -446,8 +446,8 @@
       {
         "param": "Client Meetings",
         "target": 20,
-        "actual": 9,
-        "gap": 11
+        "actual": 0,
+        "gap": 20
       },
       {
         "param": "Product Meetings",
@@ -499,9 +499,9 @@
       },
       {
         "param": "SIP",
-        "target": 10,
+        "target": 2,
         "actual": 0,
-        "gap": 10
+        "gap": 2
       },
       {
         "param": "M50",
@@ -517,24 +517,24 @@
       },
       {
         "label": "New Leverage Done",
-        "value": 0
+        "value": 1
       },
       {
         "label": "Total Leverage Done",
-        "value": 31
+        "value": 32
       },
       {
         "label": "% of Total AUM",
-        "value": 0.15816326530612246
+        "value": 0.16326530612244897
       }
     ],
     "plan": [
       {
-        "client": "Purushothaman KG",
+        "client": "Naozar Bhomisha",
         "asset": "NSP",
-        "expectedAmt": 1.1,
-        "expectedRedemption": 0,
-        "netPlan": 1.1,
+        "expectedAmt": 0.5,
+        "expectedRedemption": 0.5,
+        "netPlan": 0,
         "prob": 80
       },
       {
@@ -546,18 +546,26 @@
         "prob": 80
       },
       {
-        "client": "Atman Rath",
+        "client": "Gaurav Jain",
         "asset": "EMF",
-        "expectedAmt": 1.9,
+        "expectedAmt": 1,
         "expectedRedemption": 0,
-        "netPlan": 1.9,
+        "netPlan": 1,
+        "prob": 80
+      },
+      {
+        "client": "Gaurav Jain",
+        "asset": "NSP",
+        "expectedAmt": 2,
+        "expectedRedemption": 0,
+        "netPlan": 2,
         "prob": 80
       }
     ],
-    "planTotalAmt": 4.1,
-    "planTotalRedemption": 0,
+    "planTotalAmt": 4.6,
+    "planTotalRedemption": 0.5,
     "planNetTotal": 4.1,
-    "planWeighted": 3.2800000000000002,
+    "planWeighted": 3.68,
     "ledger": [
       {
         "client": "SIPs",
@@ -808,7 +816,7 @@
         "net": 0.60280176
       }
     ],
-    "lastUpdated": "2026-08-04T09:12:12.357Z"
+    "lastUpdated": "2026-08-04T09:21:55.811Z"
   },
   {
     "name": "Karan Desai",
@@ -1119,7 +1127,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-04T09:12:12.738Z"
+    "lastUpdated": "2026-08-04T09:21:56.036Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1582,7 +1590,7 @@
         "net": 0.4
       }
     ],
-    "lastUpdated": "2026-08-04T09:12:13.038Z"
+    "lastUpdated": "2026-08-04T09:21:56.246Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1933,6 +1941,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-04T09:12:13.344Z"
+    "lastUpdated": "2026-08-04T09:21:56.479Z"
   }
 ]
