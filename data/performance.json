@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-04T09:03:44.626Z"
+    "lastUpdated": "2026-08-04T09:11:06.268Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -393,7 +393,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-08-04T09:03:44.796Z"
+    "lastUpdated": "2026-08-04T09:11:06.606Z"
   },
   {
     "name": "Majid Shaikh",
@@ -404,7 +404,7 @@
     "sip": 35.98,
     "aumTarget": 379.42,
     "revTarget": 4.1914544125,
-    "ledgerTotal": 4.842414337000001,
+    "ledgerTotal": 5.212064255,
     "journey": [
       {
         "label": "AUM",
@@ -771,9 +771,9 @@
         "client": "Mahanaz Naozar Bhomisha",
         "asset": "Shares",
         "month": "June",
-        "purchase": 0,
-        "redemption": 0.18251151,
-        "net": -0.18251151
+        "purchase": 0.18251151,
+        "redemption": 0,
+        "net": 0.18251151
       },
       {
         "client": "RAVINDRA N KATRE",
@@ -806,9 +806,33 @@
         "purchase": 0.60280176,
         "redemption": 0,
         "net": 0.60280176
+      },
+      {
+        "client": "Muffazal Arsiwalla",
+        "asset": "EMF",
+        "month": "June",
+        "purchase": 0.313854291,
+        "redemption": 0.313869985,
+        "net": -0.000015694000000010533
+      },
+      {
+        "client": "Rajesh Doshi",
+        "asset": "EMF",
+        "month": "June",
+        "purchase": 0.930353482,
+        "redemption": 0.92508365,
+        "net": 0.005269831999999974
+      },
+      {
+        "client": "Rajesh Doshi",
+        "asset": "Shares",
+        "month": "June",
+        "purchase": 0.086053275,
+        "redemption": 0.086680515,
+        "net": -0.0006272400000000011
       }
     ],
-    "lastUpdated": "2026-08-04T09:03:44.959Z"
+    "lastUpdated": "2026-08-04T09:11:06.801Z"
   },
   {
     "name": "Karan Desai",
@@ -1119,7 +1143,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-04T09:03:45.127Z"
+    "lastUpdated": "2026-08-04T09:11:06.980Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1582,7 +1606,7 @@
         "net": 0.4
       }
     ],
-    "lastUpdated": "2026-08-04T09:03:45.375Z"
+    "lastUpdated": "2026-08-04T09:11:07.305Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1933,6 +1957,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-04T09:03:45.534Z"
+    "lastUpdated": "2026-08-04T09:11:07.503Z"
   }
 ]
