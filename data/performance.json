@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-04T09:29:47.392Z"
+    "lastUpdated": "2026-08-04T10:00:24.246Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -393,7 +393,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-08-04T09:29:47.528Z"
+    "lastUpdated": "2026-08-04T10:00:24.455Z"
   },
   {
     "name": "Majid Shaikh",
@@ -404,7 +404,7 @@
     "sip": 35.98,
     "aumTarget": 379.42,
     "revTarget": 4.1914544125,
-    "ledgerTotal": 5.207437357,
+    "ledgerTotal": 5.2596430238369,
     "journey": [
       {
         "label": "AUM",
@@ -814,9 +814,169 @@
         "purchase": 0.60280176,
         "redemption": 0,
         "net": 0.60280176
+      },
+      {
+        "client": "SIPs",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0.357082146,
+        "redemption": 0,
+        "net": 0.357082146
+      },
+      {
+        "client": "Satyabhama Bhat Trust",
+        "asset": "EMF and Shares",
+        "month": "July",
+        "purchase": 0.059997,
+        "redemption": 0.083695,
+        "net": -0.023698000000000004
+      },
+      {
+        "client": "Adyasha Rath",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 2.519579107,
+        "redemption": 0.414499501,
+        "net": 2.1050796060000003
+      },
+      {
+        "client": "Ashok Vaidya",
+        "asset": "NSP",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.6259505,
+        "net": -0.6259505
+      },
+      {
+        "client": "Ashok Vaidya",
+        "asset": "Shares",
+        "month": "July",
+        "purchase": 0.14872655,
+        "redemption": 0,
+        "net": 0.14872655
+      },
+      {
+        "client": "Vanita Vaidya",
+        "asset": "EMF and Shares ",
+        "month": "July",
+        "purchase": 0.1770721898369,
+        "redemption": 0,
+        "net": 0.1770721898369
+      },
+      {
+        "client": "BHASKAR SUBRAMANIAN",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.045380113,
+        "net": -0.045380113
+      },
+      {
+        "client": "DEEPAK DHAR",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.904521259,
+        "net": -0.904521259
+      },
+      {
+        "client": "DEEPAK DHAR",
+        "asset": "Shares",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.76596993,
+        "net": -0.76596993
+      },
+      {
+        "client": "Turab Arsiwalla",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.01707932,
+        "net": -0.01707932
+      },
+      {
+        "client": "Hrishikesh Dinkar Samant HUF",
+        "asset": "Leverage",
+        "month": "July",
+        "purchase": 1.1,
+        "redemption": 0,
+        "net": 1.1
+      },
+      {
+        "client": "Jayant Shripad Jambotkar",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.024862671,
+        "net": -0.024862671
+      },
+      {
+        "client": "Karat Tazhtetil Jithendran",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0.039998,
+        "redemption": 0.356550994,
+        "net": -0.31655299400000003
+      },
+      {
+        "client": "Lalita Dhar",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.275018162,
+        "net": -0.275018162
+      },
+      {
+        "client": "Omkarnath Dhar",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.028645275,
+        "net": -0.028645275
+      },
+      {
+        "client": "Mahesh Narayan Karnick",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.042599792,
+        "net": -0.042599792
+      },
+      {
+        "client": "Paras Ram Vishwakarma",
+        "asset": "EMF and Shares",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.470353701,
+        "net": -0.470353701
+      },
+      {
+        "client": "RAVINDRA N KATRE",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.230109549,
+        "net": -0.230109549
+      },
+      {
+        "client": "SHIVKUMAR ANANTHAKRISHNAN",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0.019999,
+        "redemption": 0,
+        "net": 0.019999
+      },
+      {
+        "client": "Shoaib Fakhruddin Padaria",
+        "asset": "EMF",
+        "month": "July",
+        "purchase": 0,
+        "redemption": 0.085012559,
+        "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-04T09:29:47.685Z"
+    "lastUpdated": "2026-08-04T10:00:24.682Z"
   },
   {
     "name": "Karan Desai",
@@ -1127,7 +1287,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-04T09:29:47.848Z"
+    "lastUpdated": "2026-08-04T10:00:24.898Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1590,7 +1750,7 @@
         "net": 0.4
       }
     ],
-    "lastUpdated": "2026-08-04T09:29:48.003Z"
+    "lastUpdated": "2026-08-04T10:00:25.114Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1941,6 +2101,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-04T09:29:48.167Z"
+    "lastUpdated": "2026-08-04T10:00:25.306Z"
   }
 ]
