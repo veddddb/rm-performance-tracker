@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-04T10:28:45.382Z"
+    "lastUpdated": "2026-08-04T10:28:56.740Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -393,7 +393,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-08-04T10:28:45.616Z"
+    "lastUpdated": "2026-08-04T10:28:56.957Z"
   },
   {
     "name": "Majid Shaikh",
@@ -976,7 +976,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-04T10:28:45.803Z"
+    "lastUpdated": "2026-08-04T10:28:57.185Z"
   },
   {
     "name": "Karan Desai",
@@ -1287,7 +1287,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-04T10:28:45.966Z"
+    "lastUpdated": "2026-08-04T10:28:57.419Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1340,8 +1340,8 @@
       {
         "param": "Client Meetings",
         "target": 13,
-        "actual": 0,
-        "gap": 13
+        "actual": 2,
+        "gap": 11
       },
       {
         "param": "Product Meetings",
@@ -1798,7 +1798,7 @@
         "net": 0.1185
       }
     ],
-    "lastUpdated": "2026-08-04T10:28:46.116Z"
+    "lastUpdated": "2026-08-04T10:28:57.625Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2149,6 +2149,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-04T10:28:46.272Z"
+    "lastUpdated": "2026-08-04T10:28:57.839Z"
   }
 ]
