@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-04T09:11:06.268Z"
+    "lastUpdated": "2026-08-04T09:12:11.734Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -393,7 +393,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-08-04T09:11:06.606Z"
+    "lastUpdated": "2026-08-04T09:12:12.042Z"
   },
   {
     "name": "Majid Shaikh",
@@ -404,7 +404,7 @@
     "sip": 35.98,
     "aumTarget": 379.42,
     "revTarget": 4.1914544125,
-    "ledgerTotal": 5.212064255,
+    "ledgerTotal": 5.207437357,
     "journey": [
       {
         "label": "AUM",
@@ -806,33 +806,9 @@
         "purchase": 0.60280176,
         "redemption": 0,
         "net": 0.60280176
-      },
-      {
-        "client": "Muffazal Arsiwalla",
-        "asset": "EMF",
-        "month": "June",
-        "purchase": 0.313854291,
-        "redemption": 0.313869985,
-        "net": -0.000015694000000010533
-      },
-      {
-        "client": "Rajesh Doshi",
-        "asset": "EMF",
-        "month": "June",
-        "purchase": 0.930353482,
-        "redemption": 0.92508365,
-        "net": 0.005269831999999974
-      },
-      {
-        "client": "Rajesh Doshi",
-        "asset": "Shares",
-        "month": "June",
-        "purchase": 0.086053275,
-        "redemption": 0.086680515,
-        "net": -0.0006272400000000011
       }
     ],
-    "lastUpdated": "2026-08-04T09:11:06.801Z"
+    "lastUpdated": "2026-08-04T09:12:12.357Z"
   },
   {
     "name": "Karan Desai",
@@ -1143,7 +1119,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-04T09:11:06.980Z"
+    "lastUpdated": "2026-08-04T09:12:12.738Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1606,7 +1582,7 @@
         "net": 0.4
       }
     ],
-    "lastUpdated": "2026-08-04T09:11:07.305Z"
+    "lastUpdated": "2026-08-04T09:12:13.038Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1957,6 +1933,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-04T09:11:07.503Z"
+    "lastUpdated": "2026-08-04T09:12:13.344Z"
   }
 ]
