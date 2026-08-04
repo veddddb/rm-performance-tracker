@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-04T08:50:14.458Z"
+    "lastUpdated": "2026-08-04T09:03:44.626Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -393,7 +393,7 @@
     "planNetTotal": 0,
     "planWeighted": 0,
     "ledger": [],
-    "lastUpdated": "2026-08-04T08:50:14.737Z"
+    "lastUpdated": "2026-08-04T09:03:44.796Z"
   },
   {
     "name": "Majid Shaikh",
@@ -404,7 +404,7 @@
     "sip": 35.98,
     "aumTarget": 379.42,
     "revTarget": 4.1914544125,
-    "ledgerTotal": 1.9015899759999997,
+    "ledgerTotal": 4.842414337000001,
     "journey": [
       {
         "label": "AUM",
@@ -737,14 +737,78 @@
       },
       {
         "client": "SIPs",
-        "asset": "",
+        "asset": "EMF",
+        "month": "June",
+        "purchase": 0.437178141,
+        "redemption": 0,
+        "net": 0.437178141
+      },
+      {
+        "client": "Ashok Vaidya",
+        "asset": "NSP",
+        "month": "June",
+        "purchase": 1.1,
+        "redemption": 0,
+        "net": 1.1
+      },
+      {
+        "client": "Hrishikesh Dinkar Samant",
+        "asset": "Shares",
+        "month": "June",
+        "purchase": 0.24942821,
+        "redemption": 0,
+        "net": 0.24942821
+      },
+      {
+        "client": "Karat Tazhtetil Jithendran",
+        "asset": "EMF",
         "month": "June",
         "purchase": 0,
+        "redemption": 0.343451913,
+        "net": -0.343451913
+      },
+      {
+        "client": "Mahanaz Naozar Bhomisha",
+        "asset": "Shares",
+        "month": "June",
+        "purchase": 0,
+        "redemption": 0.18251151,
+        "net": -0.18251151
+      },
+      {
+        "client": "RAVINDRA N KATRE",
+        "asset": "EMF",
+        "month": "June",
+        "purchase": 0.549972502,
+        "redemption": 0.020042429,
+        "net": 0.5299300730000001
+      },
+      {
+        "client": "RAVINDRA N KATRE",
+        "asset": "NSP",
+        "month": "June",
+        "purchase": 0,
+        "redemption": 0.5525504,
+        "net": -0.5525504
+      },
+      {
+        "client": "Vanita Vaidya",
+        "asset": "NSP",
+        "month": "June",
+        "purchase": 1.1,
         "redemption": 0,
-        "net": 0
+        "net": 1.1
+      },
+      {
+        "client": "Shoaib Fakhruddin Padaria",
+        "asset": "Shares",
+        "month": "June",
+        "purchase": 0.60280176,
+        "redemption": 0,
+        "net": 0.60280176
       }
     ],
-    "lastUpdated": "2026-08-04T08:50:14.968Z"
+    "lastUpdated": "2026-08-04T09:03:44.959Z"
   },
   {
     "name": "Karan Desai",
@@ -1055,7 +1119,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-04T08:50:15.213Z"
+    "lastUpdated": "2026-08-04T09:03:45.127Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1518,7 +1582,7 @@
         "net": 0.4
       }
     ],
-    "lastUpdated": "2026-08-04T08:50:15.491Z"
+    "lastUpdated": "2026-08-04T09:03:45.375Z"
   },
   {
     "name": "Pawan Vyas",
@@ -1869,6 +1933,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-04T08:50:15.711Z"
+    "lastUpdated": "2026-08-04T09:03:45.534Z"
   }
 ]
