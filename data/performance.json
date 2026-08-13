@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-13T12:16:04.709Z"
+    "lastUpdated": "2026-08-13T12:19:03.731Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -295,10 +295,10 @@
       },
       {
         "label": "SIP Book",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 0.1811,
+        "monthlyRunRate": 0.015091666666666668,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 0.0226375
       }
     ],
     "activity": [
@@ -915,7 +915,7 @@
         "net": 0.03299985
       }
     ],
-    "lastUpdated": "2026-08-13T12:16:06.030Z"
+    "lastUpdated": "2026-08-13T12:19:03.956Z"
   },
   {
     "name": "Majid Shaikh",
@@ -1498,7 +1498,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-13T12:16:06.869Z"
+    "lastUpdated": "2026-08-13T12:19:04.192Z"
   },
   {
     "name": "Karan Desai",
@@ -1809,7 +1809,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-13T12:16:07.651Z"
+    "lastUpdated": "2026-08-13T12:19:04.421Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -2328,7 +2328,7 @@
         "net": 0.3
       }
     ],
-    "lastUpdated": "2026-08-13T12:16:08.336Z"
+    "lastUpdated": "2026-08-13T12:19:04.650Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2679,6 +2679,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-13T12:16:08.859Z"
+    "lastUpdated": "2026-08-13T12:19:04.874Z"
   }
 ]
