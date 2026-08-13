@@ -252,18 +252,18 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-13T11:55:56.740Z"
+    "lastUpdated": "2026-08-13T12:16:04.709Z"
   },
   {
     "name": "Piyush Dungarpuria",
     "aum": 1161.62010289916,
     "revenue": 276.147019032603,
-    "netMob": 107.76439625,
+    "netMob": 112.08991535000001,
     "m50": 0,
     "sip": 0,
     "aumTarget": 1288.91780013916,
     "revTarget": 1328.250170625,
-    "ledgerTotal": 0,
+    "ledgerTotal": 0.3123252,
     "journey": [
       {
         "label": "AUM",
@@ -283,15 +283,15 @@
         "label": "Net Mob",
         "target": 202.2,
         "monthlyRunRate": 16.849999999999998,
-        "actual": 107.76439625,
-        "newRunRate": 11.804450468749998
+        "actual": 112.08991535000001,
+        "newRunRate": 11.263760581249997
       },
       {
         "label": "Mission 50",
-        "target": 0,
-        "monthlyRunRate": 0,
+        "target": 4,
+        "monthlyRunRate": 0.3333333333333333,
         "actual": 0,
-        "newRunRate": 0
+        "newRunRate": 0.5
       },
       {
         "label": "SIP Book",
@@ -894,12 +894,28 @@
         "client": "AJAY KUNJBIHARI SANGHI",
         "asset": "NSP- Short Term",
         "month": "August",
-        "purchase": 1.06439625,
+        "purchase": 0,
+        "redemption": 1.06439625,
+        "net": -1.06439625
+      },
+      {
+        "client": "AJAY KUNJBIHARI SANGHI",
+        "asset": "MF",
+        "month": "August",
+        "purchase": 0.75,
         "redemption": 0,
-        "net": 1.06439625
+        "net": 0.75
+      },
+      {
+        "client": "ARCHIE GLASTON WILBER DSOUZA",
+        "asset": "MF",
+        "month": "August",
+        "purchase": 0.03299985,
+        "redemption": 0,
+        "net": 0.03299985
       }
     ],
-    "lastUpdated": "2026-08-13T11:55:56.993Z"
+    "lastUpdated": "2026-08-13T12:16:06.030Z"
   },
   {
     "name": "Majid Shaikh",
@@ -1482,7 +1498,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-13T11:55:57.214Z"
+    "lastUpdated": "2026-08-13T12:16:06.869Z"
   },
   {
     "name": "Karan Desai",
@@ -1793,7 +1809,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-13T11:55:57.476Z"
+    "lastUpdated": "2026-08-13T12:16:07.651Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -2312,7 +2328,7 @@
         "net": 0.3
       }
     ],
-    "lastUpdated": "2026-08-13T11:55:57.753Z"
+    "lastUpdated": "2026-08-13T12:16:08.336Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2663,6 +2679,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-13T11:55:58.033Z"
+    "lastUpdated": "2026-08-13T12:16:08.859Z"
   }
 ]
