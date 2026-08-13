@@ -252,13 +252,13 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-13T09:10:53.876Z"
+    "lastUpdated": "2026-08-13T11:55:56.740Z"
   },
   {
     "name": "Piyush Dungarpuria",
     "aum": 1161.62010289916,
     "revenue": 276.147019032603,
-    "netMob": 106.7,
+    "netMob": 107.76439625,
     "m50": 0,
     "sip": 0,
     "aumTarget": 1288.91780013916,
@@ -283,8 +283,8 @@
         "label": "Net Mob",
         "target": 202.2,
         "monthlyRunRate": 16.849999999999998,
-        "actual": 106.7,
-        "newRunRate": 11.937499999999998
+        "actual": 107.76439625,
+        "newRunRate": 11.804450468749998
       },
       {
         "label": "Mission 50",
@@ -889,9 +889,17 @@
         "purchase": 0.1,
         "redemption": 0,
         "net": 0.1
+      },
+      {
+        "client": "AJAY KUNJBIHARI SANGHI",
+        "asset": "NSP- Short Term",
+        "month": "August",
+        "purchase": 1.06439625,
+        "redemption": 0,
+        "net": 1.06439625
       }
     ],
-    "lastUpdated": "2026-08-13T09:10:54.161Z"
+    "lastUpdated": "2026-08-13T11:55:56.993Z"
   },
   {
     "name": "Majid Shaikh",
@@ -1474,7 +1482,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-13T09:10:54.441Z"
+    "lastUpdated": "2026-08-13T11:55:57.214Z"
   },
   {
     "name": "Karan Desai",
@@ -1785,13 +1793,13 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-13T09:10:54.705Z"
+    "lastUpdated": "2026-08-13T11:55:57.476Z"
   },
   {
     "name": "Gaurav Kumar",
-    "aum": 35.11,
+    "aum": 35.32,
     "revenue": 0.2244,
-    "netMob": 1.035905735,
+    "netMob": 2.6159595729979994,
     "m50": 1,
     "sip": 0.0296,
     "aumTarget": 56.6,
@@ -1802,8 +1810,8 @@
         "label": "AUM",
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
-        "actual": 35.11,
-        "newRunRate": 2.6862500000000002
+        "actual": 35.32,
+        "newRunRate": 2.66
       },
       {
         "label": "Revenue",
@@ -1816,8 +1824,8 @@
         "label": "Net Mob",
         "target": 24.5,
         "monthlyRunRate": 2.0416666666666665,
-        "actual": 1.035905735,
-        "newRunRate": 2.933011783125
+        "actual": 2.6159595729979994,
+        "newRunRate": 2.73550505337525
       },
       {
         "label": "Mission 50",
@@ -2304,7 +2312,7 @@
         "net": 0.3
       }
     ],
-    "lastUpdated": "2026-08-13T09:10:54.949Z"
+    "lastUpdated": "2026-08-13T11:55:57.753Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2655,6 +2663,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-13T09:10:55.162Z"
+    "lastUpdated": "2026-08-13T11:55:58.033Z"
   }
 ]
