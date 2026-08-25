@@ -252,13 +252,13 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-13T12:29:10.065Z"
+    "lastUpdated": "2026-08-25T07:58:30.538Z"
   },
   {
     "name": "Piyush Dungarpuria",
     "aum": 1161.62010289916,
     "revenue": 276.147019032603,
-    "netMob": 112.08991535000001,
+    "netMob": 116.45183025200001,
     "m50": 0,
     "sip": 0,
     "aumTarget": 1288.91780013916,
@@ -283,8 +283,8 @@
         "label": "Net Mob",
         "target": 202.2,
         "monthlyRunRate": 16.849999999999998,
-        "actual": 112.08991535000001,
-        "newRunRate": 11.263760581249997
+        "actual": 116.45183025200001,
+        "newRunRate": 10.718521218499998
       },
       {
         "label": "Mission 50",
@@ -902,8 +902,8 @@
         "client": "AJAY KUNJBIHARI SANGHI",
         "asset": "MF",
         "month": "August",
-        "purchase": 0.75,
-        "redemption": 0,
+        "purchase": 1,
+        "redemption": 0.25,
         "net": 0.75
       },
       {
@@ -915,7 +915,7 @@
         "net": 0.03299985
       }
     ],
-    "lastUpdated": "2026-08-13T12:29:10.339Z"
+    "lastUpdated": "2026-08-25T07:58:30.772Z"
   },
   {
     "name": "Majid Shaikh",
@@ -1498,7 +1498,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-13T12:29:10.753Z"
+    "lastUpdated": "2026-08-25T07:58:31.023Z"
   },
   {
     "name": "Karan Desai",
@@ -1809,13 +1809,13 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-13T12:29:11.074Z"
+    "lastUpdated": "2026-08-25T07:58:31.327Z"
   },
   {
     "name": "Gaurav Kumar",
-    "aum": 35.32,
+    "aum": 36.97,
     "revenue": 0.2244,
-    "netMob": 2.6159595729979994,
+    "netMob": 4.265959572998,
     "m50": 1,
     "sip": 0.0296,
     "aumTarget": 56.6,
@@ -1826,8 +1826,8 @@
         "label": "AUM",
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
-        "actual": 35.32,
-        "newRunRate": 2.66
+        "actual": 36.97,
+        "newRunRate": 2.4537500000000003
       },
       {
         "label": "Revenue",
@@ -1840,8 +1840,8 @@
         "label": "Net Mob",
         "target": 24.5,
         "monthlyRunRate": 2.0416666666666665,
-        "actual": 2.6159595729979994,
-        "newRunRate": 2.73550505337525
+        "actual": 4.265959572998,
+        "newRunRate": 2.52925505337525
       },
       {
         "label": "Mission 50",
@@ -2323,12 +2323,28 @@
         "client": "PALLAVI VISHWAS WAD",
         "asset": "MF",
         "month": "August",
-        "purchase": 0.3,
+        "purchase": 1.55,
         "redemption": 0,
-        "net": 0.3
+        "net": 1.55
+      },
+      {
+        "client": "Vinay Kumar Santuka",
+        "asset": "SP",
+        "month": "August",
+        "purchase": 0.25,
+        "redemption": 0,
+        "net": 0.25
+      },
+      {
+        "client": "Vinay Kumar Santuka",
+        "asset": "Others",
+        "month": "August",
+        "purchase": 0.15,
+        "redemption": 0,
+        "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-13T12:29:11.337Z"
+    "lastUpdated": "2026-08-25T07:58:31.743Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2679,6 +2695,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-13T12:29:11.566Z"
+    "lastUpdated": "2026-08-25T07:58:32.025Z"
   }
 ]
