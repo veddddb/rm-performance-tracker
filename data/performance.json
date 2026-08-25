@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-25T07:58:30.538Z"
+    "lastUpdated": "2026-08-25T08:00:58.519Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -915,7 +915,7 @@
         "net": 0.03299985
       }
     ],
-    "lastUpdated": "2026-08-25T07:58:30.772Z"
+    "lastUpdated": "2026-08-25T08:00:58.721Z"
   },
   {
     "name": "Majid Shaikh",
@@ -1498,7 +1498,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-25T07:58:31.023Z"
+    "lastUpdated": "2026-08-25T08:00:58.933Z"
   },
   {
     "name": "Karan Desai",
@@ -1809,7 +1809,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-25T07:58:31.327Z"
+    "lastUpdated": "2026-08-25T08:00:59.148Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1922,8 +1922,8 @@
       {
         "param": "M50",
         "target": 1,
-        "actual": 0,
-        "gap": 1
+        "actual": 1,
+        "gap": 0
       }
     ],
     "leverage": [
@@ -2344,7 +2344,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-25T07:58:31.743Z"
+    "lastUpdated": "2026-08-25T08:00:59.515Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2695,6 +2695,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-25T07:58:32.025Z"
+    "lastUpdated": "2026-08-25T08:00:59.725Z"
   }
 ]
