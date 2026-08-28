@@ -252,7 +252,7 @@
         "net": 0.75
       }
     ],
-    "lastUpdated": "2026-08-25T08:00:58.519Z"
+    "lastUpdated": "2026-08-28T17:08:40.440Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -915,7 +915,7 @@
         "net": 0.03299985
       }
     ],
-    "lastUpdated": "2026-08-25T08:00:58.721Z"
+    "lastUpdated": "2026-08-28T17:08:40.877Z"
   },
   {
     "name": "Majid Shaikh",
@@ -1498,7 +1498,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-25T08:00:58.933Z"
+    "lastUpdated": "2026-08-28T17:08:41.208Z"
   },
   {
     "name": "Karan Desai",
@@ -1809,13 +1809,13 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-25T08:00:59.148Z"
+    "lastUpdated": "2026-08-28T17:08:41.492Z"
   },
   {
     "name": "Gaurav Kumar",
-    "aum": 36.97,
+    "aum": 37.11,
     "revenue": 0.2244,
-    "netMob": 4.265959572998,
+    "netMob": 4.399959572997999,
     "m50": 1,
     "sip": 0.0296,
     "aumTarget": 56.6,
@@ -1826,8 +1826,8 @@
         "label": "AUM",
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
-        "actual": 36.97,
-        "newRunRate": 2.4537500000000003
+        "actual": 37.11,
+        "newRunRate": 2.4362500000000002
       },
       {
         "label": "Revenue",
@@ -1840,8 +1840,8 @@
         "label": "Net Mob",
         "target": 24.5,
         "monthlyRunRate": 2.0416666666666665,
-        "actual": 4.265959572998,
-        "newRunRate": 2.52925505337525
+        "actual": 4.399959572997999,
+        "newRunRate": 2.51250505337525
       },
       {
         "label": "Mission 50",
@@ -2308,8 +2308,8 @@
         "asset": "MF",
         "month": "August",
         "purchase": 0,
-        "redemption": 0.016,
-        "net": -0.016
+        "redemption": 0.032,
+        "net": -0.032
       },
       {
         "client": "PIYUSH DUNGARPURIYA",
@@ -2342,9 +2342,25 @@
         "purchase": 0.15,
         "redemption": 0,
         "net": 0.15
+      },
+      {
+        "client": "ARUN KUMAR SRIVASTAVA",
+        "asset": "MF",
+        "month": "August",
+        "purchase": 0.1,
+        "redemption": 0,
+        "net": 0.1
+      },
+      {
+        "client": "Kumar Ram Kanuga",
+        "asset": "MF",
+        "month": "August",
+        "purchase": 0.05,
+        "redemption": 0,
+        "net": 0.05
       }
     ],
-    "lastUpdated": "2026-08-25T08:00:59.515Z"
+    "lastUpdated": "2026-08-28T17:08:41.789Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2695,6 +2711,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-25T08:00:59.725Z"
+    "lastUpdated": "2026-08-28T17:08:42.157Z"
   }
 ]
