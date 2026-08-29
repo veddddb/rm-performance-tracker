@@ -3,12 +3,12 @@
     "name": "Vedant Bhansali",
     "aum": 88,
     "revenue": 0.18,
-    "netMob": 4.0600000000000005,
+    "netMob": 5.010000000000001,
     "m50": 2,
     "sip": 17,
     "aumTarget": 116,
     "revTarget": 1.6,
-    "ledgerTotal": 4.0600000000000005,
+    "ledgerTotal": 5.010000000000001,
     "journey": [
       {
         "label": "AUM",
@@ -28,8 +28,8 @@
         "label": "Net Mob",
         "target": 27,
         "monthlyRunRate": 2.25,
-        "actual": 4.0600000000000005,
-        "newRunRate": 2.8674999999999997
+        "actual": 5.010000000000001,
+        "newRunRate": 2.74875
       },
       {
         "label": "Mission 50",
@@ -250,9 +250,17 @@
         "purchase": 0.75,
         "redemption": 0,
         "net": 0.75
+      },
+      {
+        "client": "All clients combiner",
+        "asset": "MF",
+        "month": "August",
+        "purchase": 0.95,
+        "redemption": 0,
+        "net": 0.95
       }
     ],
-    "lastUpdated": "2026-08-29T12:23:57.393Z"
+    "lastUpdated": "2026-08-29T13:21:41.845Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -915,7 +923,7 @@
         "net": 0.03299985
       }
     ],
-    "lastUpdated": "2026-08-29T12:23:57.689Z"
+    "lastUpdated": "2026-08-29T13:21:43.540Z"
   },
   {
     "name": "Majid Shaikh",
@@ -1498,7 +1506,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-29T12:23:57.970Z"
+    "lastUpdated": "2026-08-29T13:21:43.811Z"
   },
   {
     "name": "Karan Desai",
@@ -1809,7 +1817,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-29T12:23:58.241Z"
+    "lastUpdated": "2026-08-29T13:21:44.065Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -2360,7 +2368,7 @@
         "net": 0.05
       }
     ],
-    "lastUpdated": "2026-08-29T12:23:58.497Z"
+    "lastUpdated": "2026-08-29T13:21:44.328Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2711,6 +2719,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-29T12:23:58.766Z"
+    "lastUpdated": "2026-08-29T13:21:44.691Z"
   }
 ]
