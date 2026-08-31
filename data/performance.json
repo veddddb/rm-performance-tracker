@@ -1,8 +1,8 @@
 [
   {
     "name": "Vedant Bhansali",
-    "aum": 88,
-    "revenue": 0.18,
+    "aum": 90.47,
+    "revenue": 0.2717,
     "netMob": 6.110000000000001,
     "m50": 2,
     "sip": 17,
@@ -14,15 +14,15 @@
         "label": "AUM",
         "target": 116,
         "monthlyRunRate": 3.5,
-        "actual": 88,
-        "newRunRate": 3.5
+        "actual": 90.47,
+        "newRunRate": 3.19125
       },
       {
         "label": "Revenue",
         "target": 1.6,
         "monthlyRunRate": 0.13333333333333333,
-        "actual": 0.18,
-        "newRunRate": 0.17750000000000002
+        "actual": 0.2717,
+        "newRunRate": 0.1660375
       },
       {
         "label": "Net Mob",
@@ -268,7 +268,7 @@
         "net": 1.1
       }
     ],
-    "lastUpdated": "2026-08-31T09:17:23.040Z"
+    "lastUpdated": "2026-08-31T11:56:46.808Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -931,7 +931,7 @@
         "net": 0.03299985
       }
     ],
-    "lastUpdated": "2026-08-31T09:17:23.221Z"
+    "lastUpdated": "2026-08-31T11:56:47.070Z"
   },
   {
     "name": "Majid Shaikh",
@@ -1514,7 +1514,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-31T09:17:23.398Z"
+    "lastUpdated": "2026-08-31T11:56:47.579Z"
   },
   {
     "name": "Karan Desai",
@@ -1825,7 +1825,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-31T09:17:23.628Z"
+    "lastUpdated": "2026-08-31T11:56:47.792Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -2376,7 +2376,7 @@
         "net": 0.05
       }
     ],
-    "lastUpdated": "2026-08-31T09:17:23.903Z"
+    "lastUpdated": "2026-08-31T11:56:48.336Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2727,6 +2727,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-31T09:17:24.167Z"
+    "lastUpdated": "2026-08-31T11:56:48.538Z"
   }
 ]
