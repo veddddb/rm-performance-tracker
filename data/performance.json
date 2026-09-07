@@ -1,11 +1,11 @@
 [
   {
     "name": "Vedant Bhansali",
-    "aum": 90.47,
-    "revenue": 0.2717,
+    "aum": 93.04,
+    "revenue": 0.41,
     "netMob": 6.110000000000001,
     "m50": 2,
-    "sip": 17,
+    "sip": 14.5,
     "aumTarget": 116,
     "revTarget": 1.6,
     "ledgerTotal": 6.110000000000001,
@@ -14,36 +14,36 @@
         "label": "AUM",
         "target": 116,
         "monthlyRunRate": 3.5,
-        "actual": 90.47,
-        "newRunRate": 3.19125
+        "actual": 93.04,
+        "newRunRate": 3.279999999999999
       },
       {
         "label": "Revenue",
         "target": 1.6,
         "monthlyRunRate": 0.13333333333333333,
-        "actual": 0.2717,
-        "newRunRate": 0.1660375
+        "actual": 0.41,
+        "newRunRate": 0.17
       },
       {
         "label": "Net Mob",
         "target": 27,
         "monthlyRunRate": 2.25,
         "actual": 6.110000000000001,
-        "newRunRate": 2.61125
+        "newRunRate": 2.9842857142857144
       },
       {
         "label": "Mission 50",
         "target": 12,
         "monthlyRunRate": 1,
         "actual": 2,
-        "newRunRate": 1.25
+        "newRunRate": 1.4285714285714286
       },
       {
         "label": "SIP Book",
         "target": 36,
         "monthlyRunRate": 3,
-        "actual": 17,
-        "newRunRate": 2.375
+        "actual": 14.5,
+        "newRunRate": 3.0714285714285716
       }
     ],
     "activity": [
@@ -121,15 +121,15 @@
       },
       {
         "label": "New Leverage Done",
-        "value": 0
+        "value": 1.1
       },
       {
         "label": "Total Leverage Done",
-        "value": 1.8
+        "value": 2.9000000000000004
       },
       {
         "label": "% of Total AUM",
-        "value": 0.15
+        "value": 0.2416666666666667
       }
     ],
     "plan": [
@@ -268,7 +268,7 @@
         "net": 1.1
       }
     ],
-    "lastUpdated": "2026-08-31T11:56:46.808Z"
+    "lastUpdated": "2026-09-07T11:39:59.551Z"
   },
   {
     "name": "Piyush Dungarpuria",
@@ -286,35 +286,35 @@
         "target": 1288.91780013916,
         "monthlyRunRate": 31.183983344929988,
         "actual": 1161.62010289916,
-        "newRunRate": 15.912212154999992
+        "newRunRate": 18.18538531999999
       },
       {
         "label": "Revenue",
         "target": 1328.250170625,
         "monthlyRunRate": 110.68751421875,
         "actual": 276.147019032603,
-        "newRunRate": 131.5128939490496
+        "newRunRate": 150.30045022748527
       },
       {
         "label": "Net Mob",
         "target": 202.2,
         "monthlyRunRate": 16.849999999999998,
         "actual": 116.31131305499999,
-        "newRunRate": 10.736085868125
+        "newRunRate": 12.269812420714286
       },
       {
         "label": "Mission 50",
         "target": 4,
         "monthlyRunRate": 0.3333333333333333,
         "actual": 0,
-        "newRunRate": 0.5
+        "newRunRate": 0.5714285714285714
       },
       {
         "label": "SIP Book",
         "target": 0.1811,
         "monthlyRunRate": 0.015091666666666668,
         "actual": 0,
-        "newRunRate": 0.0226375
+        "newRunRate": 0.025871428571428573
       }
     ],
     "activity": [
@@ -931,7 +931,7 @@
         "net": 0.03299985
       }
     ],
-    "lastUpdated": "2026-08-31T11:56:47.070Z"
+    "lastUpdated": "2026-09-07T11:39:59.781Z"
   },
   {
     "name": "Majid Shaikh",
@@ -949,35 +949,35 @@
         "target": 379.42,
         "monthlyRunRate": 9.069266633295086,
         "actual": 309.02,
-        "newRunRate": 8.800000000000004
+        "newRunRate": 10.057142857142862
       },
       {
         "label": "Revenue",
         "target": 4.1914544125,
         "monthlyRunRate": 0.3492878677083333,
         "actual": 1.2465,
-        "newRunRate": 0.36811930156249995
+        "newRunRate": 0.42070777321428565
       },
       {
         "label": "Net Mob",
         "target": 64.27,
         "monthlyRunRate": 5.355833333333333,
         "actual": 4.68,
-        "newRunRate": 7.4487499999999995
+        "newRunRate": 8.512857142857142
       },
       {
         "label": "Mission 50",
         "target": 34,
         "monthlyRunRate": 2.8333333333333335,
         "actual": 1,
-        "newRunRate": 4.125
+        "newRunRate": 4.714285714285714
       },
       {
         "label": "SIP Book",
         "target": 46.61,
         "monthlyRunRate": 3.8841666666666668,
         "actual": 35.71,
-        "newRunRate": 1.3624999999999998
+        "newRunRate": 1.557142857142857
       }
     ],
     "activity": [
@@ -1514,7 +1514,7 @@
         "net": -0.085012559
       }
     ],
-    "lastUpdated": "2026-08-31T11:56:47.579Z"
+    "lastUpdated": "2026-09-07T11:40:00.050Z"
   },
   {
     "name": "Karan Desai",
@@ -1532,35 +1532,35 @@
         "target": 234,
         "monthlyRunRate": 4.333333333333333,
         "actual": 193.3,
-        "newRunRate": 5.087499999999999
+        "newRunRate": 5.814285714285712
       },
       {
         "label": "Revenue",
         "target": 3,
         "monthlyRunRate": 0.25,
         "actual": 0.44,
-        "newRunRate": 0.32
+        "newRunRate": 0.3657142857142857
       },
       {
         "label": "Net Mob",
         "target": 40,
         "monthlyRunRate": 3.3333333333333335,
         "actual": 2.3899999999999997,
-        "newRunRate": 4.70125
+        "newRunRate": 5.372857142857143
       },
       {
         "label": "Mission 50",
         "target": 10,
         "monthlyRunRate": 0.8333333333333334,
         "actual": 0,
-        "newRunRate": 1.25
+        "newRunRate": 1.4285714285714286
       },
       {
         "label": "SIP Book",
         "target": 15,
         "monthlyRunRate": 1.25,
         "actual": 0,
-        "newRunRate": 1.875
+        "newRunRate": 2.142857142857143
       }
     ],
     "activity": [
@@ -1825,7 +1825,7 @@
         "net": 0.15
       }
     ],
-    "lastUpdated": "2026-08-31T11:56:47.792Z"
+    "lastUpdated": "2026-09-07T11:40:00.310Z"
   },
   {
     "name": "Gaurav Kumar",
@@ -1843,35 +1843,35 @@
         "target": 56.6,
         "monthlyRunRate": 2.4283333333333332,
         "actual": 37.16,
-        "newRunRate": 2.4300000000000006
+        "newRunRate": 2.777142857142858
       },
       {
         "label": "Revenue",
         "target": 0.5589999999999999,
         "monthlyRunRate": 0.04658333333333333,
         "actual": 0.2244,
-        "newRunRate": 0.041824999999999994
+        "newRunRate": 0.047799999999999995
       },
       {
         "label": "Net Mob",
         "target": 24.5,
         "monthlyRunRate": 2.0416666666666665,
         "actual": 4.449959572998,
-        "newRunRate": 2.50625505337525
+        "newRunRate": 2.864291489571714
       },
       {
         "label": "Mission 50",
         "target": 12,
         "monthlyRunRate": 1,
         "actual": 1,
-        "newRunRate": 1.375
+        "newRunRate": 1.5714285714285714
       },
       {
         "label": "SIP Book",
         "target": 0.08,
         "monthlyRunRate": 0.006666666666666667,
         "actual": 0.0296,
-        "newRunRate": 0.0063
+        "newRunRate": 0.0072
       }
     ],
     "activity": [
@@ -2376,7 +2376,7 @@
         "net": 0.05
       }
     ],
-    "lastUpdated": "2026-08-31T11:56:48.336Z"
+    "lastUpdated": "2026-09-07T11:40:00.557Z"
   },
   {
     "name": "Pawan Vyas",
@@ -2394,35 +2394,35 @@
         "target": 40,
         "monthlyRunRate": 1.8666666666666665,
         "actual": 19,
-        "newRunRate": 2.625
+        "newRunRate": 3
       },
       {
         "label": "Revenue",
         "target": 0.4,
         "monthlyRunRate": 0.03333333333333333,
         "actual": 0.0822,
-        "newRunRate": 0.039725
+        "newRunRate": 0.0454
       },
       {
         "label": "Net Mob",
         "target": 20,
         "monthlyRunRate": 1.6666666666666667,
         "actual": -0.295,
-        "newRunRate": 2.536875
+        "newRunRate": 2.8992857142857145
       },
       {
         "label": "Mission 50",
         "target": 12,
         "monthlyRunRate": 1,
         "actual": 0,
-        "newRunRate": 1.5
+        "newRunRate": 1.7142857142857142
       },
       {
         "label": "SIP Book",
         "target": 5,
         "monthlyRunRate": 0.4166666666666667,
         "actual": 0,
-        "newRunRate": 0.625
+        "newRunRate": 0.7142857142857143
       }
     ],
     "activity": [
@@ -2727,6 +2727,6 @@
         "net": -0.12
       }
     ],
-    "lastUpdated": "2026-08-31T11:56:48.538Z"
+    "lastUpdated": "2026-09-07T11:40:01.682Z"
   }
 ]
